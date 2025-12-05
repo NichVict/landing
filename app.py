@@ -194,7 +194,7 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # -----------------------------
 # SEÇÃO 3 — A GENIALIDADE DOS GÊNIOS
 # -----------------------------
-st.markdown("### A genialidade dos gênios, ressignificada em algoritmo")
+st.markdown("### A genialidade dos mestres, ressignificada em algoritmo")
 
 # ====== CHARLES DOW ======
 col1, col2 = st.columns([0.35, 1])
