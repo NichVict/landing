@@ -1,109 +1,172 @@
 import streamlit as st
+from pathlib import Path
 
 # -------------------------------------
-# CONFIGURAÇÃO DA PÁGINA
+# CONFIG DA PÁGINA
 # -------------------------------------
 st.set_page_config(
-    page_title="Phoenix Strategy – O Algoritmo Genial",
+    page_title="Phoenix Strategy – O algoritmo genial",
     page_icon="🔥",
     layout="wide"
 )
 
 # -------------------------------------
-# CSS CUSTOMIZADO (NEON + CARDS GRADIENTE)
+# CSS – TEMA PHOENIX (PRETO + NEON + CARDS)
 # -------------------------------------
-Phoenix_CSS = """
+CSS = """
 <style>
-
 body, .stApp {
     background-color: #030303;
-    color: #D7D7D7;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #e2e2e2;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
-/* TITULOS NEON */
+/* CENTRALIZA BLOCO PRINCIPAL */
+.main-block {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* LOGO */
+.logo-container {
+    text-align: center;
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+/* TÍTULOS */
 h1, h2, h3 {
-    color: #00FF7F;
+    color: #00ff9a;
     font-weight: 700;
 }
 
-/* SUBTÍTULOS LARANJA */
+/* TAG LARANJA */
 .orange-tag {
-    color: #FF7A1A;
+    color: #ff7a1a;
     text-transform: uppercase;
     font-size: 0.9rem;
-    letter-spacing: 0.12em;
-}
-
-/* BLOCO CENTRAL */
-.main-block {
-    max-width: 950px;
-    margin: 0 auto;
+    letter-spacing: 0.14em;
+    margin-bottom: 0.2rem;
 }
 
 /* DIVISOR */
 .section-divider {
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    margin: 3rem 0 2rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    margin: 3rem 0 2.2rem 0;
 }
 
-/* BOTÃO NEON */
+/* BOTÕES */
 .stButton>button {
-    background: linear-gradient(90deg, #00FF7F, #FF7A1A);
-    color: black;
+    background: linear-gradient(90deg, #00ff9a, #ff7a1a);
+    color: #050608;
     border-radius: 999px;
-    padding: 0.7rem 2rem;
+    padding: 0.7rem 2.1rem;
     border: none;
     font-weight: 700;
+    font-size: 0.98rem;
     cursor: pointer;
-    transition: 0.25s ease-in-out;
+    transition: 0.22s ease-in-out;
 }
 .stButton>button:hover {
-    transform: scale(1.03);
-    filter: brightness(1.2);
+    transform: translateY(-2px) scale(1.02);
+    filter: brightness(1.15);
 }
 
-/* IMG LOGO CENTRALIZADA */
-.logo-container {
+/* TEXTO */
+p, li {
+    font-size: 1.02rem;
+    line-height: 1.6;
+}
+
+/* SEÇÃO GÊNIOS – GRID */
+.genius-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0 1.0rem 0;
+}
+
+/* CARD VERTICAL DOS GÊNIOS */
+.genius-card {
+    background: radial-gradient(circle at top, rgba(255,122,26,0.40), rgba(0,0,0,0.92));
+    border-radius: 20px;
+    border: 1px solid rgba(0,255,154,0.30);
+    padding: 1.3rem 1.2rem 1.4rem 1.2rem;
     text-align: center;
-    margin-bottom: 2rem;
-}
-
-/* CARDS ESTILO B (gradiente Phoenix) */
-.phoenix-card {
-    padding: 1.5rem;
-    border-radius: 18px;
-    background: radial-gradient(circle at top left, rgba(255,120,20,0.40), rgba(0,255,140,0.07));
-    border: 1px solid rgba(0,255,120,0.25);
     transition: 0.25s ease-in-out;
 }
-.phoenix-card:hover {
+.genius-card:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 0 18px rgba(255,100,20,0.7);
-    border: 1px solid rgba(0,255,120,0.55);
+    box-shadow: 0 0 20px rgba(255,122,26,0.65);
+    border-color: rgba(0,255,154,0.70);
 }
 
-/* LISTAS */
+/* IMAGEM CIRCULAR P&B COM CONTORNO NEON */
+.genius-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    border: 2px solid #00ff9a;
+    box-shadow: 0 0 12px rgba(0,255,154,0.6);
+    margin-bottom: 0.7rem;
+}
+
+/* NOME DO GÊNIO */
+.genius-name {
+    font-weight: 700;
+    color: #00ff9a;
+    font-size: 1.0rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.1rem;
+}
+
+/* SUBTÍTULO LARANJA NO CARD */
+.genius-role {
+    color: #ff7a1a;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* PARÁGRAFO MENOR DENTRO DO CARD */
+.genius-text {
+    font-size: 0.95rem;
+    color: #d7d7d7;
+}
+
+/* UL */
 ul {
     padding-left: 1.3rem;
 }
 
+/* HERO SUB */
+.hero-sub {
+    font-size: 1.05rem;
+    color: #d0d0d0;
+}
+
 </style>
 """
-st.markdown(Phoenix_CSS, unsafe_allow_html=True)
+
+st.markdown(CSS, unsafe_allow_html=True)
 
 # -------------------------------------
-# LOGO
+# LOGO PHOENIX (TOPO)
 # -------------------------------------
 st.markdown("<div class='logo-container'>", unsafe_allow_html=True)
-st.image("Phoenix_logo.png", width=240)
+if Path("Phoenix_logo.png").exists():
+    st.image("Phoenix_logo.png", width=260)
 st.markdown("</div>", unsafe_allow_html=True)
 
 # -------------------------------------
-# HERO SECTION
+# INÍCIO BLOCO PRINCIPAL
 # -------------------------------------
 st.markdown("<div class='main-block'>", unsafe_allow_html=True)
 
+# =====================================
+# SECTION 1 — HERO (CAPA)
+# =====================================
 st.markdown("<div class='orange-tag'>PLATAFORMA QUANT</div>", unsafe_allow_html=True)
 st.markdown("## PHOENIX STRATEGY")
 st.markdown("### O algoritmo genial.")
@@ -124,22 +187,22 @@ if st.button("ACESSAR PLATAFORMA"):
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-# -------------------------------------
-# SEÇÃO: O QUE É A PHOENIX STRATEGY
-# -------------------------------------
-st.markdown("## O que é a Phoenix Strategy?")
+# =====================================
+# SECTION 2 — O QUE É O PHOENIX STRATEGY?
+# =====================================
+st.markdown("## O que é o Phoenix Strategy?")
 
 st.markdown(
     """
-A **Phoenix Strategy** é a evolução da análise técnica:  
-um sistema capaz de monitorar **300+ ativos a cada 5 minutos**, identificar padrões,  
-prever movimentos e entregar **o momento exato de entrada e saída** — em tempo real.
+A Phoenix Strategy é a evolução da análise técnica:  
+um sistema capaz de monitorar mais de **300 ativos a cada 5 minutos**, encontrar padrões, 
+identificar movimentos, antecipar riscos e entregar **o momento exato de entrada e saída** — tudo em tempo real.
 """
 )
 
 st.markdown(
     """
-O que seria humanamente impossível, mesmo reunindo os maiores **gênios** da história,  
+O que seria humanamente impossível, mesmo reunindo os maiores gênios da história,  
 agora acontece em **segundos**.
 
 Porque quando a genialidade se transforma em algoritmo,  
@@ -149,114 +212,255 @@ Porque quando a genialidade se transforma em algoritmo,
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-# -------------------------------------
-# SEÇÃO 3 — OS GÊNIOS
-# -------------------------------------
-st.markdown("## A genialidade dos mestres, ressignificada em algoritmo")
+# =====================================
+# SECTION 3 — A GENIALIDADE DOS GÊNIOS (CARDS + TEXTO ORIGINAL)
+# =====================================
+st.markdown("## A genialidade dos gênios, ressignificada em algoritmo")
 
-cols = st.columns(2)
+# ---- GRID DE GÊNIOS (CARDS VERTICAIS) ----
+st.markdown("<div class='genius-grid'>", unsafe_allow_html=True)
 
-with cols[0]:
+def genius_card(img_path, name, role, text):
+    html = "<div class='genius-card'>"
+    if Path(img_path).exists():
+        html += f"<img src='data:image/png;base64,' class='genius-img'/>"
+    # OBS: Streamlit não deixa embutir fácil o base64 aqui sem processamento,
+    # então vamos usar st.image fora do HTML quando houver imagem.
+    html += f"<div class='genius-name'>{name}</div>"
+    html += f"<div class='genius-role'>{role}</div>"
+    html += f"<div class='genius-text'>{text}</div>"
+    html += "</div>"
+    return html
+
+# Em vez de usar img dentro do HTML, vamos usar layout com st.columns para suportar imagem + texto sem quebrar.
+
+genius_cols = st.columns(3)
+
+# CHARLES DOW
+with genius_cols[0]:
+    st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
+    if Path("charles_dow_bw.png").exists():
+        st.image("charles_dow_bw.png", use_column_width=False, width=90)
+    st.markdown("<div class='genius-name'>CHARLES DOW</div>", unsafe_allow_html=True)
+    st.markdown("<div class='genius-role'>Pai da tendência moderna</div>", unsafe_allow_html=True)
     st.markdown(
-        """
-        - **Charles Dow**, o visionário da tendência  
-        - **Richard Wyckoff**, o decodificador do fluxo  
-        - **Welles Wilder**, o engenheiro matemático da volatilidade  
-        """
+        "<div class='genius-text'>Criou os princípios estruturais de tendência, fases e "
+        "comportamento direcional do mercado.</div>",
+        unsafe_allow_html=True
     )
+    st.markdown("</div>", unsafe_allow_html=True)
 
-with cols[1]:
+# WYCKOFF
+with genius_cols[1]:
+    st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
+    if Path("richard_wyckoff_bw.png").exists():
+        st.image("richard_wyckoff_bw.png", use_column_width=False, width=90)
+    st.markdown("<div class='genius-name'>RICHARD WYCKOFF</div>", unsafe_allow_html=True)
+    st.markdown("<div class='genius-role'>Arquitetura do fluxo</div>", unsafe_allow_html=True)
     st.markdown(
-        """
-        - **Al Brooks**, o refinamento máximo do price action  
-        - **Gênios que mudaram tudo**  
-        - E que agora renascem em forma algorítmica  
-        """
+        "<div class='genius-text'>Decodificou oferta e demanda, atuação institucional e "
+        "fases de acumulação e distribuição.</div>",
+        unsafe_allow_html=True
     )
+    st.markdown("</div>", unsafe_allow_html=True)
 
+# WELLES WILDER
+with genius_cols[2]:
+    st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
+    if Path("welles_wilder_bw.png").exists():
+        st.image("welles_wilder_bw.png", use_column_width=False, width=90)
+    st.markdown("<div class='genius-name'>WELLES WILDER</div>", unsafe_allow_html=True)
+    st.markdown("<div class='genius-role'>O mestre dos indicadores</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='genius-text'>Criou RSI, ATR, ADX e Parabolic SAR — a espinha dorsal matemática "
+        "da análise técnica moderna.</div>",
+        unsafe_allow_html=True
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+genius_cols2 = st.columns(3)
+
+# AL BROOKS
+with genius_cols2[0]:
+    st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
+    if Path("al_brooks_bw.png").exists():
+        st.image("al_brooks_bw.png", use_column_width=False, width=90)
+    st.markdown("<div class='genius-name'>AL BROOKS</div>", unsafe_allow_html=True)
+    st.markdown("<div class='genius-role'>Price action refinado</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='genius-text'>Transformou candles em linguagem, com leitura microestrutural "
+        "e direcional do preço.</div>",
+        unsafe_allow_html=True
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+# BLACK & SCHOLES
+with genius_cols2[1]:
+    st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
+    if Path("black_scholes_bw.png").exists():
+        st.image("black_scholes_bw.png", use_column_width=False, width=90)
+    st.markdown("<div class='genius-name'>BLACK &amp; SCHOLES</div>", unsafe_allow_html=True)
+    st.markdown("<div class='genius-role'>Gênios das opções</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='genius-text'>Criadores do modelo que originou as Gregas, a volatilidade "
+        "implícita e a base da precificação moderna de opções.</div>",
+        unsafe_allow_html=True
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+# PHOENIX STRATEGY (CARD FINAL)
+with genius_cols2[2]:
+    st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
+    st.markdown("<div class='genius-name'>PHOENIX STRATEGY</div>", unsafe_allow_html=True)
+    st.markdown("<div class='genius-role'>O renascimento em algoritmo</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<div class='genius-text'>A fusão da genialidade desses nomes em um único sistema "
+        "capaz de monitorar 300+ ativos em tempo real.</div>",
+        unsafe_allow_html=True
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
+
+st.markdown("</div>", unsafe_allow_html=True)
+
+# ---- TEXTO ORIGINAL DA SECTION 3 (COPY INTACTA) ----
 st.markdown(
     """
-A **Phoenix Strategy** honra esses gênios — e os leva além do possível.
+Os pilares da análise técnica nasceram das mentes de gigantes:
+
+- **Charles Dow**, o visionário da tendência.  
+- **Richard Wyckoff**, o decodificador do fluxo.  
+- **Welles Wilder**, o engenheiro que criou revoluções matemáticas.  
+- **Al Brooks**, a leitura mais refinada do price action moderno.  
+
+Cada um deles alterou para sempre a forma como entendemos o mercado.  
+Hoje, suas genialidades renascem em forma algorítmica.
+
+A Phoenix Strategy honra esses gênios —  
+e os leva além do que era possível.
 """
 )
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-# -------------------------------------
-# SEÇÃO 4 — O ALGORITMO GENIAL (CARDS)
-# -------------------------------------
+# =====================================
+# SECTION 4 — O ALGORITMO GENIAL™
+# =====================================
 st.markdown("## O algoritmo genial™")
 
-cards = st.columns(3)
+st.markdown("O coração da plataforma.")
 
-with cards[0]:
-    st.markdown("<div class='phoenix-card'>", unsafe_allow_html=True)
-    st.markdown("### Precisão")
-    st.markdown("Detecta padrões invisíveis ao olho humano.")
-    st.markdown("</div>", unsafe_allow_html=True)
+st.markdown(
+    """
+Um sistema projetado para:
 
-with cards[1]:
-    st.markdown("<div class='phoenix-card'>", unsafe_allow_html=True)
-    st.markdown("### Velocidade")
-    st.markdown("Analisa dezenas de variáveis em segundos.")
-    st.markdown("</div>", unsafe_allow_html=True)
+- Detectar padrões invisíveis ao olho humano  
+- Analisar dezenas de variáveis simultaneamente  
+- Traduzir movimentos do preço em decisões claras  
+- Criar probabilidades reais de vantagem  
+- Atualizar-se constantemente com novos dados  
+"""
+)
 
-with cards[2]:
-    st.markdown("<div class='phoenix-card'>", unsafe_allow_html=True)
-    st.markdown("### Inteligência")
-    st.markdown("Atualiza e aprimora decisões a cada novo dado.")
-    st.markdown("</div>", unsafe_allow_html=True)
+st.markdown(
+    """
+Enquanto humanos analisam…  
+o algoritmo já concluiu.
+
+Enquanto humanos hesitam…  
+o algoritmo já executou.
+
+Isso é precisão. Isso é velocidade. Isso é genialidade aplicada.
+"""
+)
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-# -------------------------------------
-# SEÇÃO 5 — VELOCIDADE
-# -------------------------------------
+# =====================================
+# SECTION 5 — VELOCIDADE QUE HUMANOS NÃO ALCANÇAM
+# =====================================
 st.markdown("## Velocidade que humanos não alcançam")
 
 st.markdown(
     """
-Enquanto um analista acompanha **3 a 5 ativos**,  
-o algoritmo monitora **300+ simultaneamente** — sem cansaço, sem erro.
+Enquanto um analista experiente consegue acompanhar 3, talvez 5 ativos…  
+o algoritmo genial monitora 300+ ao mesmo tempo, sem erro, sem atraso, sem cansaço.
 """
 )
 
 st.markdown(
     """
 Ele não pisca.  
-Ele não hesita.  
-Ele não esquece.
+Ele não esquece.  
+Ele não se contradiz.
 
 Ele apenas calcula, compara, detecta, decide.
+
+É assim que a genialidade se perpetua.  
+É assim que nasce o futuro.
 """
 )
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-# -------------------------------------
-# SEÇÃO 6 — RESULTADOS
-# -------------------------------------
+# =====================================
+# SECTION 6 — RESULTADOS EM TEMPO REAL
+# =====================================
 st.markdown("## Resultados em tempo real")
 
 st.markdown(
     """
 A Phoenix Strategy entrega:
 
-- Sinais instantâneos  
-- Análises contínuas  
+- Sinais de entrada e saída com precisão  
+- Monitoramento contínuo  
+- Leitura de fluxo simplificada  
 - Insights algorítmicos  
-- Fluxo decodificado  
-- Probabilidade a favor  
+- Interpretação automatizada de price action  
+- Probabilidade estatística a favor do trader  
+
+Tudo isso com a mesma lógica que guiou os gênios —  
+mas com a rapidez que eles nunca tiveram.
 """
 )
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-# -------------------------------------
-# FINAL SECTION
-# -------------------------------------
-st.markdown("## Pronto para ver o algoritmo genial em ação?")
-st.markdown("### PHOENIX STRATEGY · O algoritmo genial.")
+# =====================================
+# SECTION 7 — O RENASCIMENTO DA ANÁLISE TÉCNICA
+# =====================================
+st.markdown("## O renascimento da análise técnica")
 
-st.button("ACESSAR A PLATAFORMA")
+st.markdown(
+    """
+A Phoenix Strategy não substitui os gênios.  
+Ela honra, amplifica e perpetua sua genialidade.
+"""
+)
+
+st.markdown(
+    """
+O que eles imaginaram,  
+nós transformamos em algoritmo.
+
+O que eles definiram,  
+nós levamos ao extremo.
+
+O que era teoria,  
+agora é execução instantânea.
+"""
+)
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+# =====================================
+# SECTION 8 — CHAMADA FINAL
+# =====================================
+st.markdown("## A genialidade humana nos trouxe até aqui.")
+st.markdown("### A precisão algorítmica nos levará além.")
+
+st.markdown("## PHOENIX STRATEGY")
+st.markdown("### O algoritmo genial.")
+
+st.button("ACESSAR AGORA")
+
 st.markdown("</div>", unsafe_allow_html=True)
