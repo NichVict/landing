@@ -220,8 +220,6 @@ st.markdown("## A genialidade dos gênios, ressignificada em algoritmo")
 # ---- GRID DE GÊNIOS (CARDS VERTICAIS) ----
 st.markdown("<div class='genius-grid'>", unsafe_allow_html=True)
 
-import streamlit as st
-from pathlib import Path
 
 st.markdown("<div class='genius-grid'>", unsafe_allow_html=True)
 
