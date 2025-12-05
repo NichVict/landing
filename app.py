@@ -502,6 +502,9 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # -----------------------------
 # SEÇÃO — WHITEPAPER TÉCNICO (PDF)
 # -----------------------------
+# -----------------------------
+# SEÇÃO — WHITEPAPER TÉCNICO (PDF)
+# -----------------------------
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 # Título em verde neon
@@ -519,16 +522,20 @@ os módulos analíticos e a filosofia que orienta todo o sistema.
 """
 )
 
-# Botão neon para download do PDF
-st.link_button(
-    "📥 Baixar Whitepaper Técnico (PDF)",
-    "Whitepaper_Phoenix.pdf"
-)
+# Download real do PDF
+with open("Whitepaper_Phoenix.pdf", "rb") as pdf_file:
+    st.download_button(
+        label="📥 Baixar Whitepaper Técnico (PDF)",
+        data=pdf_file,
+        file_name="Whitepaper_Phoenix.pdf",
+        mime="application/pdf",
+        key="download_whitepaper"
+    )
 
-# Opcional: expander para contexto adicional
+# Expander opcional
 with st.expander(
     "<span style='color:#00ff9a; font-weight:700;'>O que você encontrará no Whitepaper?</span>", 
-    expanded=False
+    unsafe_allow_html=True
 ):
     st.markdown(
         """
@@ -544,6 +551,7 @@ O Whitepaper apresenta uma visão aprofundada da tecnologia:
 Um material desenvolvido para **profissionais que precisam de precisão, transparência e entendimento técnico real** do mecanismo interno da plataforma.
         """
     )
+
 
 # SEÇÃO 8 — CHAMADA FINAL
 st.markdown("### Pronto para ver o algoritmo genial em ação?")
