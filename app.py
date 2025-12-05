@@ -415,7 +415,11 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # -----------------------------
 # NOVA SEÇÃO — SOBRE O CRIADOR
 # -----------------------------
-st.markdown("### Quem está por trás do Phoenix Strategy™?")
+st.markdown(
+    "<h4 style='color:#00ff9a; font-weight:700;'>Quem está por trás do Phoenix Strategy\u2122?</h4>",
+    unsafe_allow_html=True
+)
+
 
 col1, col2 = st.columns([0.35, 1])
 
