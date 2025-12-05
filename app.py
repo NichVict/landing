@@ -564,17 +564,7 @@ do mecanismo interno da plataforma.
         """
     )
 
-    # Botão de download
-    try:
-        with open("Whitepaper_Phoenix.pdf", "rb") as pdf:
-            st.download_button(
-                label="📄 Baixar Whitepaper",
-                data=pdf,
-                file_name="Whitepaper_Phoenix.pdf",
-                mime="application/pdf"
-            )
-    except FileNotFoundError:
-        st.warning("⚠️ O arquivo *Whitepaper_Phoenix.pdf* não foi encontrado na pasta do projeto.")
+
 
 
 
