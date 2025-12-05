@@ -137,7 +137,7 @@ def circular_image(path, size=120):
 # 4. LOGO DA PHOENIX (CORRETO E ALINHADO À ESQUERDA)
 # ============================================================
 try:
-    logo = Image.open("Phoenix_logo.png")
+    logo = Image.open("Logo_phoenix.png")
     st.markdown(
         """
         <div style="display:flex; align-items:center; justify-content:flex-start; margin:10px 0 25px 0;">
