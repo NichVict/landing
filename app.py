@@ -431,7 +431,7 @@ with col2:
     st.markdown(
         """
 Sou estrategista financeiro, certificado no Brasil e formado em programação e inteligência artificial na Europa.  
-Estudei com analistas CNPIs e especialistas em derivativos, e dediquei minha carreira a integrar tecnologia avançada com tomada de decisão no mercado financeiro.  
+Estudei com analistas CNPIs e especialistas em derivativos, e dedico minha carreira a integrar tecnologia avançada com tomada de decisão no mercado financeiro.  
 O Phoenix Strategy é o resultado dessa jornada: a união entre análise técnica clássica, matemática moderna e automação inteligente para entregar precisão, velocidade e simplicidade a todos os investidores.
 """
     )
