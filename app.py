@@ -77,13 +77,7 @@ p, li {
     line-height: 1.6;
 }
 
-/* SEÇÃO GÊNIOS – GRID */
-.genius-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    margin: 1.5rem 0 1.0rem 0;
-}
+
 
 /* CARD VERTICAL DOS GÊNIOS */
 .genius-card {
@@ -216,14 +210,6 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # SECTION 3 — A GENIALIDADE DOS GÊNIOS (CARDS + TEXTO ORIGINAL)
 # =====================================
 st.markdown("## A genialidade dos gênios, ressignificada em algoritmo")
-
-# ---- GRID DE GÊNIOS (CARDS VERTICAIS) ----
-st.markdown("<div class='genius-grid'>", unsafe_allow_html=True)
-
-
-st.markdown("<div class='genius-grid'>", unsafe_allow_html=True)
-
-
 
 
 
