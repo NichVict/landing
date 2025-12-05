@@ -412,6 +412,85 @@ O que era teoria,
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
+# -----------------------------
+# NOVA SEÇÃO — SOBRE O CRIADOR
+# -----------------------------
+st.markdown("### Quem está por trás do Phoenix Strategy™?")
+
+col1, col2 = st.columns([0.35, 1])
+
+with col1:
+    # mesma moldura neon dos gênios, usando sua foto eu.png
+    st.markdown(circular_image("eu.png", size=130), unsafe_allow_html=True)
+
+with col2:
+    st.markdown(
+        """
+Sou estrategista financeiro, certificado no Brasil e formado em programação e inteligência artificial na Europa.  
+Estudei com analistas CNPIs e especialistas em derivativos, e dediquei minha carreira a integrar tecnologia avançada com tomada de decisão no mercado financeiro.  
+O Phoenix Strategy é o resultado dessa jornada: a união entre análise técnica clássica, matemática moderna e automação inteligente para entregar precisão, velocidade e simplicidade a todos os investidores.
+"""
+    )
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+# -----------------------------
+# EXPANDER — JORNADA COMPLETA
+# -----------------------------
+with st.expander("Ler a jornada completa por trás do Phoenix Strategy™"):
+    st.markdown(
+        """
+O Phoenix Strategy™ não nasceu de um insight momentâneo — ele é o resultado direto de uma trajetória inteira dedicada à tecnologia, ao estudo da inteligência artificial e à precisão das análises financeiras.
+
+A semente do projeto começou a ser plantada ainda na Europa, durante meus estudos em programação, linguagens modernas como Python e cursos avançados de Inteligência Artificial. A combinação entre tecnologia, matemática aplicada e mercado financeiro sempre esteve presente no meu dia a dia. Ao retornar ao Brasil, após conquistar certificações relevantes, como a ANBIMA, intensifiquei meu trabalho como estrategista financeiro e aprofundei minha especialização em análise técnica, derivativos e comportamento de mercado.
+
+Foi durante minha última mentoria — talvez a mais transformadora de todas — ao lado de mestres, analistas CNPIs e especialistas em derivativos, que a percepção se tornou inevitável:  
+**mesmo com tanto conhecimento, o mercado sofre com um problema estrutural.**
+
+Profissionais e investidores usam quatro, cinco ou até mais plataformas para localizar dados, comparar informações, avaliar risco, analisar fluxo, volatilidade, tendências e possíveis entradas.  
+Esse processo é lento, fragmentado e, acima de tudo, vulnerável ao maior inimigo dos traders:
+
+### A emoção.
+
+O fator emocional atrapalha decisões, distorce leituras, antecipa saídas e atrasa entradas.  
+Já a complexidade operacional leva investidores — até os avançados — a perder oportunidades valiosas simplesmente porque **ninguém consegue analisar dezenas de ativos simultaneamente em tempo real**.
+
+Foi então que a ideia deixou de ser uma visão e se tornou uma necessidade:  
+criar um sistema capaz de integrar tudo isso.  
+Rápido. Preciso. Impessoal.  
+E baseado na genialidade dos mestres que criaram os pilares da análise moderna.
+
+Assim nasceu o **Projeto Fênix**:  
+um algoritmo proprietário que sintetiza os princípios de Charles Dow, Wyckoff, Welles Wilder, Al Brooks, Black & Scholes e outros gigantes — traduzidos em lógica computacional, monitoramento contínuo e análise automatizada de centenas de ativos simultaneamente.
+
+Um algoritmo que não pisca.  
+Não esquece.  
+Não se contradiz.  
+E nunca age por emoção.
+
+Mas o Phoenix Strategy™ não é apenas uma ferramenta de trade — ele é uma plataforma completa, criada para todos os níveis de investidores e profissionais:
+
+- **Leigos** que desejam entrar no mercado sem dominar análise gráfica ou indicadores complexos.  
+- **Intermediários** que já investem, mas não têm tempo para analisar gráficos diariamente.  
+- **Investidores avançados** que dominam análise técnica, mas não conseguem acompanhar centenas de ativos ao mesmo tempo.  
+- **Analistas CNPI, gestores e profissionais** que precisam de ferramentas sérias, auditáveis e com relatórios formais — incluindo relatórios consolidados, motores de busca de ações e opções, e documentação adequada para órgãos reguladores como CVM e APIMEC.
+
+O Phoenix Strategy™ transforma minutos em segundos, incerteza em precisão e subjetividade em cálculo.  
+Ele não substitui o analista — **ele o potencializa**.  
+Ele não remove os princípios — **ele os leva à perfeição matemática**.  
+Ele não elimina o trader — **ele devolve a ele vantagem estatística, precisão e clareza operacional.**
+
+O projeto Fênix é o renascimento da análise técnica em sua forma mais evoluída:  
+um sistema que honra a genialidade humana ao mesmo tempo em que elimina suas limitações.
+
+O futuro do trade não é humano ou algorítmico.  
+É **a união perfeita dos dois.**  
+E esse futuro começa agora.
+"""
+    )
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
 
 st.link_button(
     "ACESSAR AGORA",
