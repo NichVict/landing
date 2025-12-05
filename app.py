@@ -133,7 +133,7 @@ try:
         """,
         unsafe_allow_html=True
     )
-    st.image(logo, width=160)
+    st.image(logo, width=200)
     st.markdown("</div>", unsafe_allow_html=True)
 
 except:
@@ -142,18 +142,7 @@ except:
 
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 
-# -----------------------------
-# LOGO NO TOPO
-# -----------------------------
-if Path("Phoenix_logo.png").exists():
-    st.markdown(
-        """
-        <div style="text-align:center; margin-top:20px; margin-bottom:25px;">
-            <img src="Phoenix_logo.png" width="220">
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+
 
 
 # -----------------------------
