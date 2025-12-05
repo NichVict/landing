@@ -437,7 +437,10 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # -----------------------------
 # EXPANDER — JORNADA COMPLETA
 # -----------------------------
-with st.expander("<span style='color:#00ff9a; font-weight:700;'>Ler a jornada completa por trás do Phoenix Strategy™</span>", expanded=False):
+with st.expander(
+    "<span style='color:#00ff9a; font-weight:700;'>Ler a jornada completa por trás do Phoenix Strategy\u2122</span>",
+    expanded=False
+):
     
     st.markdown(
         """
@@ -487,10 +490,11 @@ with st.expander("<span style='color:#00ff9a; font-weight:700;'>Ler a jornada co
         O futuro do trade não é humano ou algorítmico.  
         É **a união perfeita dos dois.**  
         E esse futuro começa agora.
-        """
-    )
+        """,
+                unsafe_allow_html=True
+            )
 
-st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+        st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 # SEÇÃO 8 — CHAMADA FINAL
 st.markdown("### Pronto para ver o algoritmo genial em ação?")
