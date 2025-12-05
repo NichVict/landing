@@ -330,7 +330,10 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # ============================================================
 # 10. VELOCIDADE QUE HUMANOS NÃO ALCANÇAM (VERSÃO COMPLETA)
 # ============================================================
-st.markdown("### Velocidade que humanos não alcançam")
+st.markdown(
+    "<h3 style='color:#00ff9a; font-weight:700;'>Velocidade que humanos não alcançam</h3>",
+    unsafe_allow_html=True
+)
 
 st.markdown("""
 Enquanto um analista experiente consegue acompanhar **3, talvez 5 ativos**…  
@@ -353,10 +356,15 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # ============================================================
 # 11. RESULTADOS EM TEMPO REAL (VERSÃO COMPLETA)
 # ============================================================
-st.markdown("### Resultados em tempo real")
+st.markdown(
+    "<h3 style='color:#00ff9a; font-weight:700;'>Resultados em tempo real</h3>",
+    unsafe_allow_html=True
+)
 
-st.markdown("""
-A **Phoenix Strategy** entrega:
+st.markdown(
+    "<h3 style='color:#00ff9a; font-weight:700;'>Phoenix Estrategy entrega:</h3>",
+    unsafe_allow_html=True
+)
 
 - Sinais de entrada e saída com precisão  
 - Monitoramento contínuo  
@@ -375,7 +383,10 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # ============================================================
 # 12. O RENASCIMENTO DA ANÁLISE TÉCNICA (VERSÃO COMPLETA)
 # ============================================================
-st.markdown("### O renascimento da análise técnica")
+st.markdown(
+    "<h3 style='color:#00ff9a; font-weight:700;'>O renascimento da análise técnica</h3>",
+    unsafe_allow_html=True
+)
 
 st.markdown("""
 A **Phoenix Strategy** não substitui os gênios.  
