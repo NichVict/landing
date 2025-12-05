@@ -152,7 +152,7 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # -------------------------------------
 # SEÇÃO 3 — OS GÊNIOS
 # -------------------------------------
-st.markdown("## A genialidade dos gênios, ressignificada em algoritmo")
+st.markdown("## A genialidade dos mestres, ressignificada em algoritmo")
 
 cols = st.columns(2)
 
