@@ -1,145 +1,178 @@
 import streamlit as st
 
-# -------------------------------------
-# CONFIGURAÇÃO DA PÁGINA
-# -------------------------------------
+# -----------------------------
+# CONFIGURAÇÃO INICIAL DA PÁGINA
+# -----------------------------
 st.set_page_config(
-    page_title="Phoenix Strategy – O Algoritmo Genial",
+    page_title="Phoenix Strategy – O algoritmo genial",
     page_icon="🔥",
     layout="wide"
 )
 
-# -------------------------------------
-# CSS CUSTOMIZADO (NEON + CARDS GRADIENTE)
-# -------------------------------------
-Phoenix_CSS = """
+# -----------------------------
+# ESTILO CUSTOMIZADO (CSS)
+# -----------------------------
+CUSTOM_CSS = """
 <style>
-
+/* Fundo geral e fonte */
 body, .stApp {
-    background-color: #030303;
-    color: #D7D7D7;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #050608;
+    color: #f2f2f2;
+    font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
-/* TITULOS NEON */
-h1, h2, h3 {
-    color: #00FF7F;
+/* Títulos */
+h1, h2, h3, h4 {
+    color: #00ff9a; /* neon verde */
     font-weight: 700;
 }
 
-/* SUBTÍTULOS LARANJA */
-.orange-tag {
-    color: #FF7A1A;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.12em;
+/* Texto principal */
+p, li {
+    font-size: 1.02rem;
+    line-height: 1.6;
 }
 
-/* BLOCO CENTRAL */
+/* Contêiner centralizado */
 .main-block {
-    max-width: 950px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
-/* DIVISOR */
+/* Linha divisória customizada */
 .section-divider {
     border-bottom: 1px solid rgba(255,255,255,0.08);
     margin: 3rem 0 2rem 0;
 }
 
-/* BOTÃO NEON */
+/* Botão principal */
 .stButton>button {
-    background: linear-gradient(90deg, #00FF7F, #FF7A1A);
-    color: black;
+    background: linear-gradient(90deg, #00ff9a, #ff7a1a);
+    color: #050608;
     border-radius: 999px;
-    padding: 0.7rem 2rem;
     border: none;
+    padding: 0.6rem 1.8rem;
     font-weight: 700;
+    font-size: 1rem;
     cursor: pointer;
-    transition: 0.25s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
+
 .stButton>button:hover {
-    transform: scale(1.03);
-    filter: brightness(1.2);
+    filter: brightness(1.1);
+    transform: translateY(-1px);
 }
 
-/* IMG LOGO CENTRALIZADA */
-.logo-container {
-    text-align: center;
-    margin-bottom: 2rem;
+/* Subtítulo hero */
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #d7d7d7;
+    margin-bottom: 0.4rem;
 }
 
-/* CARDS ESTILO B (gradiente Phoenix) */
-.phoenix-card {
-    padding: 1.5rem;
+/* Slogan */
+.hero-slogan {
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ff7a1a;
+    margin-bottom: 1.7rem;
+}
+
+/* Caixa levemente destacada */
+.highlight-box {
     border-radius: 18px;
-    background: radial-gradient(circle at top left, rgba(255,120,20,0.40), rgba(0,255,140,0.07));
-    border: 1px solid rgba(0,255,120,0.25);
-    transition: 0.25s ease-in-out;
-}
-.phoenix-card:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 0 18px rgba(255,100,20,0.7);
-    border: 1px solid rgba(0,255,120,0.55);
+    border: 1px solid rgba(0,255,154,0.3);
+    background: radial-gradient(circle at top left, rgba(0,255,154,0.12), rgba(5,6,8,0.95));
+    padding: 1.5rem 1.6rem;
+    margin-top: 1.5rem;
 }
 
-/* LISTAS */
+/* Bullets customizados */
 ul {
-    padding-left: 1.3rem;
+    list-style-position: outside;
+    padding-left: 1.2rem;
 }
 
+/* Pequeno texto em destaque */
+.muted {
+    color: #b0b0b0;
+    font-size: 0.92rem;
+}
+
+/* Título menor laranja */
+.orange-tag {
+    color: #ff7a1a;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.2rem;
+}
 </style>
 """
-st.markdown(Phoenix_CSS, unsafe_allow_html=True)
 
-# -------------------------------------
-# LOGO
-# -------------------------------------
-st.markdown("<div class='logo-container'>", unsafe_allow_html=True)
-st.image("Phoenix_logo.png", width=240)
-st.markdown("</div>", unsafe_allow_html=True)
+st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 
-# -------------------------------------
-# HERO SECTION
-# -------------------------------------
+# -----------------------------
+# LOGO (OPCIONAL)
+# -----------------------------
+# Se você tiver o arquivo do logo na pasta (ex: "phoenix_logo.png"),
+# descomente a linha abaixo e ajuste o nome do arquivo:
+#
+# st.image("phoenix_logo.png", width=140)
+
+
+# -----------------------------
+# SEÇÃO 1 — HERO (CAPA)
+# -----------------------------
 st.markdown("<div class='main-block'>", unsafe_allow_html=True)
 
-st.markdown("<div class='orange-tag'>PLATAFORMA QUANT</div>", unsafe_allow_html=True)
-st.markdown("## PHOENIX STRATEGY")
-st.markdown("### O algoritmo genial.")
+col1, col2 = st.columns([1.3, 1])
 
-st.markdown(
-    """
-Um novo padrão nasceu.  
-A fusão perfeita entre a genialidade humana e a precisão algorítmica.  
-O poder de análise que antes era privilégio de poucos — agora renascido em tecnologia.
-"""
-)
+with col1:
+    st.markdown("<div class='orange-tag'>PLATAFORMA QUANT</div>", unsafe_allow_html=True)
+    st.markdown("## PHOENIX STRATEGY")
+    st.markdown("### O algoritmo genial.")
 
-if st.button("ACESSAR PLATAFORMA"):
     st.markdown(
-        "<meta http-equiv='refresh' content='0; url=https://phoenix-master.onrender.com/dashboard_geral'/>",
-        unsafe_allow_html=True
+        "<p class='hero-subtitle'>"
+        "Um novo padrão nasceu. A fusão perfeita entre a genialidade humana e a precisão algorítmica."
+        "</p>",
+        unsafe_allow_html=True,
     )
+
+    st.markdown(
+        "<p>O poder de análise que antes era privilégio de poucos — agora renascido em tecnologia.</p>",
+        unsafe_allow_html=True,
+    )
+
+    if st.button("ACESSAR PLATAFORMA"):
+        # Aqui no futuro você pode redirecionar para um link real
+        st.toast("Em breve: acesso à plataforma Phoenix Strategy. 🚀")
+
+with col2:
+    # Espaço reservado para o logo grande ou uma imagem do dashboard
+    st.empty()
+    # Exemplo: st.image("phoenix_dashboard_mock.png", use_column_width=True)
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-# -------------------------------------
-# SEÇÃO: O QUE É A PHOENIX STRATEGY
-# -------------------------------------
-st.markdown("## O que é a Phoenix Strategy?")
+# -----------------------------
+# SEÇÃO 2 — O QUE É O PHOENIX STRATEGY?
+# -----------------------------
+st.markdown("### O que é a Phoenix Strategy?")
 
 st.markdown(
     """
 A **Phoenix Strategy** é a evolução da análise técnica:  
-um sistema capaz de monitorar **300+ ativos a cada 5 minutos**, identificar padrões,  
-prever movimentos e entregar **o momento exato de entrada e saída** — em tempo real.
+um sistema capaz de monitorar mais de **300 ativos a cada 5 minutos**, encontrar padrões, 
+identificar movimentos, antecipar riscos e entregar **o momento exato de entrada e saída** — tudo em tempo real.
 """
 )
 
 st.markdown(
     """
-O que seria humanamente impossível, mesmo reunindo os maiores **gênios** da história,  
+O que seria humanamente impossível, mesmo reunindo os **maiores gênios da história**, 
 agora acontece em **segundos**.
 
 Porque quando a genialidade se transforma em algoritmo,  
@@ -149,114 +182,169 @@ Porque quando a genialidade se transforma em algoritmo,
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-# -------------------------------------
-# SEÇÃO 3 — OS GÊNIOS
-# -------------------------------------
-st.markdown("## A genialidade dos gênios, ressignificada em algoritmo")
-
-cols = st.columns(2)
-
-with cols[0]:
-    st.markdown(
-        """
-        - **Charles Dow**, o visionário da tendência  
-        - **Richard Wyckoff**, o decodificador do fluxo  
-        - **Welles Wilder**, o engenheiro matemático da volatilidade  
-        """
-    )
-
-with cols[1]:
-    st.markdown(
-        """
-        - **Al Brooks**, o refinamento máximo do price action  
-        - **Gênios que mudaram tudo**  
-        - E que agora renascem em forma algorítmica  
-        """
-    )
+# -----------------------------
+# SEÇÃO 3 — A GENIALIDADE DOS GÊNIOS
+# -----------------------------
+st.markdown("### A genialidade dos gênios, ressignificada em algoritmo")
 
 st.markdown(
     """
-A **Phoenix Strategy** honra esses gênios — e os leva além do possível.
+Os pilares da análise técnica nasceram das mentes de gigantes:
+
+- **Charles Dow**, o visionário da tendência.  
+- **Richard Wyckoff**, o decodificador do fluxo.  
+- **Welles Wilder**, o engenheiro que criou revoluções matemáticas.  
+- **Al Brooks**, a leitura mais refinada do price action moderno.
+"""
+)
+
+st.markdown(
+    """
+Cada um deles alterou para sempre a forma como entendemos o mercado.  
+Hoje, suas genialidades renascem em forma algorítmica.
+
+A **Phoenix Strategy** honra esses gênios —  
+e os leva além do que era possível.
 """
 )
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-# -------------------------------------
-# SEÇÃO 4 — O ALGORITMO GENIAL (CARDS)
-# -------------------------------------
-st.markdown("## O algoritmo genial™")
+# -----------------------------
+# SEÇÃO 4 — O ALGORITMO GENIAL™
+# -----------------------------
+st.markdown("### O algoritmo genial™")
 
-cards = st.columns(3)
-
-with cards[0]:
-    st.markdown("<div class='phoenix-card'>", unsafe_allow_html=True)
-    st.markdown("### Precisão")
-    st.markdown("Detecta padrões invisíveis ao olho humano.")
-    st.markdown("</div>", unsafe_allow_html=True)
-
-with cards[1]:
-    st.markdown("<div class='phoenix-card'>", unsafe_allow_html=True)
-    st.markdown("### Velocidade")
-    st.markdown("Analisa dezenas de variáveis em segundos.")
-    st.markdown("</div>", unsafe_allow_html=True)
-
-with cards[2]:
-    st.markdown("<div class='phoenix-card'>", unsafe_allow_html=True)
-    st.markdown("### Inteligência")
-    st.markdown("Atualiza e aprimora decisões a cada novo dado.")
-    st.markdown("</div>", unsafe_allow_html=True)
-
-st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
-
-# -------------------------------------
-# SEÇÃO 5 — VELOCIDADE
-# -------------------------------------
-st.markdown("## Velocidade que humanos não alcançam")
+st.markdown("O coração da plataforma.")
 
 st.markdown(
     """
-Enquanto um analista acompanha **3 a 5 ativos**,  
-o algoritmo monitora **300+ simultaneamente** — sem cansaço, sem erro.
+Um sistema projetado para:
+
+- Detectar padrões invisíveis ao olho humano  
+- Analisar dezenas de variáveis simultaneamente  
+- Traduzir movimentos do preço em decisões claras  
+- Criar probabilidades reais de vantagem  
+- Atualizar-se constantemente com novos dados  
+"""
+)
+
+st.markdown(
+    """
+Enquanto humanos analisam…  
+**o algoritmo já concluiu.**
+
+Enquanto humanos hesitam…  
+**o algoritmo já executou.**
+
+Isso é **precisão**.  
+Isso é **velocidade**.  
+Isso é **genialidade aplicada.**
+"""
+)
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+# -----------------------------
+# SEÇÃO 5 — VELOCIDADE QUE HUMANOS NÃO ALCANÇAM
+# -----------------------------
+st.markdown("### Velocidade que humanos não alcançam")
+
+st.markdown(
+    """
+Enquanto um analista experiente consegue acompanhar **3, talvez 5 ativos**…  
+o **algoritmo genial** monitora **300+ ao mesmo tempo**, sem erro, sem atraso, sem cansaço.
 """
 )
 
 st.markdown(
     """
 Ele não pisca.  
-Ele não hesita.  
-Ele não esquece.
+Ele não esquece.  
+Ele não se contradiz.
 
-Ele apenas calcula, compara, detecta, decide.
+Ele apenas **calcula, compara, detecta, decide.**
 """
 )
-
-st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
-
-# -------------------------------------
-# SEÇÃO 6 — RESULTADOS
-# -------------------------------------
-st.markdown("## Resultados em tempo real")
 
 st.markdown(
     """
-A Phoenix Strategy entrega:
-
-- Sinais instantâneos  
-- Análises contínuas  
-- Insights algorítmicos  
-- Fluxo decodificado  
-- Probabilidade a favor  
+É assim que a genialidade se perpetua.  
+É assim que nasce o futuro.
 """
 )
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-# -------------------------------------
-# FINAL SECTION
-# -------------------------------------
-st.markdown("## Pronto para ver o algoritmo genial em ação?")
-st.markdown("### PHOENIX STRATEGY · O algoritmo genial.")
+# -----------------------------
+# SEÇÃO 6 — RESULTADOS EM TEMPO REAL
+# -----------------------------
+st.markdown("### Resultados em tempo real")
 
-st.button("ACESSAR A PLATAFORMA")
+st.markdown(
+    """
+A **Phoenix Strategy** entrega:
+
+- Sinais de entrada e saída com precisão  
+- Monitoramento contínuo  
+- Leitura de fluxo simplificada  
+- Insights algorítmicos  
+- Interpretação automatizada de price action  
+- Probabilidade estatística a favor do trader  
+"""
+)
+
+st.markdown(
+    """
+Tudo isso com a mesma lógica que guiou os gênios —  
+mas com a **rapidez que eles nunca tiveram**.
+"""
+)
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+# -----------------------------
+# SEÇÃO 7 — O RENASCIMENTO DA ANÁLISE TÉCNICA
+# -----------------------------
+st.markdown("### O renascimento da análise técnica")
+
+st.markdown(
+    """
+A **Phoenix Strategy** não substitui os gênios.  
+Ela **honra, amplifica e perpetua** sua genialidade.
+"""
+)
+
+st.markdown(
+    """
+O que eles imaginaram,  
+**nós transformamos em algoritmo.**
+
+O que eles definiram,  
+**nós levamos ao extremo.**
+
+O que era teoria,  
+**agora é execução instantânea.**
+"""
+)
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+# -----------------------------
+# SEÇÃO 8 — CHAMADA FINAL
+# -----------------------------
+st.markdown("### Pronto para ver o algoritmo genial em ação?")
+
+st.markdown(
+    """
+A genialidade humana nos trouxe até aqui.  
+A precisão algorítmica nos levará além.
+"""
+)
+
+st.markdown("## PHOENIX STRATEGY")
+st.markdown("### O algoritmo genial.")
+
+st.button("ACESSAR AGORA")
+
 st.markdown("</div>", unsafe_allow_html=True)
