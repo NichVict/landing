@@ -10,7 +10,7 @@ st.set_page_config(
     page_icon="🔥",
     layout="wide"
 )
-
+st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 # -----------------------------
 # FUNÇÃO PARA IMAGEM CIRCULAR COM NEON
 # -----------------------------
@@ -72,25 +72,28 @@ p, li {
     margin: 3rem 0 2rem 0;
 }
 
-/* BOTÕES LINK — estilo Phoenix */
-a.st-link-button {
-    display: inline-block !important;
-    border: 2px solid #00ff9a !important;  /* contorno neon verde */
-    color: #ff7a1a !important;             /* texto laranja */
-    background: transparent !important;
-    padding: 0.55rem 1.7rem !important;
-    border-radius: 999px !important;
-    font-weight: 700 !important;
-    font-size: 1rem !important;
-    text-decoration: none !important;
-    transition: 0.18s ease-in-out !important;
+/* BOTÕES DE LINK (st.link_button) – CONTORNO VERDE + TEXTO LARANJA */
+a[kind="secondary"], a[kind="primary"] {
+    display: inline-block;
+    border: 2px solid #00ff9a;       /* contorno verde neon */
+    color: #ff7a1a;                  /* texto laranja */
+    background: transparent;
+    padding: 0.55rem 1.7rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.18s ease-in-out;
 }
 
-/* Hover neon */
-a.st-link-button:hover {
-    box-shadow: 0 0 12px #00ff9a !important;
-    transform: translateY(-2px) !important;
+/* HOVER NEON */
+a[kind="secondary"]:hover,
+a[kind="primary"]:hover {
+    box-shadow: 0 0 12px #00ff9a;
+    transform: translateY(-2px);
 }
+
 
 
 /* Botão principal */
