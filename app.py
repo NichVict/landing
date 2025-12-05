@@ -297,7 +297,10 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # ============================================================
 # 9. O ALGORITMO GENIAL™ (VERSÃO COMPLETA)
 # ============================================================
-st.markdown("### O algoritmo genial™")
+st.markdown(
+    "<h3 style='color:#00ff9a; font-weight:700;'>O algoritmo genial™</h3>",
+    unsafe_allow_html=True
+)
 
 st.markdown("""
 O coração da plataforma.
