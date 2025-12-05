@@ -362,10 +362,8 @@ st.markdown(
 )
 
 st.markdown(
-    "<h3 style='color:#00ff9a; font-weight:700;'>A Phoenix Strategy™ entrega:</h3>",
-    unsafe_allow_html=True
-)
-
+    """
+A **Phoenix Strategy™ entrega:**
 
 - Sinais de entrada e saída com precisão  
 - Monitoramento contínuo  
@@ -373,6 +371,9 @@ st.markdown(
 - Insights algorítmicos  
 - Interpretação automatizada de price action  
 - Probabilidade estatística a favor do trader  
+"""
+)
+
 
 st.markdown(
     """
