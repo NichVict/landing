@@ -1,6 +1,7 @@
 import streamlit as st
 from pathlib import Path
 import base64
+
 # -------------------------------------
 # CONFIG DA PÁGINA
 # -------------------------------------
@@ -77,8 +78,6 @@ p, li {
     line-height: 1.6;
 }
 
-
-
 /* CARD VERTICAL DOS GÊNIOS */
 .genius-card {
     background: radial-gradient(circle at top, rgba(255,122,26,0.40), rgba(0,0,0,0.92));
@@ -92,18 +91,6 @@ p, li {
     transform: translateY(-4px) scale(1.02);
     box-shadow: 0 0 20px rgba(255,122,26,0.65);
     border-color: rgba(0,255,154,0.70);
-}
-
-/* IMAGEM CIRCULAR P&B COM CONTORNO NEON */
-.genius-img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    filter: grayscale(100%);
-    border: 2px solid #00ff9a;
-    box-shadow: 0 0 12px rgba(0,255,154,0.6);
-    margin-bottom: 0.7rem;
 }
 
 /* NOME DO GÊNIO */
@@ -129,11 +116,6 @@ p, li {
     color: #d7d7d7;
 }
 
-/* UL */
-ul {
-    padding-left: 1.3rem;
-}
-
 /* HERO SUB */
 .hero-sub {
     font-size: 1.05rem;
@@ -152,6 +134,7 @@ st.markdown("<div class='logo-container'>", unsafe_allow_html=True)
 if Path("Phoenix_logo.png").exists():
     st.image("Phoenix_logo.png", width=260)
 st.markdown("</div>", unsafe_allow_html=True)
+
 
 # -------------------------------------
 # INÍCIO BLOCO PRINCIPAL
@@ -207,11 +190,9 @@ Porque quando a genialidade se transforma em algoritmo,
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 # =====================================
-# SECTION 3 — A GENIALIDADE DOS GÊNIOS (CARDS + TEXTO ORIGINAL)
+# SECTION 3 — A GENIALIDADE DOS GÊNIOS
 # =====================================
 st.markdown("## A genialidade dos gênios, ressignificada em algoritmo")
-
-
 
 
 # Função da imagem circular com moldura neon
@@ -245,70 +226,51 @@ def circular_image(image_path, size=110):
     return html
 
 
-# Função para renderizar cada card
+# Função dos cards
 def render_genius_card(image_path, name, role, text):
     st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
-
-    # foto circular
     st.markdown(circular_image(image_path), unsafe_allow_html=True)
-
-    # nome / subtítulo / texto
     st.markdown(f"<div class='genius-name'>{name}</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='genius-role'>{role}</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='genius-text'>{text}</div>", unsafe_allow_html=True)
-
     st.markdown("</div>", unsafe_allow_html=True)
 
 
-# ===== RENDER DOS CARDS (apenas 5, sem card extra) =====
-
+# ---- 3 × 2 CARDS, SEM GRIDS FANTASMAS ----
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    render_genius_card(
-        "charles_dow_bw.png",
-        "CHARLES DOW",
-        "Pai da tendência moderna",
-        "Criou os princípios estruturais de tendência, fases e comportamento direcional do mercado."
-    )
+    render_genius_card("charles_dow_bw.png", "CHARLES DOW",
+                       "Pai da tendência moderna",
+                       "Criou os princípios estruturais de tendência, fases e comportamento direcional do mercado.")
 
 with col2:
-    render_genius_card(
-        "richard_wyckoff_bw.png",
-        "RICHARD WYCKOFF",
-        "Arquitetura do fluxo",
-        "Decodificou oferta e demanda, atuação institucional e fases de acumulação e distribuição."
-    )
+    render_genius_card("richard_wyckoff_bw.png", "RICHARD WYCKOFF",
+                       "Arquitetura do fluxo",
+                       "Decodificou oferta e demanda, atuação institucional e fases de acumulação e distribuição.")
 
 with col3:
-    render_genius_card(
-        "welles_wilder_bw.png",
-        "WELLES WILDER",
-        "O mestre dos indicadores",
-        "Criou RSI, ATR, ADX e Parabolic SAR — a espinha dorsal matemática da análise técnica moderna."
-    )
+    render_genius_card("welles_wilder_bw.png", "WELLES WILDER",
+                       "O mestre dos indicadores",
+                       "Criou RSI, ATR, ADX e Parabolic SAR — a espinha dorsal matemática da análise técnica moderna.")
 
 
 col4, col5 = st.columns(2)
 
 with col4:
-    render_genius_card(
-        "al_brooks_bw.png",
-        "AL BROOKS",
-        "Price action refinado",
-        "Transformou candles em linguagem, com leitura microestrutural e direcional do preço."
-    )
+    render_genius_card("al_brooks_bw.png", "AL BROOKS",
+                       "Price action refinado",
+                       "Transformou candles em linguagem, com leitura microestrutural e direcional do preço.")
 
 with col5:
-    render_genius_card(
-        "black_scholes_bw.png",
-        "BLACK & SCHOLES",
-        "Gênios das opções",
-        "Criadores do modelo que originou as Gregas, a volatilidade implícita e a base da precificação moderna de opções."
-    )
+    render_genius_card("black_scholes_bw.png", "BLACK & SCHOLES",
+                       "Gênios das opções",
+                       "Criadores do modelo que originou as Gregas, a volatilidade implícita e a base da precificação moderna de opções.")
 
 
-# ---- TEXTO ORIGINAL DA SECTION 3 (COPY INTACTA) ----
+# -------------------------------------
+# TEXTO COMPLEMENTAR DA SEÇÃO
+# -------------------------------------
 st.markdown(
     """
 Os pilares da análise técnica nasceram das mentes de gigantes:
@@ -328,20 +290,22 @@ e os leva além do que era possível.
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
+
 # =====================================
 # SECTION 4 — O ALGORITMO GENIAL™
 # =====================================
 st.markdown("## O algoritmo genial™")
 
-st.markdown("O coração da plataforma.")
-
 st.markdown(
     """
+O coração da plataforma.
+
 Um sistema projetado para:
 
 - Detectar padrões invisíveis ao olho humano  
 - Analisar dezenas de variáveis simultaneamente  
-- Traduzir movimentos do preço em decisões claras  
+- Traduzir movimentos do preço
+    em decisões claras  
 - Criar probabilidades reais de vantagem  
 - Atualizar-se constantemente com novos dados  
 """
@@ -360,6 +324,7 @@ Isso é precisão. Isso é velocidade. Isso é genialidade aplicada.
 )
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
 
 # =====================================
 # SECTION 5 — VELOCIDADE QUE HUMANOS NÃO ALCANÇAM
@@ -388,6 +353,7 @@ Ele apenas calcula, compara, detecta, decide.
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
+
 # =====================================
 # SECTION 6 — RESULTADOS EM TEMPO REAL
 # =====================================
@@ -410,6 +376,7 @@ mas com a rapidez que eles nunca tiveram.
 )
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
 
 # =====================================
 # SECTION 7 — O RENASCIMENTO DA ANÁLISE TÉCNICA
@@ -437,6 +404,7 @@ agora é execução instantânea.
 )
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
 
 # =====================================
 # SECTION 8 — CHAMADA FINAL
