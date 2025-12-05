@@ -532,7 +532,9 @@ with open("Whitepaper_Phoenix.pdf", "rb") as pdf_file:
         key="download_whitepaper"
     )
 
-# Expander opcional
+# ==============================
+# EXPANDER — WHITEPAPER
+# ==============================
 with st.expander(
     "<span style='color:#00ff9a; font-weight:700;'>O que você encontrará no Whitepaper?</span>", 
     unsafe_allow_html=True
@@ -552,8 +554,24 @@ Um material desenvolvido para **profissionais que precisam de precisão, transpa
         """
     )
 
+    # Botão de download — funciona perfeitamente
+    try:
+        with open("Whitepaper_Phoenix.pdf", "rb") as pdf:
+            st.download_button(
+                label="📄 Baixar Whitepaper",
+                data=pdf,
+                file_name="Whitepaper_Phoenix.pdf",
+                mime="application/pdf"
+            )
+    except FileNotFoundError:
+        st.warning("⚠️ O arquivo *Whitepaper_Phoenix.pdf* não foi encontrado na pasta do projeto.")
 
+
+# ==============================
 # SEÇÃO 8 — CHAMADA FINAL
+# ==============================
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
 st.markdown("### Pronto para ver o algoritmo genial em ação?")
 
 st.link_button(
