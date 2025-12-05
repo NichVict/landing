@@ -164,6 +164,10 @@ with col1:
     #st.markdown("<div class='orange-tag'>PLATAFORMA QUANT</div>", unsafe_allow_html=True)
     st.markdown("<h2 style='color:#00ff9a;'>PHOENIX STRATEGY</h2>", unsafe_allow_html=True)
     st.markdown("<div class='orange-tag' style='color:#ff5a1f;'>O ALGORITMO GENIAL</div>", unsafe_allow_html=True)
+    st.markdown(
+        "<div style='color:#ff5a1f; font-size:1.45rem; font-weight:800; letter-spacing:0.06em; text-transform:uppercase;'>O ALGORITMO GENIAL</div>",
+        unsafe_allow_html=True
+    )
 
     st.markdown("<p class='hero-subtitle'>Um novo padrão nasceu. A fusão perfeita entre a genialidade humana e a precisão algorítmica.</p>", unsafe_allow_html=True)
     st.markdown("<p>O poder de análise que antes era privilégio de poucos — agora renascido em tecnologia.</p>", unsafe_allow_html=True)
