@@ -457,7 +457,11 @@ Foi durante minha última mentoria — talvez a mais transformadora de todas —
 Profissionais e investidores usam quatro, cinco ou até mais plataformas para localizar dados, comparar informações, avaliar risco, analisar fluxo, volatilidade, tendências e possíveis entradas.  
 Esse processo é lento, fragmentado e, acima de tudo, vulnerável ao maior inimigo dos traders:
 
-### A emoção.
+st.markdown(
+    "<h3 style='color:#00ff9a; font-weight:700;'>A emoção.</h3>",
+    unsafe_allow_html=True
+)
+
 
 O fator emocional atrapalha decisões, distorce leituras, antecipa saídas e atrasa entradas.  
 Já a complexidade operacional leva investidores — até os avançados — a perder oportunidades valiosas simplesmente porque **ninguém consegue analisar dezenas de ativos simultaneamente em tempo real**.
