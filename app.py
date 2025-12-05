@@ -281,23 +281,103 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # ============================================================
 # 9. ALGORITMO GENIAL™
 # ============================================================
+# 9. O ALGORITMO GENIAL™ (VERSÃO COMPLETA)
+# ============================================================
 st.markdown("### O algoritmo genial™")
+
 st.markdown("""
+O coração da plataforma.
+
+Um sistema projetado para:
+
+- Detectar padrões invisíveis ao olho humano  
+- Analisar dezenas de variáveis simultaneamente  
+- Traduzir movimentos do preço em decisões claras  
+- Criar probabilidades reais de vantagem  
+- Atualizar-se constantemente com novos dados  
+
 Enquanto humanos analisam…  
 **o algoritmo já concluiu.**
 
 Enquanto humanos hesitam…  
 **o algoritmo já executou.**
+
+Isso é **precisão**.  
+Isso é **velocidade**.  
+Isso é **genialidade aplicada.**
 """)
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
+
 # ============================================================
-# 10. CHAMADA FINAL
+# 10. VELOCIDADE QUE HUMANOS NÃO ALCANÇAM (VERSÃO COMPLETA)
 # ============================================================
-st.markdown("### Pronto para ver o algoritmo genial em ação?")
-st.markdown("## PHOENIX STRATEGY")
-st.markdown("### O algoritmo genial.")
+st.markdown("### Velocidade que humanos não alcançam")
+
+st.markdown("""
+Enquanto um analista experiente consegue acompanhar **3, talvez 5 ativos**…  
+o **algoritmo genial** monitora **300+ ao mesmo tempo**, sem erro, sem atraso, sem cansaço.
+
+Ele não pisca.  
+Ele não esquece.  
+Ele não se contradiz.  
+Ele não se emociona.
+
+Ele apenas **calcula, compara, detecta, decide**.
+
+É assim que a genialidade se perpetua.  
+É assim que nasce o futuro.
+""")
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+
+# ============================================================
+# 11. RESULTADOS EM TEMPO REAL (VERSÃO COMPLETA)
+# ============================================================
+st.markdown("### Resultados em tempo real")
+
+st.markdown("""
+A **Phoenix Strategy** entrega:
+
+- Sinais de entrada e saída com precisão  
+- Monitoramento contínuo  
+- Leitura de fluxo simplificada  
+- Insights algorítmicos  
+- Interpretação automatizada de price action  
+- Probabilidade estatística a favor do trader  
+
+Tudo isso com a mesma lógica que guiou os gênios —  
+mas com a **rapidez que eles nunca tiveram**.
+""")
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+
+# ============================================================
+# 12. O RENASCIMENTO DA ANÁLISE TÉCNICA (VERSÃO COMPLETA)
+# ============================================================
+st.markdown("### O renascimento da análise técnica")
+
+st.markdown("""
+A **Phoenix Strategy** não substitui os gênios.  
+Ela **honra, amplifica e perpetua** sua genialidade.
+""")
+
+st.markdown("""
+O que eles imaginaram,  
+**nós transformamos em algoritmo.**
+
+O que eles definiram,  
+**nós levamos ao extremo.**
+
+O que era teoria,  
+**agora é execução instantânea.**
+""")
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
 
 st.link_button(
     "ACESSAR AGORA",
