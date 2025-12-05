@@ -162,10 +162,19 @@ col1, col2 = st.columns([1.3, 1])
 
 with col1:
     #st.markdown("<div class='orange-tag'>PLATAFORMA QUANT</div>", unsafe_allow_html=True)
-    st.markdown("<h2 style='color:#00ff9a;'>PHOENIX STRATEGY</h2>", unsafe_allow_html=True)
-    st.markdown("<div class='orange-tag' style='color:#ff5a1f;'>O ALGORITMO GENIAL</div>", unsafe_allow_html=True)
+    st.markdown("<h2 style='color:#00ff9a;'>PHOENIX STRATEGY</h2>", unsafe_allow_html=True)    
     st.markdown(
         "<div style='color:#ff5a1f; font-size:1.45rem; font-weight:800; letter-spacing:0.06em; text-transform:uppercase;'>O ALGORITMO GENIAL</div>",
+        unsafe_allow_html=True
+    )
+    # LINHA DIVISÓRIA
+    st.markdown(
+        """
+        <div style='
+            border-bottom:1px solid rgba(255,255,255,0.08);
+            margin: 1.5rem 0 2rem 0;
+        '></div>
+        """,
         unsafe_allow_html=True
     )
 
