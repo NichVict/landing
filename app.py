@@ -535,10 +535,19 @@ with open("Whitepaper_Phoenix.pdf", "rb") as pdf_file:
 # ==============================
 # EXPANDER — WHITEPAPER
 # ==============================
-with st.expander(
-    "<span style='color:#00ff9a; font-weight:700;'>O que você encontrará no Whitepaper?</span>", 
-    unsafe_allow_html=True
-):
+# ==============================
+# EXPANDER — WHITEPAPER
+# ==============================
+
+exp = st.expander("O que você encontrará no Whitepaper?", expanded=False)
+
+with exp:
+    # Título estilizado dentro do expander (aqui pode HTML)
+    st.markdown(
+        "<h4 style='color:#00ff9a; font-weight:700; margin-top:0;'>O que você encontrará no Whitepaper?</h4>",
+        unsafe_allow_html=True
+    )
+
     st.markdown(
         """
 O Whitepaper apresenta uma visão aprofundada da tecnologia:
@@ -550,11 +559,12 @@ O Whitepaper apresenta uma visão aprofundada da tecnologia:
 - Modelos de volatilidade, risco e simulação  
 - Fundamentos que inspiraram o Phoenix Strategy™  
 
-Um material desenvolvido para **profissionais que precisam de precisão, transparência e entendimento técnico real** do mecanismo interno da plataforma.
+Um material desenvolvido para **profissionais que precisam de precisão, transparência e entendimento técnico real**
+do mecanismo interno da plataforma.
         """
     )
 
-    # Botão de download — funciona perfeitamente
+    # Botão de download
     try:
         with open("Whitepaper_Phoenix.pdf", "rb") as pdf:
             st.download_button(
@@ -565,6 +575,7 @@ Um material desenvolvido para **profissionais que precisam de precisão, transpa
             )
     except FileNotFoundError:
         st.warning("⚠️ O arquivo *Whitepaper_Phoenix.pdf* não foi encontrado na pasta do projeto.")
+
 
 
 # ==============================
