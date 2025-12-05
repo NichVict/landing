@@ -499,6 +499,51 @@ E esse futuro começa agora.
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 
+# -----------------------------
+# SEÇÃO — WHITEPAPER TÉCNICO (PDF)
+# -----------------------------
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+# Título em verde neon
+st.markdown(
+    "<h3 style='color:#00ff9a; font-weight:700;'>Whitepaper Técnico – Phoenix Strategy™</h3>",
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    """
+Para profissionais, analistas, engenheiros quantitativos e investidores que desejam compreender a 
+estrutura lógica, matemática e computacional do Phoenix Strategy™, disponibilizamos o 
+**Whitepaper Oficial** — um documento técnico que descreve a arquitetura, os modelos estatísticos, 
+os módulos analíticos e a filosofia que orienta todo o sistema.
+"""
+)
+
+# Botão neon para download do PDF
+st.link_button(
+    "📥 Baixar Whitepaper Técnico (PDF)",
+    "Whitepaper_Phoenix.pdf"
+)
+
+# Opcional: expander para contexto adicional
+with st.expander(
+    "<span style='color:#00ff9a; font-weight:700;'>O que você encontrará no Whitepaper?</span>", 
+    expanded=False
+):
+    st.markdown(
+        """
+O Whitepaper apresenta uma visão aprofundada da tecnologia:
+
+- Arquitetura central do algoritmo  
+- Formulações matemáticas e bases estatísticas  
+- Mecanismos de monitoramento de ativos  
+- Sistemas de priorização e pesos dinâmicos  
+- Modelos de volatilidade, risco e simulação  
+- Fundamentos que inspiraram o Phoenix Strategy™  
+
+Um material desenvolvido para **profissionais que precisam de precisão, transparência e entendimento técnico real** do mecanismo interno da plataforma.
+        """
+    )
 
 # SEÇÃO 8 — CHAMADA FINAL
 st.markdown("### Pronto para ver o algoritmo genial em ação?")
