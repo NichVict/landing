@@ -344,8 +344,9 @@ o **algoritmo genial** monitora **300+ ao mesmo tempo**, sem erro, sem atraso, s
 st.markdown(
     """
 Ele não pisca.  
-Ele não esquece.  
+Ele não esquece. 
 Ele não se contradiz.
+Ele não se emociona.
 
 Ele apenas **calcula, compara, detecta, decide.**
 """
