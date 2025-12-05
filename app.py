@@ -191,41 +191,107 @@ Porque quando a genialidade se transforma em algoritmo,
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 # -----------------------------
-# SEÇÃO 3 — OS GÊNIOS (AGORA COM IMAGENS!)
 # -----------------------------
-st.markdown("### A genialidade dos mestres, ressignificada em algoritmo")
+# SEÇÃO 3 — A GENIALIDADE DOS GÊNIOS
+# -----------------------------
+st.markdown("### A genialidade dos gênios, ressignificada em algoritmo")
 
-# CHARLES DOW
-st.markdown(circular_image("charles_dow_bw.png"), unsafe_allow_html=True)
-st.markdown("#### **Charles Dow** – Pai da tendência moderna")
-st.markdown("Criou os princípios estruturais de tendência, fases e comportamento direcional do mercado.")
+# ====== CHARLES DOW ======
+col1, col2 = st.columns([0.35, 1])
 
-# WYCKOFF
-st.markdown(circular_image("richard_wyckoff_bw.png"), unsafe_allow_html=True)
-st.markdown("#### **Richard Wyckoff** – Arquitetura do fluxo")
-st.markdown("Decodificou oferta e demanda, atuação institucional e fases de acumulação/distribuição.")
+with col1:
+    st.markdown(circular_image("charles_dow_bw.png"), unsafe_allow_html=True)
 
-# WELLES WILDER
-st.markdown(circular_image("welles_wilder_bw.png"), unsafe_allow_html=True)
-st.markdown("#### **Welles Wilder** – O mestre dos indicadores")
-st.markdown("Criou RSI, ATR, ADX e Parabolic SAR — a base matemática moderna da análise técnica.")
+with col2:
+    st.markdown("#### 🟩 **Charles Dow — O arquiteto da tendência moderna**")
+    st.markdown("""
+Charles Dow não apenas observou o mercado — ele **decifrou sua estrutura**.
+Ele organizou o comportamento dos preços em **tendências, fases e ciclos**, criando a base 
+da leitura direcional moderna.
 
-# AL BROOKS
-st.markdown(circular_image("al_brooks_bw.png"), unsafe_allow_html=True)
-st.markdown("#### **Al Brooks** – Price action refinado")
-st.markdown("Transformou candles em linguagem microestrutural e direcional.")
-
-# BLACK & SCHOLES
-st.markdown(circular_image("black_scholes_bw.png"), unsafe_allow_html=True)
-st.markdown("#### **Black & Scholes** – Gênios das opções")
-st.markdown("Criaram o modelo das Gregas, volatilidade implícita e a base da precificação moderna de opções.")
+**No Phoenix Strategy:**  
+Suas leis foram traduzidas para lógica algorítmica, permitindo que o sistema identifique automaticamente
+tendências primárias, secundárias e microtendências — em tempo real.
+""")
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-# -----------------------------
-# CONTINUAÇÃO DAS SUAS SEÇÕES (SEM ALTERAR)
-# -----------------------------
-# ... (restante igual)
+# ====== WYCKOFF ======
+col1, col2 = st.columns([0.35, 1])
+
+with col1:
+    st.markdown(circular_image("richard_wyckoff_bw.png"), unsafe_allow_html=True)
+
+with col2:
+    st.markdown("#### 🟩 **Richard Wyckoff — A mente que enxergou o fluxo**")
+    st.markdown("""
+Wyckoff revelou a atuação institucional como ninguém: **acumulação, manipulação e distribuição**.  
+Criou o conceito de causa–efeito e mostrou que o volume é uma linguagem.
+
+**No Phoenix Strategy:**  
+Os ciclos institucionais se tornam **detectáveis** — absorções, esforço vs. resultado,
+falsos rompimentos e zonas de equilíbrio viram variáveis matemáticas monitoradas 24h por dia.
+""")
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+# ====== WELLES WILDER ======
+col1, col2 = st.columns([0.35, 1])
+
+with col1:
+    st.markdown(circular_image("welles_wilder_bw.png"), unsafe_allow_html=True)
+
+with col2:
+    st.markdown("#### 🟩 **Welles Wilder — O engenheiro da matemática aplicada ao mercado**")
+    st.markdown("""
+Criador de pilares como **RSI, ATR, ADX e Parabolic SAR**, Wilder transformou volatilidade,
+força e aceleração em fórmulas.
+
+**No Phoenix Strategy:**  
+Esses cálculos são combinados, recalculados e otimizados milhares de vezes por dia para gerar
+leitura probabilística antecipativa — não apenas indicadores, mas **antecipação algorítmica**.
+""")
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+# ====== AL BROOKS ======
+col1, col2 = st.columns([0.35, 1])
+
+with col1:
+    st.markdown(circular_image("al_brooks_bw.png"), unsafe_allow_html=True)
+
+with col2:
+    st.markdown("#### 🟩 **Al Brooks — O cirurgião do price action**")
+    st.markdown("""
+Brooks transformou candles em **informação microestrutural**, enxergando padrões, falhas,
+intenção e contexto.
+
+**No Phoenix Strategy:**  
+A subjetividade virou matemática:  
+rejeições, micro-padrões, continuidade e reversão são convertidos em lógica computacional
+capaz de enxergar o micro do mercado sem viés e sem cansaço.
+""")
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+# ====== BLACK & SCHOLES ======
+col1, col2 = st.columns([0.35, 1])
+
+with col1:
+    st.markdown(circular_image("black_scholes_bw.png"), unsafe_allow_html=True)
+
+with col2:
+    st.markdown("#### 🟩 **Black & Scholes — Os gênios das opções e do risco matemático**")
+    st.markdown("""
+Criaram a equação que mudou o mundo financeiro: **as Gregas**, a volatilidade implícita e
+a base da precificação contemporânea.
+
+**No Phoenix Strategy:**  
+Cálculos de IV, delta, gama, vega e probabilidade são atualizados em ciclos de segundos,
+oferecendo análise e tomada de decisão tática com precisão absoluta.
+""")
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 
 # -----------------------------
