@@ -374,9 +374,13 @@ st.markdown(
 - Interpretação automatizada de price action  
 - Probabilidade estatística a favor do trader  
 
-Tudo isso com a mesma lógica que guiou os gênios —  
+st.markdown(
+    """
+Tudo isso com a mesma lógica que guiou os gênios —
 mas com a **rapidez que eles nunca tiveram**.
-""")
+"""
+)
+
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
