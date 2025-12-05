@@ -72,6 +72,27 @@ p, li {
     margin: 3rem 0 2rem 0;
 }
 
+/* BOTÕES LINK — estilo Phoenix */
+a.st-link-button {
+    display: inline-block !important;
+    border: 2px solid #00ff9a !important;  /* contorno neon verde */
+    color: #ff7a1a !important;             /* texto laranja */
+    background: transparent !important;
+    padding: 0.55rem 1.7rem !important;
+    border-radius: 999px !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    text-decoration: none !important;
+    transition: 0.18s ease-in-out !important;
+}
+
+/* Hover neon */
+a.st-link-button:hover {
+    box-shadow: 0 0 12px #00ff9a !important;
+    transform: translateY(-2px) !important;
+}
+
+
 /* Botão principal */
 .stButton>button {
     background: linear-gradient(90deg, #00ff9a, #ff7a1a);
