@@ -1,6 +1,6 @@
 import streamlit as st
 from pathlib import Path
-
+import base64
 # -------------------------------------
 # CONFIG DA PÁGINA
 # -------------------------------------
@@ -225,28 +225,57 @@ from pathlib import Path
 
 st.markdown("<div class='genius-grid'>", unsafe_allow_html=True)
 
+import base64
+
+def circular_image(image_path, size=110):
+    if Path(image_path).exists():
+        with open(image_path, "rb") as img_file:
+            img_bytes = img_file.read()
+            img_b64 = base64.b64encode(img_bytes).decode()
+    else:
+        return ""
+
+    html = f"""
+    <div style="
+        width: {size}px;
+        height: {size}px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid #00ff9a;
+        box-shadow: 0 0 10px rgba(0,255,154,0.7);
+        margin: 0 auto 0.6rem auto;
+    ">
+        <img src="data:image/png;base64,{img_b64}" 
+             style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: grayscale(100%);
+             ">
+    </div>
+    """
+    return html
+
+
+# -------------------------------
+# RENDERIZAÇÃO DOS CARDS
+# -------------------------------
+
 def render_genius_card(image_path, name, role, text):
     st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
 
-    # FOTO EM CIMA - CÍRCULO NEON
-    if Path(image_path).exists():
-        st.image(image_path, width=110, output_format="PNG")
-    else:
-        st.image("https://via.placeholder.com/110?text=Foto", width=110)
+    # FOTO CIRCULAR NEON
+    st.markdown(circular_image(image_path), unsafe_allow_html=True)
 
-    # NOME
+    # TITULOS
     st.markdown(f"<div class='genius-name'>{name}</div>", unsafe_allow_html=True)
-
-    # SUBTÍTULO
     st.markdown(f"<div class='genius-role'>{role}</div>", unsafe_allow_html=True)
-
-    # TEXTO
     st.markdown(f"<div class='genius-text'>{text}</div>", unsafe_allow_html=True)
 
     st.markdown("</div>", unsafe_allow_html=True)
 
 
-# --- LINHA 1 ---
+# LINHA 1
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -273,7 +302,7 @@ with col3:
         "Criou RSI, ATR, ADX e Parabolic SAR — a espinha dorsal matemática da análise técnica moderna."
     )
 
-# --- LINHA 2 ---
+# LINHA 2
 col4, col5, col6 = st.columns(3)
 
 with col4:
@@ -300,7 +329,6 @@ with col6:
         "A fusão da genialidade desses nomes em um único sistema capaz de monitorar 300+ ativos em tempo real."
     )
 
-st.markdown("</div>", unsafe_allow_html=True)
 
 # ---- TEXTO ORIGINAL DA SECTION 3 (COPY INTACTA) ----
 st.markdown(
