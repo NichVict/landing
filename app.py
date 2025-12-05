@@ -362,9 +362,10 @@ st.markdown(
 )
 
 st.markdown(
-    "<h3 style='color:#00ff9a; font-weight:700;'>Phoenix Estrategy entrega:</h3>",
+    "<h3 style='color:#00ff9a; font-weight:700;'>A Phoenix Strategy™ entrega:</h3>",
     unsafe_allow_html=True
 )
+
 
 - Sinais de entrada e saída com precisão  
 - Monitoramento contínuo  
