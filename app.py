@@ -433,6 +433,10 @@ A precisão algorítmica nos levará além.
 st.markdown("## PHOENIX STRATEGY")
 st.markdown("### O algoritmo genial.")
 
-st.button("ACESSAR AGORA")
+st.link_button(
+    "ACESSAR AGORA",
+    "https://phoenix-master.onrender.com/dashboard_geral"
+)
+
 
 st.markdown("</div>", unsafe_allow_html=True)
