@@ -491,6 +491,8 @@ E esse futuro começa agora.
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
+# SEÇÃO 8 — CHAMADA FINAL
+st.markdown("### Pronto para ver o algoritmo genial em ação?")
 
 st.link_button(
     "ACESSAR AGORA",
