@@ -207,7 +207,7 @@ st.markdown("### A genialidade dos mestres, ressignificada em algoritmo")
 col1, col2 = st.columns([0.35, 1])
 with col1: st.markdown(circular_image("charles_dow_bw.png"), unsafe_allow_html=True)
 with col2:
-    st.markdown("#### 🟩 **Charles Dow — O arquiteto da tendência moderna**")
+    st.markdown("#### 🧠 **Charles Dow — O arquiteto da tendência moderna**")
     st.markdown("""
 Charles Dow organizou o mercado em **tendências, fases e ciclos**, decifrando sua estrutura.
 
@@ -223,7 +223,7 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 col1, col2 = st.columns([0.35, 1])
 with col1: st.markdown(circular_image("richard_wyckoff_bw.png"), unsafe_allow_html=True)
 with col2:
-    st.markdown("#### 🟩 **Richard Wyckoff — A mente que enxergou o fluxo**")
+    st.markdown("#### 🧠 **Richard Wyckoff — A mente que enxergou o fluxo**")
     st.markdown("""
 Wyckoff revelou a atuação institucional: acumulação, manipulação, distribuição e volume como linguagem.
 
@@ -238,7 +238,7 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 col1, col2 = st.columns([0.35, 1])
 with col1: st.markdown(circular_image("welles_wilder_bw.png"), unsafe_allow_html=True)
 with col2:
-    st.markdown("#### 🟩 **Welles Wilder — O engenheiro da matemática aplicada ao mercado**")
+    st.markdown("#### 🧠 **Welles Wilder — O engenheiro da matemática aplicada ao mercado**")
     st.markdown("""
 Criador de RSI, ATR, ADX e Parabolic SAR — a base dos indicadores modernos.
 
@@ -253,7 +253,7 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 col1, col2 = st.columns([0.35, 1])
 with col1: st.markdown(circular_image("al_brooks_bw.png"), unsafe_allow_html=True)
 with col2:
-    st.markdown("#### 🟩 **Al Brooks — O cirurgião do price action**")
+    st.markdown("#### 🧠 **Al Brooks — O cirurgião do price action**")
     st.markdown("""
 Transformou candles em **linguagem microestrutural**.
 
@@ -268,7 +268,7 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 col1, col2 = st.columns([0.35, 1])
 with col1: st.markdown(circular_image("black_scholes_bw.png"), unsafe_allow_html=True)
 with col2:
-    st.markdown("#### 🟩 **Black & Scholes — Gênios das opções e do risco matemático**")
+    st.markdown("#### 🧠 **Black & Scholes — Gênios das opções e do risco matemático**")
     st.markdown("""
 Criadores das Gregas e da volatilidade implícita.
 
