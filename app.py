@@ -220,105 +220,85 @@ st.markdown("## A genialidade dos gênios, ressignificada em algoritmo")
 # ---- GRID DE GÊNIOS (CARDS VERTICAIS) ----
 st.markdown("<div class='genius-grid'>", unsafe_allow_html=True)
 
-def genius_card(img_path, name, role, text):
-    html = "<div class='genius-card'>"
-    if Path(img_path).exists():
-        html += f"<img src='data:image/png;base64,' class='genius-img'/>"
-    # OBS: Streamlit não deixa embutir fácil o base64 aqui sem processamento,
-    # então vamos usar st.image fora do HTML quando houver imagem.
-    html += f"<div class='genius-name'>{name}</div>"
-    html += f"<div class='genius-role'>{role}</div>"
-    html += f"<div class='genius-text'>{text}</div>"
-    html += "</div>"
-    return html
+import streamlit as st
+from pathlib import Path
 
-# Em vez de usar img dentro do HTML, vamos usar layout com st.columns para suportar imagem + texto sem quebrar.
+st.markdown("<div class='genius-grid'>", unsafe_allow_html=True)
 
-genius_cols = st.columns(3)
-
-# CHARLES DOW
-with genius_cols[0]:
+def render_genius_card(image_path, name, role, text):
     st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
-    if Path("charles_dow_bw.png").exists():
-        st.image("charles_dow_bw.png", use_column_width=False, width=90)
-    st.markdown("<div class='genius-name'>CHARLES DOW</div>", unsafe_allow_html=True)
-    st.markdown("<div class='genius-role'>Pai da tendência moderna</div>", unsafe_allow_html=True)
-    st.markdown(
-        "<div class='genius-text'>Criou os princípios estruturais de tendência, fases e "
-        "comportamento direcional do mercado.</div>",
-        unsafe_allow_html=True
-    )
+
+    # FOTO EM CIMA - CÍRCULO NEON
+    if Path(image_path).exists():
+        st.image(image_path, width=110, output_format="PNG")
+    else:
+        st.image("https://via.placeholder.com/110?text=Foto", width=110)
+
+    # NOME
+    st.markdown(f"<div class='genius-name'>{name}</div>", unsafe_allow_html=True)
+
+    # SUBTÍTULO
+    st.markdown(f"<div class='genius-role'>{role}</div>", unsafe_allow_html=True)
+
+    # TEXTO
+    st.markdown(f"<div class='genius-text'>{text}</div>", unsafe_allow_html=True)
+
     st.markdown("</div>", unsafe_allow_html=True)
 
-# WYCKOFF
-with genius_cols[1]:
-    st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
-    if Path("richard_wyckoff_bw.png").exists():
-        st.image("richard_wyckoff_bw.png", use_column_width=False, width=90)
-    st.markdown("<div class='genius-name'>RICHARD WYCKOFF</div>", unsafe_allow_html=True)
-    st.markdown("<div class='genius-role'>Arquitetura do fluxo</div>", unsafe_allow_html=True)
-    st.markdown(
-        "<div class='genius-text'>Decodificou oferta e demanda, atuação institucional e "
-        "fases de acumulação e distribuição.</div>",
-        unsafe_allow_html=True
-    )
-    st.markdown("</div>", unsafe_allow_html=True)
 
-# WELLES WILDER
-with genius_cols[2]:
-    st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
-    if Path("welles_wilder_bw.png").exists():
-        st.image("welles_wilder_bw.png", use_column_width=False, width=90)
-    st.markdown("<div class='genius-name'>WELLES WILDER</div>", unsafe_allow_html=True)
-    st.markdown("<div class='genius-role'>O mestre dos indicadores</div>", unsafe_allow_html=True)
-    st.markdown(
-        "<div class='genius-text'>Criou RSI, ATR, ADX e Parabolic SAR — a espinha dorsal matemática "
-        "da análise técnica moderna.</div>",
-        unsafe_allow_html=True
-    )
-    st.markdown("</div>", unsafe_allow_html=True)
+# --- LINHA 1 ---
+col1, col2, col3 = st.columns(3)
 
-genius_cols2 = st.columns(3)
-
-# AL BROOKS
-with genius_cols2[0]:
-    st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
-    if Path("al_brooks_bw.png").exists():
-        st.image("al_brooks_bw.png", use_column_width=False, width=90)
-    st.markdown("<div class='genius-name'>AL BROOKS</div>", unsafe_allow_html=True)
-    st.markdown("<div class='genius-role'>Price action refinado</div>", unsafe_allow_html=True)
-    st.markdown(
-        "<div class='genius-text'>Transformou candles em linguagem, com leitura microestrutural "
-        "e direcional do preço.</div>",
-        unsafe_allow_html=True
+with col1:
+    render_genius_card(
+        "charles_dow_bw.png",
+        "CHARLES DOW",
+        "Pai da tendência moderna",
+        "Criou os princípios estruturais de tendência, fases e comportamento direcional do mercado."
     )
-    st.markdown("</div>", unsafe_allow_html=True)
 
-# BLACK & SCHOLES
-with genius_cols2[1]:
-    st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
-    if Path("black_scholes_bw.png").exists():
-        st.image("black_scholes_bw.png", use_column_width=False, width=90)
-    st.markdown("<div class='genius-name'>BLACK &amp; SCHOLES</div>", unsafe_allow_html=True)
-    st.markdown("<div class='genius-role'>Gênios das opções</div>", unsafe_allow_html=True)
-    st.markdown(
-        "<div class='genius-text'>Criadores do modelo que originou as Gregas, a volatilidade "
-        "implícita e a base da precificação moderna de opções.</div>",
-        unsafe_allow_html=True
+with col2:
+    render_genius_card(
+        "richard_wyckoff_bw.png",
+        "RICHARD WYCKOFF",
+        "Arquitetura do fluxo",
+        "Decodificou oferta e demanda, atuação institucional e fases de acumulação e distribuição."
     )
-    st.markdown("</div>", unsafe_allow_html=True)
 
-# PHOENIX STRATEGY (CARD FINAL)
-with genius_cols2[2]:
-    st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
-    st.markdown("<div class='genius-name'>PHOENIX STRATEGY</div>", unsafe_allow_html=True)
-    st.markdown("<div class='genius-role'>O renascimento em algoritmo</div>", unsafe_allow_html=True)
-    st.markdown(
-        "<div class='genius-text'>A fusão da genialidade desses nomes em um único sistema "
-        "capaz de monitorar 300+ ativos em tempo real.</div>",
-        unsafe_allow_html=True
+with col3:
+    render_genius_card(
+        "welles_wilder_bw.png",
+        "WELLES WILDER",
+        "O mestre dos indicadores",
+        "Criou RSI, ATR, ADX e Parabolic SAR — a espinha dorsal matemática da análise técnica moderna."
     )
-    st.markdown("</div>", unsafe_allow_html=True)
+
+# --- LINHA 2 ---
+col4, col5, col6 = st.columns(3)
+
+with col4:
+    render_genius_card(
+        "al_brooks_bw.png",
+        "AL BROOKS",
+        "Price action refinado",
+        "Transformou candles em linguagem, com leitura microestrutural e direcional do preço."
+    )
+
+with col5:
+    render_genius_card(
+        "black_scholes_bw.png",
+        "BLACK & SCHOLES",
+        "Gênios das opções",
+        "Criadores do modelo que originou as Gregas, a volatilidade implícita e a base da precificação moderna de opções."
+    )
+
+with col6:
+    render_genius_card(
+        "Phoenix_logo.png",
+        "PHOENIX STRATEGY",
+        "O renascimento em algoritmo",
+        "A fusão da genialidade desses nomes em um único sistema capaz de monitorar 300+ ativos em tempo real."
+    )
 
 st.markdown("</div>", unsafe_allow_html=True)
 
