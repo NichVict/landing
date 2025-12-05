@@ -16,110 +16,141 @@ st.set_page_config(
 # -------------------------------------
 CSS = """
 <style>
+
+/* ================================ */
+/* 🔥 RESET DE SEGURANÇA ANTI-FANTASMA */
+/* ================================ */
+
+/* Remove qualquer fundo ou borda invisível gerado pelo Streamlit */
+div:not(.genius-card):not(.genius-img-container):not(.logo-container):not(.main-block) {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+/* ================================ */
+/* 🔥 ESTILO GLOBAL */
+/* ================================ */
+
 body, .stApp {
-    background-color: #030303;
-    color: #e2e2e2;
+    background-color: #030303 !important;
+    color: #e2e2e2 !important;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 }
 
-/* CENTRALIZA BLOCO PRINCIPAL */
 .main-block {
     max-width: 960px;
     margin: 0 auto;
 }
 
-/* LOGO */
 .logo-container {
     text-align: center;
     margin: 1.5rem 0 2.5rem 0;
 }
 
-/* TÍTULOS */
+/* Títulos */
 h1, h2, h3 {
-    color: #00ff9a;
-    font-weight: 700;
+    color: #00ff9a !important;
+    font-weight: 700 !important;
 }
 
 /* TAG LARANJA */
 .orange-tag {
-    color: #ff7a1a;
+    color: #ff7a1a !important;
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 0.14em;
     margin-bottom: 0.2rem;
 }
 
-/* DIVISOR */
+/* Divisor */
 .section-divider {
     border-bottom: 1px solid rgba(255,255,255,0.10);
     margin: 3rem 0 2.2rem 0;
 }
 
-/* BOTÕES */
+/* Botões */
 .stButton>button {
-    background: linear-gradient(90deg, #00ff9a, #ff7a1a);
-    color: #050608;
-    border-radius: 999px;
-    padding: 0.7rem 2.1rem;
-    border: none;
-    font-weight: 700;
-    font-size: 0.98rem;
-    cursor: pointer;
-    transition: 0.22s ease-in-out;
+    background: linear-gradient(90deg, #00ff9a, #ff7a1a) !important;
+    color: #050608 !important;
+    border-radius: 999px !important;
+    padding: 0.7rem 2.1rem !important;
+    border: none !important;
+    font-weight: 700 !important;
+    font-size: 0.98rem !important;
+    cursor: pointer !important;
+    transition: 0.22s ease-in-out !important;
 }
 .stButton>button:hover {
-    transform: translateY(-2px) scale(1.02);
-    filter: brightness(1.15);
+    transform: translateY(-2px) scale(1.02) !important;
+    filter: brightness(1.15) !important;
 }
 
-/* TEXTO */
+/* Texto */
 p, li {
-    font-size: 1.02rem;
-    line-height: 1.6;
+    font-size: 1.02rem !important;
+    line-height: 1.6 !important;
 }
 
-/* CARD VERTICAL DOS GÊNIOS */
+/* ================================ */
+/* 🔥 CARDS DOS GÊNIOS */
+/* ================================ */
+
 .genius-card {
-    background: radial-gradient(circle at top, rgba(255,122,26,0.40), rgba(0,0,0,0.92));
-    border-radius: 20px;
-    border: 1px solid rgba(0,255,154,0.30);
-    padding: 1.3rem 1.2rem 1.4rem 1.2rem;
-    text-align: center;
-    transition: 0.25s ease-in-out;
+    background: radial-gradient(circle at top, rgba(255,122,26,0.40), rgba(0,0,0,0.92)) !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(0,255,154,0.30) !important;
+    padding: 1.3rem 1.2rem 1.4rem 1.2rem !important;
+    text-align: center !important;
+    transition: 0.25s ease-in-out !important;
 }
+
 .genius-card:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 0 20px rgba(255,122,26,0.65);
-    border-color: rgba(0,255,154,0.70);
+    transform: translateY(-4px) scale(1.02) !important;
+    box-shadow: 0 0 20px rgba(255,122,26,0.65) !important;
+    border-color: rgba(0,255,154,0.70) !important;
 }
 
-/* NOME DO GÊNIO */
+/* Imagem circular com neon */
+.genius-img-container {
+    margin: 0 auto 0.6rem auto !important;
+    width: 110px !important;
+    height: 110px !important;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    border: 3px solid #00ff9a !important;
+    box-shadow: 0 0 12px rgba(0,255,154,0.7) !important;
+}
+
+.genius-img-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: grayscale(100%) !important;
+}
+
+/* Nome */
 .genius-name {
-    font-weight: 700;
-    color: #00ff9a;
-    font-size: 1.0rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.1rem;
+    font-weight: 700 !important;
+    color: #00ff9a !important;
+    font-size: 1.0rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    margin-bottom: 0.1rem !important;
 }
 
-/* SUBTÍTULO LARANJA NO CARD */
+/* Subtítulo */
 .genius-role {
-    color: #ff7a1a;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    color: #ff7a1a !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0.5rem !important;
 }
 
-/* PARÁGRAFO MENOR DENTRO DO CARD */
+/* Texto */
 .genius-text {
-    font-size: 0.95rem;
-    color: #d7d7d7;
-}
-
-/* HERO SUB */
-.hero-sub {
-    font-size: 1.05rem;
-    color: #d0d0d0;
+    font-size: 0.95rem !important;
+    color: #d7d7d7 !important;
 }
 
 </style>
@@ -229,7 +260,15 @@ def circular_image(image_path, size=110):
 # Função dos cards
 def render_genius_card(image_path, name, role, text):
     st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
-    st.markdown(circular_image(image_path), unsafe_allow_html=True)
+    st.markdown(
+        f"""
+        <div class="genius-img-container">
+            <img src="data:image/png;base64,{img_b64}">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
     st.markdown(f"<div class='genius-name'>{name}</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='genius-role'>{role}</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='genius-text'>{text}</div>", unsafe_allow_html=True)
