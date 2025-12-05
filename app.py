@@ -303,7 +303,7 @@ st.markdown(
 )
 
 st.markdown("""
-O coração da plataforma.
+O cérebro digital da plataforma.
 
 Um sistema projetado para:
 
