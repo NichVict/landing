@@ -164,7 +164,7 @@ with col1:
     #st.markdown("<div class='orange-tag'>PLATAFORMA QUANT</div>", unsafe_allow_html=True)
     st.markdown("<h2 style='color:#00ff9a;'>PHOENIX STRATEGY</h2>", unsafe_allow_html=True)    
     st.markdown(
-        "<div style='color:#ff5a1f; font-size:1.45rem; font-weight:800; letter-spacing:0.06em; text-transform:uppercase;'>O ALGORITMO GENIAL</div>",
+        "<div style='color:#ff5a1f; font-size:1.45rem; font-weight:400; letter-spacing:0.06em; text-transform:uppercase;'>O ALGORITMO GENIAL</div>",
         unsafe_allow_html=True
     )
     # LINHA DIVISÓRIA
