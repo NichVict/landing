@@ -193,7 +193,7 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # -----------------------------
 # SEÇÃO 3 — OS GÊNIOS (AGORA COM IMAGENS!)
 # -----------------------------
-st.markdown("### A genialidade dos gênios, ressignificada em algoritmo")
+st.markdown("### A genialidade dos mestres, ressignificada em algoritmo")
 
 # CHARLES DOW
 st.markdown(circular_image("charles_dow_bw.png"), unsafe_allow_html=True)
