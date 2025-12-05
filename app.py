@@ -222,89 +222,79 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 # =====================================
 # SECTION 3 — A GENIALIDADE DOS GÊNIOS
-# =====================================
+# ======================================================
+# SECTION 3 — A GENIALIDADE DOS GÊNIOS (100% sem retângulos)
+# ======================================================
+
 st.markdown("## A genialidade dos gênios, ressignificada em algoritmo")
 
-
-# Função da imagem circular com moldura neon
-def circular_image(image_path, size=110):
-    if Path(image_path).exists():
-        with open(image_path, "rb") as img_file:
-            img_bytes = img_file.read()
-            img_b64 = base64.b64encode(img_bytes).decode()
-    else:
-        return ""
-
-    html = f"""
-    <div style="
-        width: {size}px;
-        height: {size}px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 3px solid #00ff9a;
-        box-shadow: 0 0 12px rgba(0,255,154,0.7);
-        margin: 0 auto 0.6rem auto;
-    ">
-        <img src="data:image/png;base64,{img_b64}"
-             style="
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                filter: grayscale(100%);
-             ">
-    </div>
-    """
-    return html
-
-
-# Função dos cards
-def render_genius_card(image_path, name, role, text):
-    st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
-    st.markdown(
-        f"""
+def circular_image_html(path):
+    if Path(path).exists():
+        img_bytes = Path(path).read_bytes()
+        img_b64 = base64.b64encode(img_bytes).decode()
+        return f"""
         <div class="genius-img-container">
             <img src="data:image/png;base64,{img_b64}">
         </div>
-        """,
-        unsafe_allow_html=True
-    )
+        """
+    return ""
 
-    st.markdown(f"<div class='genius-name'>{name}</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='genius-role'>{role}</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='genius-text'>{text}</div>", unsafe_allow_html=True)
-    st.markdown("</div>", unsafe_allow_html=True)
+# ----------- GRID EM HTML PURO (SEM STREAMLIT COLUMNS) ----------
+html_grid = f"""
+<div style="display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); 
+            gap: 22px;
+            margin-top: 25px;">
 
+    <div class="genius-card">
+        {circular_image_html("charles_dow_bw.png")}
+        <div class="genius-name">CHARLES DOW</div>
+        <div class="genius-role">Pai da tendência moderna</div>
+        <div class="genius-text">
+            Criou princípios estruturais de tendência, fases e comportamento direcional.
+        </div>
+    </div>
 
-# ---- 3 × 2 CARDS, SEM GRIDS FANTASMAS ----
-col1, col2, col3 = st.columns(3)
+    <div class="genius-card">
+        {circular_image_html("richard_wyckoff_bw.png")}
+        <div class="genius-name">RICHARD WYCKOFF</div>
+        <div class="genius-role">Arquitetura do fluxo</div>
+        <div class="genius-text">
+            Decodificou oferta e demanda, fases institucionais e acumulação/distribuição.
+        </div>
+    </div>
 
-with col1:
-    render_genius_card("charles_dow_bw.png", "CHARLES DOW",
-                       "Pai da tendência moderna",
-                       "Criou os princípios estruturais de tendência, fases e comportamento direcional do mercado.")
+    <div class="genius-card">
+        {circular_image_html("welles_wilder_bw.png")}
+        <div class="genius-name">WELLES WILDER</div>
+        <div class="genius-role">O mestre dos indicadores</div>
+        <div class="genius-text">
+            Criou RSI, ATR, ADX e Parabolic SAR — base da análise técnica moderna.
+        </div>
+    </div>
 
-with col2:
-    render_genius_card("richard_wyckoff_bw.png", "RICHARD WYCKOFF",
-                       "Arquitetura do fluxo",
-                       "Decodificou oferta e demanda, atuação institucional e fases de acumulação e distribuição.")
+    <div class="genius-card">
+        {circular_image_html("al_brooks_bw.png")}
+        <div class="genius-name">AL BROOKS</div>
+        <div class="genius-role">Price action refinado</div>
+        <div class="genius-text">
+            Transformou candles em linguagem microestrutural e direcional.
+        </div>
+    </div>
 
-with col3:
-    render_genius_card("welles_wilder_bw.png", "WELLES WILDER",
-                       "O mestre dos indicadores",
-                       "Criou RSI, ATR, ADX e Parabolic SAR — a espinha dorsal matemática da análise técnica moderna.")
+    <div class="genius-card">
+        {circular_image_html("black_scholes_bw.png")}
+        <div class="genius-name">BLACK & SCHOLES</div>
+        <div class="genius-role">Gênios das opções</div>
+        <div class="genius-text">
+            Criaram o modelo que originou as Gregas e a precificação moderna de opções.
+        </div>
+    </div>
 
+</div>
+"""
 
-col4, col5 = st.columns(2)
-
-with col4:
-    render_genius_card("al_brooks_bw.png", "AL BROOKS",
-                       "Price action refinado",
-                       "Transformou candles em linguagem, com leitura microestrutural e direcional do preço.")
-
-with col5:
-    render_genius_card("black_scholes_bw.png", "BLACK & SCHOLES",
-                       "Gênios das opções",
-                       "Criadores do modelo que originou as Gregas, a volatilidade implícita e a base da precificação moderna de opções.")
+st.markdown(html_grid, unsafe_allow_html=True)
 
 
 # -------------------------------------
