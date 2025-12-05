@@ -2,249 +2,173 @@ import streamlit as st
 from pathlib import Path
 import base64
 
-# -------------------------------------
-# CONFIG DA PÁGINA
-# -------------------------------------
+# ----------------------------
+# CONFIG
+# ----------------------------
 st.set_page_config(
     page_title="Phoenix Strategy – O algoritmo genial",
     page_icon="🔥",
     layout="wide"
 )
 
-# -------------------------------------
-# CSS – TEMA PHOENIX (PRETO + NEON + CARDS)
-# -------------------------------------
+# ----------------------------
+# CSS
+# ----------------------------
 CSS = """
 <style>
-
-/* ================================ */
-/* 🔥 RESET DE SEGURANÇA ANTI-FANTASMA */
-/* ================================ */
-
-/* Remove qualquer fundo ou borda invisível gerado pelo Streamlit */
-div:not(.genius-card):not(.genius-img-container):not(.logo-container):not(.main-block) {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-
-/* ================================ */
-/* 🔥 ESTILO GLOBAL */
-/* ================================ */
-
 body, .stApp {
-    background-color: #030303 !important;
-    color: #e2e2e2 !important;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background-color: #030303;
+    color: #eaeaea;
+    font-family: "Inter", sans-serif;
 }
 
+/* Container central */
 .main-block {
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.logo-container {
-    text-align: center;
-    margin: 1.5rem 0 2.5rem 0;
+    max-width: 1000px;
+    margin: auto;
 }
 
 /* Títulos */
 h1, h2, h3 {
-    color: #00ff9a !important;
-    font-weight: 700 !important;
+    color: #00ff9a;
+    font-weight: 700;
 }
 
-/* TAG LARANJA */
+/* Tag laranja */
 .orange-tag {
-    color: #ff7a1a !important;
-    text-transform: uppercase;
+    color: #ff7a1a;
     font-size: 0.9rem;
-    letter-spacing: 0.14em;
-    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
 }
 
 /* Divisor */
 .section-divider {
-    border-bottom: 1px solid rgba(255,255,255,0.10);
-    margin: 3rem 0 2.2rem 0;
+    margin: 3rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Botões */
-.stButton>button {
-    background: linear-gradient(90deg, #00ff9a, #ff7a1a) !important;
-    color: #050608 !important;
-    border-radius: 999px !important;
-    padding: 0.7rem 2.1rem !important;
-    border: none !important;
-    font-weight: 700 !important;
-    font-size: 0.98rem !important;
-    cursor: pointer !important;
-    transition: 0.22s ease-in-out !important;
-}
-.stButton>button:hover {
-    transform: translateY(-2px) scale(1.02) !important;
-    filter: brightness(1.15) !important;
-}
-
-/* Texto */
-p, li {
-    font-size: 1.02rem !important;
-    line-height: 1.6 !important;
-}
-
-/* ================================ */
-/* 🔥 CARDS DOS GÊNIOS */
-/* ================================ */
-
+/* Card dos Gênios */
 .genius-card {
-    background: radial-gradient(circle at top, rgba(255,122,26,0.40), rgba(0,0,0,0.92)) !important;
-    border-radius: 20px !important;
-    border: 1px solid rgba(0,255,154,0.30) !important;
-    padding: 1.3rem 1.2rem 1.4rem 1.2rem !important;
-    text-align: center !important;
-    transition: 0.25s ease-in-out !important;
+    background: radial-gradient(circle at top, rgba(255,120,20,0.35), rgba(0,0,0,0.85));
+    border: 1px solid rgba(0,255,154,0.25);
+    border-radius: 18px;
+    padding: 1.4rem 1rem;
+    text-align: center;
+    transition: .25s ease-in-out;
 }
-
 .genius-card:hover {
-    transform: translateY(-4px) scale(1.02) !important;
-    box-shadow: 0 0 20px rgba(255,122,26,0.65) !important;
-    border-color: rgba(0,255,154,0.70) !important;
+    transform: translateY(-4px);
+    border-color: #00ff9a;
+    box-shadow: 0 0 18px rgba(0,255,154,0.6);
 }
 
-/* Imagem circular com neon */
+/* Foto circular neon */
 .genius-img-container {
-    margin: 0 auto 0.6rem auto !important;
-    width: 110px !important;
-    height: 110px !important;
-    border-radius: 50% !important;
-    overflow: hidden !important;
-    border: 3px solid #00ff9a !important;
-    box-shadow: 0 0 12px rgba(0,255,154,0.7) !important;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #00ff9a;
+    margin: 0 auto 0.7rem auto;
+    box-shadow: 0 0 12px rgba(0,255,154,0.7);
 }
-
 .genius-img-container img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    filter: grayscale(100%) !important;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
 }
 
 /* Nome */
 .genius-name {
-    font-weight: 700 !important;
-    color: #00ff9a !important;
-    font-size: 1.0rem !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.08em !important;
-    margin-bottom: 0.1rem !important;
+    color: #00ff9a;
+    font-size: 1.0rem;
+    font-weight: 700;
+    margin-bottom: .2rem;
+    letter-spacing: 0.08em;
 }
 
 /* Subtítulo */
 .genius-role {
-    color: #ff7a1a !important;
-    font-size: 0.9rem !important;
-    margin-bottom: 0.5rem !important;
+    color: #ff7a1a;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Texto */
 .genius-text {
-    font-size: 0.95rem !important;
-    color: #d7d7d7 !important;
+    color: #dcdcdc;
+    font-size: .95rem;
+    line-height: 1.45;
 }
-
 </style>
 """
-
 st.markdown(CSS, unsafe_allow_html=True)
 
-# -------------------------------------
-# LOGO PHOENIX (TOPO)
-# -------------------------------------
-st.markdown("<div class='logo-container'>", unsafe_allow_html=True)
+
+# ----------------------------
+# Função imagem circular
+# ----------------------------
+def circular_image_html(path):
+    if not Path(path).exists():
+        return ""
+    img_bytes = Path(path).read_bytes()
+    img_b64 = base64.b64encode(img_bytes).decode()
+
+    return f"""
+    <div class="genius-img-container">
+        <img src="data:image/png;base64,{img_b64}">
+    </div>
+    """
+
+
+# ----------------------------
+# LOGO
+# ----------------------------
+st.markdown("<div class='logo-container' style='text-align:center;'>", unsafe_allow_html=True)
 if Path("Phoenix_logo.png").exists():
     st.image("Phoenix_logo.png", width=260)
 st.markdown("</div>", unsafe_allow_html=True)
 
 
-# -------------------------------------
-# INÍCIO BLOCO PRINCIPAL
-# -------------------------------------
+# ----------------------------
+# MAIN BLOCK
+# ----------------------------
 st.markdown("<div class='main-block'>", unsafe_allow_html=True)
 
-# =====================================
-# SECTION 1 — HERO (CAPA)
-# =====================================
+# ----------------------------
+# SECTION 1 – HERO
+# ----------------------------
 st.markdown("<div class='orange-tag'>PLATAFORMA QUANT</div>", unsafe_allow_html=True)
 st.markdown("## PHOENIX STRATEGY")
 st.markdown("### O algoritmo genial.")
 
-st.markdown(
-    """
+st.markdown("""
 Um novo padrão nasceu.  
 A fusão perfeita entre a genialidade humana e a precisão algorítmica.  
 O poder de análise que antes era privilégio de poucos — agora renascido em tecnologia.
-"""
-)
-
-if st.button("ACESSAR PLATAFORMA"):
-    st.markdown(
-        "<meta http-equiv='refresh' content='0; url=https://phoenix-master.onrender.com/dashboard_geral'/>",
-        unsafe_allow_html=True
-    )
-
-st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
-
-# =====================================
-# SECTION 2 — O QUE É O PHOENIX STRATEGY?
-# =====================================
-st.markdown("## O que é o Phoenix Strategy?")
+""")
 
 st.markdown(
-    """
-A Phoenix Strategy é a evolução da análise técnica:  
-um sistema capaz de monitorar mais de **300 ativos a cada 5 minutos**, encontrar padrões, 
-identificar movimentos, antecipar riscos e entregar **o momento exato de entrada e saída** — tudo em tempo real.
-"""
-)
-
-st.markdown(
-    """
-O que seria humanamente impossível, mesmo reunindo os maiores gênios da história,  
-agora acontece em **segundos**.
-
-Porque quando a genialidade se transforma em algoritmo,  
-**nasce precisão absoluta.**
-"""
+    "<a href='https://phoenix-master.onrender.com/dashboard_geral' "
+    "style='display:inline-block;margin-top:10px;padding:10px 22px;"
+    "background:linear-gradient(90deg,#00ff9a,#ff7a1a);color:#000;border-radius:50px;"
+    "font-weight:700;text-decoration:none;'>ACESSAR PLATAFORMA</a>",
+    unsafe_allow_html=True
 )
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-# =====================================
-# SECTION 3 — A GENIALIDADE DOS GÊNIOS
-# ======================================================
-# SECTION 3 — A GENIALIDADE DOS GÊNIOS (100% sem retângulos)
-# ======================================================
-
+# ----------------------------
+# SECTION 3 – GÊNIOS
+# ----------------------------
 st.markdown("## A genialidade dos gênios, ressignificada em algoritmo")
 
-def circular_image_html(path):
-    if Path(path).exists():
-        img_bytes = Path(path).read_bytes()
-        img_b64 = base64.b64encode(img_bytes).decode()
-        return f"""
-        <div class="genius-img-container">
-            <img src="data:image/png;base64,{img_b64}">
-        </div>
-        """
-    return ""
-
-# ----------- GRID EM HTML PURO (SEM STREAMLIT COLUMNS) ----------
 html_grid = f"""
-<div style="display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); 
-            gap: 22px;
-            margin-top: 25px;">
+<div style="display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap:22px; margin-top:25px;">
 
     <div class="genius-card">
         {circular_image_html("charles_dow_bw.png")}
@@ -269,7 +193,7 @@ html_grid = f"""
         <div class="genius-name">WELLES WILDER</div>
         <div class="genius-role">O mestre dos indicadores</div>
         <div class="genius-text">
-            Criou RSI, ATR, ADX e Parabolic SAR — base da análise técnica moderna.
+            Criou RSI, ATR, ADX e Parabolic SAR — base matemática da análise técnica moderna.
         </div>
     </div>
 
@@ -287,7 +211,7 @@ html_grid = f"""
         <div class="genius-name">BLACK & SCHOLES</div>
         <div class="genius-role">Gênios das opções</div>
         <div class="genius-text">
-            Criaram o modelo que originou as Gregas e a precificação moderna de opções.
+            Criaram o modelo das Gregas, a volatilidade implícita e a base da precificação moderna.
         </div>
     </div>
 
@@ -295,6 +219,20 @@ html_grid = f"""
 """
 
 st.markdown(html_grid, unsafe_allow_html=True)
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+# ----------------------------
+# COPY FINAL (mantido)
+# ----------------------------
+st.markdown("""
+Os pilares da análise técnica nasceram das mentes de gigantes.  
+Hoje, suas genialidades renascem em forma algorítmica.  
+A Phoenix Strategy honra esses gênios — e os leva além do que era possível.
+""")
+
+st.markdown("</div>", unsafe_allow_html=True)  # Fecha main-block
+
 
 
 # -------------------------------------
