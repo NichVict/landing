@@ -162,8 +162,11 @@ with col1:
     st.markdown("<p class='hero-subtitle'>Um novo padrão nasceu. A fusão perfeita entre a genialidade humana e a precisão algorítmica.</p>", unsafe_allow_html=True)
     st.markdown("<p>O poder de análise que antes era privilégio de poucos — agora renascido em tecnologia.</p>", unsafe_allow_html=True)
 
-    if st.button("ACESSAR PLATAFORMA"):
-        st.toast("Em breve: acesso à plataforma Phoenix Strategy. 🚀")
+    st.link_button(
+        "ACESSAR PLATAFORMA",
+        "https://phoenix-master.onrender.com/dashboard_geral"
+    )
+
 
 with col2:
     st.empty()
