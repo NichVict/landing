@@ -118,6 +118,28 @@ p, li {
 </style>
 """
 
+# -----------------------------
+# LOGO NO TOPO – VERSÃO CORRETA
+# -----------------------------
+from PIL import Image
+
+logo_path = "Phoenix_logo.png"
+
+try:
+    logo = Image.open(logo_path)
+    st.markdown(
+        """
+        <div style="display:flex; align-items:center; justify-content:flex-start; margin:10px 0 25px 0;">
+        """,
+        unsafe_allow_html=True
+    )
+    st.image(logo, width=160)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+except:
+    st.warning("⚠️ Logo não encontrado: coloque Phoenix_logo.png na mesma pasta do app.py")
+
+
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 
 # -----------------------------
