@@ -223,8 +223,12 @@ st.markdown("<div class='genius-grid'>", unsafe_allow_html=True)
 
 st.markdown("<div class='genius-grid'>", unsafe_allow_html=True)
 
-import base64
 
+
+
+
+
+# Função da imagem circular com moldura neon
 def circular_image(image_path, size=110):
     if Path(image_path).exists():
         with open(image_path, "rb") as img_file:
@@ -240,10 +244,10 @@ def circular_image(image_path, size=110):
         border-radius: 50%;
         overflow: hidden;
         border: 3px solid #00ff9a;
-        box-shadow: 0 0 10px rgba(0,255,154,0.7);
+        box-shadow: 0 0 12px rgba(0,255,154,0.7);
         margin: 0 auto 0.6rem auto;
     ">
-        <img src="data:image/png;base64,{img_b64}" 
+        <img src="data:image/png;base64,{img_b64}"
              style="
                 width: 100%;
                 height: 100%;
@@ -255,17 +259,14 @@ def circular_image(image_path, size=110):
     return html
 
 
-# -------------------------------
-# RENDERIZAÇÃO DOS CARDS
-# -------------------------------
-
+# Função para renderizar cada card
 def render_genius_card(image_path, name, role, text):
     st.markdown("<div class='genius-card'>", unsafe_allow_html=True)
 
-    # FOTO CIRCULAR NEON
+    # foto circular
     st.markdown(circular_image(image_path), unsafe_allow_html=True)
 
-    # TITULOS
+    # nome / subtítulo / texto
     st.markdown(f"<div class='genius-name'>{name}</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='genius-role'>{role}</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='genius-text'>{text}</div>", unsafe_allow_html=True)
@@ -273,7 +274,8 @@ def render_genius_card(image_path, name, role, text):
     st.markdown("</div>", unsafe_allow_html=True)
 
 
-# LINHA 1
+# ===== RENDER DOS CARDS (apenas 5, sem card extra) =====
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
@@ -300,8 +302,8 @@ with col3:
         "Criou RSI, ATR, ADX e Parabolic SAR — a espinha dorsal matemática da análise técnica moderna."
     )
 
-# LINHA 2
-col4, col5, col6 = st.columns(3)
+
+col4, col5 = st.columns(2)
 
 with col4:
     render_genius_card(
@@ -317,14 +319,6 @@ with col5:
         "BLACK & SCHOLES",
         "Gênios das opções",
         "Criadores do modelo que originou as Gregas, a volatilidade implícita e a base da precificação moderna de opções."
-    )
-
-with col6:
-    render_genius_card(
-        "Phoenix_logo.png",
-        "PHOENIX STRATEGY",
-        "O renascimento em algoritmo",
-        "A fusão da genialidade desses nomes em um único sistema capaz de monitorar 300+ ativos em tempo real."
     )
 
 
