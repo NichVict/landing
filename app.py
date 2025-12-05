@@ -378,7 +378,7 @@ A **Phoenix Strategy™ entrega:**
 st.markdown(
     """
 Tudo isso com a mesma lógica que guiou os gênios —
-mas com a **rapidez que eles nunca tiveram**.
+mas com a **rapidez que nunca tiveram**.
 """
 )
 
