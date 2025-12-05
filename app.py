@@ -437,7 +437,7 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 # -----------------------------
 # EXPANDER — JORNADA COMPLETA
 # -----------------------------
-with st.expander("Ler a jornada completa por trás do Phoenix Strategy™"):
+with st.expander("<span style='color:#00ff9a; font-weight:700;'>Ler a jornada completa por trás do Phoenix Strategy™</span>", expanded=False):
     st.markdown(
         """
 O Phoenix Strategy™ não nasceu de um insight momentâneo — ele é o resultado direto de uma trajetória inteira dedicada à tecnologia, ao estudo da inteligência artificial e à precisão das análises financeiras.
