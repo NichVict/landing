@@ -182,8 +182,13 @@ with col1:
     st.markdown("<p>O poder de análise que antes era privilégio de poucos — agora renascido em tecnologia.</p>", unsafe_allow_html=True)
 
     st.link_button(
-        "ACESSAR PLATAFORMA",
+        "ACESSAR PLATAFORMA PHOENIX",
         "https://phoenix-master.onrender.com/dashboard_geral"
+    )
+
+    st.link_button(
+        "ASSINAR AGORA – ACESSO IMEDIATO",
+        "https://linknabio.gg/aurinvest"
     )
     
 
