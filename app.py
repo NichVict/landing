@@ -185,6 +185,7 @@ with col1:
         "ACESSAR PLATAFORMA",
         "https://phoenix-master.onrender.com/dashboard_geral"
     )
+    
 
 with col2:
     st.empty()
@@ -580,5 +581,11 @@ st.link_button(
     "ACESSAR AGORA",
     "https://phoenix-master.onrender.com/dashboard_geral"
 )
+
+st.link_button(
+    "ASSINAR A PHOENIX STRATEGY",
+    "https://linknabio.gg/aurinvest"
+)
+
 
 st.markdown("</div>", unsafe_allow_html=True)
