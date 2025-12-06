@@ -181,15 +181,22 @@ with col1:
     st.markdown("<p class='hero-subtitle'>Um novo padrão nasceu. A fusão perfeita entre a genialidade humana e a precisão algorítmica.</p>", unsafe_allow_html=True)
     st.markdown("<p>O poder de análise que antes era privilégio de poucos — agora renascido em tecnologia.</p>", unsafe_allow_html=True)
 
-    st.link_button(
-        "ACESSAR PLATAFORMA PHOENIX",
-        "https://phoenix-master.onrender.com/dashboard_geral"
-    )
+    # ---------------------------
+    # BOTÕES LADO A LADO
+    # ---------------------------
+    b1, b2 = st.columns([1, 1])
 
-    st.link_button(
-        "ASSINAR AGORA – ACESSO IMEDIATO",
-        "https://linknabio.gg/aurinvest"
-    )
+    with b1:
+        st.link_button(
+            "ACESSAR PLATAFORMA",
+            "https://phoenix-master.onrender.com/dashboard_geral"
+        )
+
+    with b2:
+        st.link_button(
+            "ASSINAR AGORA",
+            "https://linknabio.gg/aurinvest"
+        )
     
 
 with col2:
