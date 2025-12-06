@@ -577,10 +577,6 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 st.markdown("### Pronto para ver o algoritmo genial em ação?")
 
-st.link_button(
-    "ACESSAR AGORA",
-    "https://phoenix-master.onrender.com/dashboard_geral"
-)
 
 st.link_button(
     "ASSINAR A PHOENIX STRATEGY",
