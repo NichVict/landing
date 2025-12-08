@@ -189,7 +189,7 @@ with col1:
     with b1:
         st.link_button(
             "ACESSAR PLATAFORMA",
-            "https://phoenix-master.onrender.com/dashboard_geral"
+            "https://phoenix-strategy.onrender.com/dashboard_geral"
         )
 
     with b2:
