@@ -1133,8 +1133,7 @@ calc_html = """
           </div>
 
           <div class="calc-footnote">
-            Os valores são <strong>simulações</strong> baseadas em premissas conservadoras e na filosofia
-            da estratégia. Não constituem garantia de rentabilidade futura.
+
           </div>
         </div>
       </div>
