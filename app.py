@@ -2,6 +2,7 @@ import streamlit as st
 from pathlib import Path
 import base64
 from PIL import Image
+from textwrap import dedent
 
 # ============================================================
 # 1. CONFIGURAÇÃO DA PÁGINA
