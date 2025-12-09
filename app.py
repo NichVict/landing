@@ -1280,10 +1280,10 @@ calc_html = """
             Plano / Perfil de Estratégia
           </label>
           <select id="plano-select" class="calc-select">
-            <option value="acoes">Phoenix Ações (IBOV + Small + BDR)</option>
-            <option value="opcoes">Phoenix Options (Estratégias Assimétricas)</option>
-            <option value="max">Phoenix Max (Ações + Opções)</option>
-            <option value="full">Phoenix Full (Completo + Scanners)</option>
+            <option value="acoes">Phoenix Equity (IBOV + Small + BDR)</option>
+            <option value="opcoes">Phoenix Opções (Estratégias Assimétricas)</option>
+            <option value="max">Phoenix Full (IBOV + Small + BDR + Opções)</option>
+            <option value="full">Phoenix Pro (Scanner)</option>
           </select>
 
           <label class="calc-label" for="horizonte-select">
