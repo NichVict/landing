@@ -908,27 +908,22 @@ with step2:
         unsafe_allow_html=True
     )
 
-# ============================================================
-# STEP 3 – EXECUTE (VERSÃO CORRIGIDA E ISOLADA)
-# ============================================================
-
 with step3:
-    st.markdown(
-"""
-<div style="text-align:center;">
-    <h3 style="color:#00ff9a;">3. Execute com clareza</h3>
-    <p style="font-size:0.9rem; color:#d7d7d7;">
-        Recebeu o alerta? Execute na sua corretora.<br>
-        <strong>Sem análise gráfica.<br>
-        Sem necessidade de monitorar.</strong><br>
-        A plataforma cuida do resto em tempo real.
-    </p>
-</div>
-""", 
-    unsafe_allow_html=True
-)
+    html_step3 = dedent("""
+        <div class="plan-card" style="text-align:center;">
+            <h3 style="color:#00ff9a;">3. Execute com clareza</h3>
+            <p style="font-size:0.9rem; color:#d7d7d7;">
+                Recebeu o alerta? Execute na sua corretora.<br>
+                <strong>Sem análise gráfica.<br>
+                Sem necessidade de monitorar.</strong><br>
+                A plataforma cuida do resto em tempo real.
+            </p>
+        </div>
+    """)
+    st.markdown(html_step3, unsafe_allow_html=True)
 
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
 
 
 
