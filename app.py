@@ -108,6 +108,84 @@ a[kind="primary"]:hover {
 """
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 
+
+
+EXTRA_CSS = """
+<style>
+
+.plan-card {
+    background: #0b0d10;
+    border: 1px solid rgba(0,255,154,0.25);
+    border-radius: 16px;
+    padding: 1.4rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 12px rgba(0,255,154,0.18);
+    transition: all .25s ease-in-out;
+}
+
+.plan-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 22px rgba(0,255,154,0.45);
+    border-color: #00ff9a;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: linear-gradient(90deg, #ff7a1a, #ff5a1a);
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+    color: #050608;
+}
+
+.badge-green {
+    display: inline-block;
+    padding: 4px 10px;
+    background: linear-gradient(90deg, #00ff9a, #00d97a);
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+    color: #050608;
+}
+
+.price {
+    color: #00ff9a;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 0.7rem;
+}
+
+.feature-list li {
+    margin-bottom: 6px;
+}
+
+.section-title-center {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #00ff9a;
+}
+
+.subtle-center {
+    text-align: center;
+    color: #d7d7d7;
+    margin-bottom: 2rem;
+}
+
+.divider-neon {
+    border-bottom: 1px solid rgba(0,255,154,0.35);
+    margin: 2.2rem 0;
+}
+
+</style>
+"""
+st.markdown(EXTRA_CSS, unsafe_allow_html=True)
+
+
 # ============================================================
 # 3. FUNÇÃO DE IMAGEM CIRCULAR COM NEON
 # ============================================================
@@ -578,6 +656,139 @@ do mecanismo interno da plataforma.
         """
     )
 
+
+
+# ============================================================
+# NOVA SEÇÃO — PLANOS PHOENIX STRATEGY (VERSÃO PREMIUM)
+# ============================================================
+st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
+st.markdown("<h2 class='section-title-center'>Planos Phoenix Strategy</h2>", unsafe_allow_html=True)
+st.markdown("<p class='subtle-center'>Escolha seu nível de autonomia e profundidade.</p>", unsafe_allow_html=True)
+
+# ===================================================================
+# 1) CARTEIRAS INDIVIDUAIS
+# ===================================================================
+st.markdown("<h3 style='color:#00ff9a;'>Carteiras Individuais</h3>", unsafe_allow_html=True)
+
+c1, c2, c3, c4 = st.columns(4)
+
+with c1:
+    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
+    st.markdown("### Carteira IBOV")
+    st.markdown("<span class='badge-green'>Essencial</span>", unsafe_allow_html=True)
+    st.markdown("<p>Ações sólidas do Ibovespa, com sinais automatizados.</p>", unsafe_allow_html=True)
+    st.markdown("<div class='price'>R$ 49/mês</div>", unsafe_allow_html=True)
+    st.link_button("Assinar", "https://wa.me/351915323219")
+    st.markdown("</div>", unsafe_allow_html=True)
+
+with c2:
+    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
+    st.markdown("### Small Caps")
+    st.markdown("<span class='badge'>Alta Performance</span>", unsafe_allow_html=True)
+    st.markdown("<p>Oportunidades agressivas com forte potencial de valorização.</p>", unsafe_allow_html=True)
+    st.markdown("<div class='price'>R$ 69/mês</div>", unsafe_allow_html=True)
+    st.link_button("Assinar", "https://wa.me/351915323219")
+    st.markdown("</div>", unsafe_allow_html=True)
+
+with c3:
+    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
+    st.markdown("### Carteira BDR")
+    st.markdown("<span class='badge-green'>Internacional</span>", unsafe_allow_html=True)
+    st.markdown("<p>Exposição global com simplicidade total.</p>", unsafe_allow_html=True)
+    st.markdown("<div class='price'>R$ 49/mês</div>", unsafe_allow_html=True)
+    st.link_button("Assinar", "https://wa.me/351915323219")
+    st.markdown("</div>", unsafe_allow_html=True)
+
+with c4:
+    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
+    st.markdown("### Carteira de Opções")
+    st.markdown("<span class='badge'>Agressivo</span>", unsafe_allow_html=True)
+    st.markdown("<p>Estratégias assimétricas com potencial explosivo.</p>", unsafe_allow_html=True)
+    st.markdown("<div class='price'>R$ 97/mês</div>", unsafe_allow_html=True)
+    st.link_button("Assinar", "https://wa.me/351915323219")
+    st.markdown("</div>", unsafe_allow_html=True)
+
+st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
+# ===================================================================
+# 2) PLANOS PREMIUM
+# ===================================================================
+st.markdown("<h3 style='color:#00ff9a;'>Planos Premium</h3>", unsafe_allow_html=True)
+
+p1, p2 = st.columns(2)
+
+with p1:
+    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
+    st.markdown("<span class='badge'>Mais Vendido</span>", unsafe_allow_html=True)
+    st.markdown("## Phoenix Equity")
+    st.markdown("<p>Inclui IBOV + Small Caps + BDR. O melhor custo-benefício para quem opera ações.</p>", unsafe_allow_html=True)
+    st.markdown("<div class='price'>R$ 97/mês</div>", unsafe_allow_html=True)
+    st.link_button("Assinar Phoenix Equity", "https://wa.me/351915323219")
+    st.markdown("</div>", unsafe_allow_html=True)
+
+with p2:
+    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
+    st.markdown("<span class='badge'>Recomendado</span>", unsafe_allow_html=True)
+    st.markdown("## Phoenix Options")
+    st.markdown("<p>Operações assimétricas e estratégias de derivativos.</p>", unsafe_allow_html=True)
+    st.markdown("<div class='price'>R$ 147/mês</div>", unsafe_allow_html=True)
+    st.link_button("Assinar Phoenix Options", "https://wa.me/351915323219")
+    st.markdown("</div>", unsafe_allow_html=True)
+
+st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
+# ===================================================================
+# 3) SCANNERS — LINHA PRO
+# ===================================================================
+st.markdown("<h3 style='color:#00ff9a;'>Linha PRO — Scanners Profissionais</h3>", unsafe_allow_html=True)
+
+s1, s2, s3 = st.columns(3)
+
+with s1:
+    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
+    st.markdown("## Phoenix Quant Scanner")
+    st.markdown("<p>O motor analítico de ações. Autonomia total para traders avançados.</p>", unsafe_allow_html=True)
+    st.markdown("<div class='price'>R$ 147/mês</div>", unsafe_allow_html=True)
+    st.link_button("Assinar Quant Scanner", "https://wa.me/351915323219")
+    st.markdown("</div>", unsafe_allow_html=True)
+
+with s2:
+    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
+    st.markdown("<span class='badge'>Profissional</span>", unsafe_allow_html=True)
+    st.markdown("## Phoenix Volatility Scanner")
+    st.markdown("<p>Leitura avançada de volatilidade, assimetrias e distorções de prêmio.</p>", unsafe_allow_html=True)
+    st.markdown("<div class='price'>R$ 197/mês</div>", unsafe_allow_html=True)
+    st.link_button("Assinar Volatility Scanner", "https://wa.me/351915323219")
+    st.markdown("</div>", unsafe_allow_html=True)
+
+with s3:
+    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
+    st.markdown("<span class='badge'>Completo</span>", unsafe_allow_html=True)
+    st.markdown("## Phoenix Scanner PRO")
+    st.markdown("<p>Quant + Volatility. A experiência definitiva para profissionais.</p>", unsafe_allow_html=True)
+    st.markdown("<div class='price'>R$ 247/mês</div>", unsafe_allow_html=True)
+    st.link_button("Assinar Scanner PRO", "https://wa.me/351915323219")
+    st.markdown("</div>", unsafe_allow_html=True)
+
+st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
+# ===================================================================
+# SEÇÃO: QUAL PLANO ESCOLHER?
+# ===================================================================
+st.markdown("<h3 style='color:#00ff9a; text-align:center;'>Qual plano escolher?</h3>", unsafe_allow_html=True)
+
+st.markdown("""
+- **Sou iniciante e quero sinais claros** → Carteira IBOV ou BDR  
+- **Quero agressividade, mas sem complexidade** → Small Caps  
+- **Quero assimetria explosiva** → Carteira de Opções  
+- **Quero todas as ações com melhor valor** → Phoenix Equity  
+- **Quero operar derivativos sério** → Phoenix Options  
+- **Quero autonomia total e operar como profissional** → Scanners  
+- **Quero o melhor do melhor** → Phoenix Scanner PRO  
+""")
+
+st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
 
 
