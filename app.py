@@ -862,6 +862,73 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 
 
+# ============================================================
+# SEÇÃO — COMO FUNCIONA NA PRÁTICA (3 PASSOS)
+# ============================================================
+st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
+st.markdown(
+    "<h2 class='section-title-center'>Como funciona na prática</h2>",
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    "<p class='subtle-center'>Da análise ao resultado, tudo acontece em três passos simples.</p>",
+    unsafe_allow_html=True
+)
+
+# 3 COLUNAS — PASSO 1, PASSO 2, PASSO 3
+step1, step2, step3 = st.columns(3)
+
+with step1:
+    st.markdown(
+        """
+        <div class="plan-card" style="text-align:center;">
+            <h3 style="color:#00ff9a;">1. O algoritmo monitora</h3>
+            <p style="font-size:0.9rem; color:#d7d7d7;">
+                O Phoenix Strategy varre mais de <strong>300 ativos</strong> em tempo real,
+                analisando tendência, fluxo, volatilidade, assimetrias e padrões invisíveis ao olho humano.
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+with step2:
+    st.markdown(
+        """
+        <div class="plan-card" style="text-align:center;">
+            <h3 style="color:#00ff9a;">2. Você recebe o alerta</h3>
+            <p style="font-size:0.9rem; color:#d7d7d7;">
+                Quando uma oportunidade é confirmada, você recebe um <strong>alerta imediato</strong>
+                no Telegram e no e-mail, com ponto de entrada, alvo e stop pré-calculados.
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+with step3:
+    st.markdown(
+        """
+        <div class="plan-card" style="text-align:center;">
+            <h3 style="color:#00ff9a;">3. Execute com clareza</h3>
+            <p style="font-size:0.9rem; color:#d7d7d7;">
+                Basta executar conforme o alerta.  
+                <strong>Sem interpretar gráfico.  
+                Sem ficar na tela.  
+                Sem dúvida.</strong><br>
+                A plataforma acompanha tudo em tempo real.
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
+
+
 
 
 # ============================================================
