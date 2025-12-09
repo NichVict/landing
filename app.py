@@ -934,36 +934,30 @@ st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
-st.markdown(
-"""
-<h2 style='color:#00ff9a; text-align:center; margin-bottom:0.3rem;'>
-Entendendo o ROI da Phoenix Strategy
-</h2>
-
-<p style='text-align:center; color:#d7d7d7; font-size:1.05rem;'>
-A Phoenix Strategy opera em ciclos curtos, com média de <strong>15 dias entre entrada e saída</strong>, 
-permitindo operar duas vezes o capital por mês. Os números abaixo são 
-<strong>simulações educacionais</strong> baseadas em premissas conservadoras.
-</p>
-""", 
-unsafe_allow_html=True
-)
-
-st.markdown(
-"""
-<div style='text-align:center; margin-top:1rem; margin-bottom:1rem;'>
-    <span style='color:#ff7a1a; font-weight:700; font-size:1.1rem;'>
-        Dois Cenários. Total Transparência. Total Segurança.
-    </span>
-    <p style='color:#d7d7d7; font-size:0.95rem; margin-top:0.4rem;'>
-        • <strong>Cenário Conservador:</strong> 4% (Ações) e 12% (Opções).<br>
-        • <strong>Premissas da Estratégia:</strong> 6% (Ações) e 25% (Opções).<br>
-        Estes valores NÃO representam promessa de rentabilidade futura.
+st.markdown(dedent("""
+    <h2 style='color:#00ff9a; text-align:center; margin-bottom:0.3rem;'>
+        Entendendo o ROI da Phoenix Strategy
+    </h2>
+    <p style='text-align:center; color:#d7d7d7; font-size:1.05rem;'>
+        A Phoenix Strategy opera em ciclos curtos, com média de <strong>15 dias entre entrada e saída</strong>,
+        permitindo operar duas vezes o capital por mês. Os números abaixo são
+        <strong>simulações educacionais</strong> baseadas em premissas conservadoras.
     </p>
-</div>
-""",
-unsafe_allow_html=True
-)
+"""), unsafe_allow_html=True)
+
+st.markdown(dedent("""
+    <div style='text-align:center; margin-top:1rem; margin-bottom:1rem;'>
+        <span style='color:#ff7a1a; font-weight:700; font-size:1.1rem;'>
+            Dois Cenários. Total Transparência. Total Segurança.
+        </span>
+        <p style='color:#d7d7d7; font-size:0.95rem; margin-top:0.4rem;'>
+            • <strong>Cenário Conservador:</strong> 4% (Ações) e 12% (Opções).<br>
+            • <strong>Premissas da Estratégia:</strong> 6% (Ações) e 25% (Opções).<br>
+            Estes valores NÃO representam promessa de rentabilidade futura.
+        </p>
+    </div>
+"""), unsafe_allow_html=True)
+
 
 
 
@@ -982,45 +976,36 @@ cols = st.columns(3)
 for col, (nome, capital) in zip(cols, perfis):
 
     conserv_acao = capital * 0.04
-    conserv_opc = capital * 0.12
+    conserv_opc  = capital * 0.12
 
-    estrat_acao = capital * 0.06
-    estrat_opc = capital * 0.25
+    estrat_acao  = capital * 0.06
+    estrat_opc   = capital * 0.25
 
-    card_html = f"""
-<div style="
-    border: 1px solid rgba(0,255,154,0.3);
-    padding: 1.3rem;
-    border-radius: 12px;
-    box-shadow: 0 0 12px rgba(0,255,154,0.25);
-    margin-bottom: 1.2rem;
-    background: rgba(255,255,255,0.02);
-">
+    card_html = dedent(f"""
+        <div class="plan-card" style="background:rgba(255,255,255,0.02);">
+            <h3 style='color:#00ff9a; text-align:center;'>{nome}</h3>
 
-    <h3 style='color:#00ff9a; text-align:center;'>{nome}</h3>
+            <p style='text-align:center; color:#d7d7d7; font-size:1.05rem;'>
+                Capital: <strong>R$ {capital:,.0f}</strong>
+            </p>
 
-    <p style='text-align:center; color:#d7d7d7; font-size:1.05rem;'>
-        Capital: <strong>R$ {capital:,.0f}</strong>
-    </p>
+            <hr style='border: 1px solid rgba(255,255,255,0.1); margin: 1rem 0;'>
 
-    <hr style='border: 1px solid rgba(255,255,255,0.1); margin: 1rem 0;'>
+            <h4 style='color:#ff7a1a; text-align:center; margin-bottom:0.3rem;'>Cenário Conservador</h4>
+            <p style='font-size:0.9rem; color:#d7d7d7;'>
+                Ações (4%): <strong>R$ {conserv_acao:,.0f}</strong><br>
+                Opções (12%): <strong>R$ {conserv_opc:,.0f}</strong>
+            </p>
 
-    <h4 style='color:#ff7a1a; text-align:center; margin-bottom:0.3rem;'>Cenário Conservador</h4>
-    <p style='font-size:0.9rem; color:#d7d7d7;'>
-        Ações (4%): <strong>R$ {conserv_acao:,.0f}</strong><br>
-        Opções (12%): <strong>R$ {conserv_opc:,.0f}</strong>
-    </p>
-
-    <h4 style='color:#00ff9a; text-align:center; margin-top:1rem; margin-bottom:0.3rem;'>
-        Premissas da Estratégia
-    </h4>
-    <p style='font-size:0.9rem; color:#d7d7d7;'>
-        Ações (6%): <strong>R$ {estrat_acao:,.0f}</strong><br>
-        Opções (25%): <strong>R$ {estrat_opc:,.0f}</strong>
-    </p>
-
-</div>
-"""
+            <h4 style='color:#00ff9a; text-align:center; margin-top:1rem; margin-bottom:0.3rem;'>
+                Premissas da Estratégia
+            </h4>
+            <p style='font-size:0.9rem; color:#d7d7d7;'>
+                Ações (6%): <strong>R$ {estrat_acao:,.0f}</strong><br>
+                Opções (25%): <strong>R$ {estrat_opc:,.0f}</strong>
+            </p>
+        </div>
+    """)
 
     col.markdown(card_html, unsafe_allow_html=True)
 
@@ -1030,37 +1015,31 @@ for col, (nome, capital) in zip(cols, perfis):
 # DISCLAIMER + CTA FINAL
 # ============================================================
 
-st.markdown(
-"""
-<p style='color:#888; font-size:0.8rem; text-align:center; margin-top:1rem;'>
-As simulações acima são educacionais. Não constituem garantia, promessa ou sugestão 
-de rentabilidade futura. Rentabilidade passada não garante resultados futuros.
-</p>
-""",
-unsafe_allow_html=True
-)
+st.markdown(dedent("""
+    <p style='color:#888; font-size:0.8rem; text-align:center; margin-top:1rem;'>
+        As simulações acima são educacionais. Não constituem garantia, promessa ou sugestão 
+        de rentabilidade futura. Rentabilidade passada não garante resultados futuros.
+    </p>
+"""), unsafe_allow_html=True)
 
-st.markdown(
-"""
-<div style='text-align:center; margin-top:1.5rem;'>
-    <a href="https://wa.me/351915323219" target="_blank"
-       style="
-           display:inline-block;
-           background:linear-gradient(90deg, #00ff9a, #ff7a1a);
-           padding:1rem 2.5rem;
-           border-radius:50px;
-           color:#050608 !important;
-           font-weight:700;
-           font-size:1.15rem;
-           text-decoration:none;
-           box-shadow:0 0 15px rgba(0,255,154,0.45);
-       ">
-       🔥 Quero entender meu ROI com o Phoenix Strategy
-    </a>
-</div>
-""",
-unsafe_allow_html=True
-)
+st.markdown(dedent("""
+    <div style='text-align:center; margin-top:1.5rem;'>
+        <a href="https://wa.me/351915323219" target="_blank"
+           style="
+               display:inline-block;
+               background:linear-gradient(90deg, #00ff9a, #ff7a1a);
+               padding:1rem 2.5rem;
+               border-radius:50px;
+               color:#050608 !important;
+               font-weight:700;
+               font-size:1.15rem;
+               text-decoration:none;
+               box-shadow:0 0 15px rgba(0,255,154,0.45);
+           ">
+           🔥 Quero entender meu ROI com o Phoenix Strategy
+        </a>
+    </div>
+"""), unsafe_allow_html=True)
 
 
 
