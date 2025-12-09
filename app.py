@@ -802,6 +802,62 @@ with col_t3:
         unsafe_allow_html=True
     )
 
+# ============================================================
+# DEPOIMENTOS — PERFIS INICIANTES E INTERMEDIÁRIOS
+# ============================================================
+
+col_t4, col_t5, col_t6 = st.columns(3)
+
+with col_t4:
+    st.markdown(
+        """
+        <div class='plan-card'>
+            <p style='font-size:0.9rem; color:#d7d7d7;'>
+            “Eu não tinha experiência nenhuma. Sempre achei que precisava ficar o dia inteiro olhando gráfico.
+            Com os alertas da Phoenix, eu só sigo as entradas e saídas. Simples, direto e seguro.”
+            </p>
+            <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
+            — Investidor Iniciante (1º mês operando)
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+with col_t5:
+    st.markdown(
+        """
+        <div class='plan-card'>
+            <p style='font-size:0.9rem; color:#d7d7d7;'>
+            “Trabalho o dia todo e não tenho tempo para acompanhar mercado. Os alertas chegam prontos,
+            com instrução clara. É só executar. Finalmente consegui consistência sem viver na frente da tela.”
+            </p>
+            <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
+            — Trader Intermediário, sem tempo para acompanhar mercado
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+with col_t6:
+    st.markdown(
+        """
+        <div class='plan-card'>
+            <p style='font-size:0.9rem; color:#d7d7d7;'>
+            “Sempre tive dificuldade com análise gráfica. A Phoenix me tirou esse peso das costas.
+            Os alertas são objetivos e o relatório em tempo real mostra exatamente o que o algoritmo está lendo.”
+            </p>
+            <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
+            — Investidor que não gosta de análise técnica
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+
+
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 
