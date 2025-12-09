@@ -1259,6 +1259,14 @@ calc_html = """
       font-size: 1.35rem;
     }
   }
+
+  .result-row.plano span:last-child {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+
+  
 </style>
 </head>
 <body>
@@ -1313,9 +1321,9 @@ calc_html = """
             </div>
           </div>
 
-          <div class="result-row conservador">
-            <span>Total conservador no período</span>
-            <span id="valor-conservador">R$ 0,00</span>
+          <div class="result-row plano">
+            <span>Valor do Plano Selecionado</span>
+            <span id="valor-plano">R$ 0,00</span>
           </div>
           <div class="result-row estrategia">
             <span>Total estratégia no período</span>
@@ -1379,6 +1387,7 @@ calc_html = """
 
     document.getElementById("valor-conservador").textContent = formatCurrency(totalCons);
     document.getElementById("valor-estrategia").textContent  = formatCurrency(totalEst);
+    document.getElementById("valor-plano").textContent = formatCurrency(plano.preco);
     document.getElementById("main-number-value").textContent = formatCurrency(totalEst);
 
     if (lucroMensalCons > 0) {
