@@ -913,10 +913,13 @@ with step3:
     st.markdown(
         """
         <div class="plan-card" style="text-align:center;">
-            <h3 style="color:#00ff9a;">2. Você recebe o alerta</h3>
+            <h3 style="color:#00ff9a;">3. Execute com clareza</h3>
             <p style="font-size:0.9rem; color:#d7d7d7;">
-                Quando uma oportunidade é confirmada, você recebe um <strong>alerta imediato</strong>
-                no Telegram e no e-mail, com ponto de entrada, alvo e stop pré-calculados.
+                Basta executar conforme o alerta.  
+                <strong>Sem interpretar gráfico.  
+                Sem ficar na tela.  
+                Sem dúvida.</strong><br>
+                A plataforma acompanha tudo em tempo real.
             </p>
         </div>
         """,
@@ -924,6 +927,7 @@ with step3:
     )
 
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
 
 
 
