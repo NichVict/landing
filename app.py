@@ -914,7 +914,7 @@ with step3:
         <div class="plan-card" style="text-align:center;">
             <h3 style="color:#00ff9a;">3. Execute com clareza</h3>
             <p style="font-size:0.9rem; color:#d7d7d7;">
-                Basta executar conforme o alerta.  
+                Basta executar a ordem na sua corretora preferida conforme o alerta.  
                 <strong>Sem interpretar gráfico.  
                 Sem ficar na tela.  
                 Sem dúvida.</strong><br>
