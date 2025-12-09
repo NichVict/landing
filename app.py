@@ -1230,7 +1230,7 @@ calc_html = """
   }
 
   .result-row.conservador span:last-child {
-    color: #ffb347;
+    color: #ffffff;
   }
 
   .result-row.estrategia span:last-child {
@@ -1238,7 +1238,7 @@ calc_html = """
   }
 
   .result-row.payback span:last-child {
-    color: #ffffff;
+    text-shadow: 0 0 6px rgba(255, 180, 70, 0.55);
   }
 
   .calc-footnote {
