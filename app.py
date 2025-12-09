@@ -910,14 +910,13 @@ with step2:
     )
 
 with step3:
-    html_step3 = dedent("""
+    st.markdown(
+        """
         <div class="plan-card" style="text-align:center;">
-            <h3 style="color:#00ff9a;">3. Execute com clareza</h3>
+            <h3 style="color:#00ff9a;">2. Você recebe o alerta</h3>
             <p style="font-size:0.9rem; color:#d7d7d7;">
-                Recebeu o alerta? Execute na sua corretora.<br>
-                <strong>Sem análise gráfica.<br>
-                Sem necessidade de monitorar.</strong><br>
-                A plataforma cuida do resto em tempo real.
+                Quando uma oportunidade é confirmada, você recebe um <strong>alerta imediato</strong>
+                no Telegram e no e-mail, com ponto de entrada, alvo e stop pré-calculados.
             </p>
         </div>
         """,
@@ -966,6 +965,8 @@ st.markdown(dedent("""
 # CARDS ROI – 100% COMPATÍVEIS COM STREAMLIT
 # ============================================================
 
+from textwrap import dedent
+
 perfis = [
     ("Investidor Iniciante", 5000),
     ("Investidor Intermediário", 30000),
@@ -983,29 +984,29 @@ for col, (nome, capital) in zip(cols, perfis):
     estrat_opc   = capital * 0.25
 
     card_html = dedent(f"""
-        <div class="plan-card" style="background:rgba(255,255,255,0.02);">
-            <h3 style='color:#00ff9a; text-align:center;'>{nome}</h3>
+    <div class="plan-card" style="background:rgba(255,255,255,0.02);">
+        <h3 style="color:#00ff9a; text-align:center;">{nome}</h3>
 
-            <p style='text-align:center; color:#d7d7d7; font-size:1.05rem;'>
-                Capital: <strong>R$ {capital:,.0f}</strong>
-            </p>
+        <p style="text-align:center; color:#d7d7d7; font-size:1.05rem;">
+            Capital: <strong>R$ {capital:,.0f}</strong>
+        </p>
 
-            <hr style='border: 1px solid rgba(255,255,255,0.1); margin: 1rem 0;'>
+        <hr style="border: 1px solid rgba(255,255,255,0.1); margin: 1rem 0;">
 
-            <h4 style='color:#ff7a1a; text-align:center; margin-bottom:0.3rem;'>Cenário Conservador</h4>
-            <p style='font-size:0.9rem; color:#d7d7d7;'>
-                Ações (4%): <strong>R$ {conserv_acao:,.0f}</strong><br>
-                Opções (12%): <strong>R$ {conserv_opc:,.0f}</strong>
-            </p>
+        <h4 style="color:#ff7a1a; text-align:center; margin-bottom:0.3rem;">Cenário Conservador</h4>
+        <p style="font-size:0.9rem; color:#d7d7d7;">
+            Ações (4%): <strong>R$ {conserv_acao:,.0f}</strong><br>
+            Opções (12%): <strong>R$ {conserv_opc:,.0f}</strong>
+        </p>
 
-            <h4 style='color:#00ff9a; text-align:center; margin-top:1rem; margin-bottom:0.3rem;'>
-                Premissas da Estratégia
-            </h4>
-            <p style='font-size:0.9rem; color:#d7d7d7;'>
-                Ações (6%): <strong>R$ {estrat_acao:,.0f}</strong><br>
-                Opções (25%): <strong>R$ {estrat_opc:,.0f}</strong>
-            </p>
-        </div>
+        <h4 style="color:#00ff9a; text-align:center; margin-top:1rem; margin-bottom:0.3rem;">
+            Premissas da Estratégia
+        </h4>
+        <p style="font-size:0.9rem; color:#d7d7d7;">
+            Ações (6%): <strong>R$ {estrat_acao:,.0f}</strong><br>
+            Opções (25%): <strong>R$ {estrat_opc:,.0f}</strong>
+        </p>
+    </div>
     """)
 
     col.markdown(card_html, unsafe_allow_html=True)
