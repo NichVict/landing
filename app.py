@@ -1449,7 +1449,8 @@ with s1:
     st.markdown("""
     <div class='plan-card-wrapper'>
         <div class='plan-card'>
-            <h3>Phoenix Quant Scanner</h3>
+            <span class='badge'>Profissional</span>    
+            <h3>Phoenix Scanner Ações</h3>
             <p>O motor analítico de ações. Autonomia total para traders avançados.</p>
             <div class='price'>R$ 147/mês</div>
         </div>
@@ -1462,7 +1463,7 @@ with s2:
     <div class='plan-card-wrapper'>
         <div class='plan-card'>
             <span class='badge'>Profissional</span>
-            <h3>Phoenix Volatility Scanner</h3>
+            <h3>Phoenix Scanner Opções</h3>
             <p>Leitura avançada de volatilidade, assimetrias e distorções de prêmio.</p>
             <div class='price'>R$ 197/mês</div>
         </div>
@@ -1475,8 +1476,8 @@ with s3:
     <div class='plan-card-wrapper'>
         <div class='plan-card'>
             <span class='badge'>Completo</span>
-            <h3>Phoenix Scanner PRO</h3>
-            <p>Quant + Volatility. A experiência definitiva para profissionais.</p>
+            <h3>Scanner Phoenix Scanner PRO</h3>
+            <p>Ações + Opções. A experiência definitiva para profissionais.</p>
             <div class='price'>R$ 247/mês</div>
         </div>
     </div>
@@ -1484,7 +1485,7 @@ with s3:
     st.link_button("Assinar Scanner PRO", "https://wa.me/351915323219")
 
 
-
+st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 # ===================================================================
 # 4) SEÇÃO — QUAL PLANO ESCOLHER?
 # ===================================================================
