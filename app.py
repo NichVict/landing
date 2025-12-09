@@ -2,6 +2,11 @@ import streamlit as st
 from pathlib import Path
 import base64
 from PIL import Image
+from streamlit_lottie import st_lottie
+import requests
+
+def load_lottie(url):
+    return requests.get(url).json()
 
 # ============================================================
 # 1. CONFIGURAÇÃO DA PÁGINA
@@ -862,8 +867,13 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 
 
+# ANIMAÇÕES LOTTIE
+lottie_algoritmo = load_lottie("https://lottie.host/6e552c02-68e5-4d63-8f56-7ab0e3c4f5f6/9c2t0bKa7b.json")
+lottie_alerta = load_lottie("https://lottie.host/775dbf24-6c7c-4d2d-8e7b-7af4d816e8f4/nG0p9PnXgV.json")
+lottie_operacao = load_lottie("https://lottie.host/b323ad3c-7cfe-44b5-a66a-349f4b9f2bde/zTKjvP9nW5.json")
+
 # ============================================================
-# SEÇÃO — COMO FUNCIONA NA PRÁTICA (3 PASSOS)
+# SEÇÃO — COMO FUNCIONA NA PRÁTICA (3 PASSOS ANIMADOS)
 # ============================================================
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
@@ -871,59 +881,94 @@ st.markdown(
     "<h2 class='section-title-center'>Como funciona na prática</h2>",
     unsafe_allow_html=True
 )
-
 st.markdown(
-    "<p class='subtle-center'>Da análise ao resultado, tudo acontece em três passos simples.</p>",
+    "<p class='subtle-center'>O processo é simples, elegante e completamente automatizado.</p>",
     unsafe_allow_html=True
 )
 
-# 3 COLUNAS — PASSO 1, PASSO 2, PASSO 3
+# 3 COLUNAS — Passo 1, 2, 3
 step1, step2, step3 = st.columns(3)
 
+# -----------------------------
+# PASSO 1 — ALGORITMO TRABALHANDO
+# -----------------------------
 with step1:
+    st_lottie(lottie_algoritmo, height=180, key="algoritmo")
     st.markdown(
         """
-        <div class="plan-card" style="text-align:center;">
+        <div style="text-align:center;">
             <h3 style="color:#00ff9a;">1. O algoritmo monitora</h3>
             <p style="font-size:0.9rem; color:#d7d7d7;">
-                O Phoenix Strategy varre mais de <strong>300 ativos</strong> em tempo real,
-                analisando tendência, fluxo, volatilidade, assimetrias e padrões invisíveis ao olho humano.
+                O Phoenix Strategy processa centenas de ativos em tempo real, identificando tendências,
+                volatilidade, fluxo e oportunidades invisíveis ao olho humano.
             </p>
         </div>
         """,
         unsafe_allow_html=True
     )
 
+# -----------------------------
+# PASSO 2 — CELULAR RECEBE ALERTA
+# -----------------------------
 with step2:
+    st_lottie(lottie_alerta, height=180, key="alerta")
     st.markdown(
         """
-        <div class="plan-card" style="text-align:center;">
+        <div style="text-align:center;">
             <h3 style="color:#00ff9a;">2. Você recebe o alerta</h3>
             <p style="font-size:0.9rem; color:#d7d7d7;">
-                Quando uma oportunidade é confirmada, você recebe um <strong>alerta imediato</strong>
-                no Telegram e no e-mail, com ponto de entrada, alvo e stop pré-calculados.
+                Quando uma oportunidade é confirmada, você recebe um sinal imediato no celular —
+                com ponto de entrada, alvo e stop prontos.
             </p>
         </div>
         """,
         unsafe_allow_html=True
     )
 
+# -----------------------------
+# PASSO 3 — EXECUTANDO NA CORRETORA
+# -----------------------------
 with step3:
+    st_lottie(lottie_operacao, height=180, key="operacao")
     st.markdown(
         """
-        <div class="plan-card" style="text-align:center;">
+        <div style="text-align:center;">
             <h3 style="color:#00ff9a;">3. Execute com clareza</h3>
             <p style="font-size:0.9rem; color:#d7d7d7;">
-                Basta executar conforme o alerta.  
-                <strong>Sem interpretar gráfico.  
+                Basta confirmar a operação na sua corretora preferida.  
+                Sem interpretar gráfico.  
                 Sem ficar na tela.  
-                Sem dúvida.</strong><br>
-                A plataforma acompanha tudo em tempo real.
+                Sem complicação.
             </p>
         </div>
         """,
         unsafe_allow_html=True
     )
+
+# CTA FINAL — ESTILO SAAS PREMIUM
+st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
+st.markdown(
+    """
+    <div style='text-align:center; margin-top:1rem;'>
+        <a href="https://wa.me/351915323219" target="_blank"
+           style="
+               display:inline-block;
+               background:linear-gradient(90deg, #00ff9a, #ff7a1a);
+               padding:0.8rem 2.2rem;
+               border-radius:999px;
+               color:#050608 !important;
+               font-weight:700;
+               font-size:1.1rem;
+               text-decoration:none;
+               box-shadow:0 0 15px rgba(0,255,154,0.45);
+           ">
+            🔥 Quero usar o algoritmo agora
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
