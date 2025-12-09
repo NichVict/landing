@@ -1229,7 +1229,8 @@ components.html(calc_html, height=800, scrolling=False)
 
 st.markdown(dedent("""
     <p style='color:#888; font-size:0.8rem; text-align:center; margin-top:1rem;'>
-        As simulações acima não constituem garantia, promessa ou sugestão 
+        As simulações acima são baseadas em premissas conservadoras e na filosofia
+            da estratégia e não constituem garantia, promessa ou sugestão 
         de rentabilidade futura. Rentabilidade passada não garante resultados futuros.
     </p>
 """), unsafe_allow_html=True)
