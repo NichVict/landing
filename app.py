@@ -1405,8 +1405,8 @@ with s2:
 with s3:
     st.markdown("""
     <div class='plan-card-wrapper'>
-        <div class='plan-card'>
-            <span class='badge'>Completo</span>
+        <div class='plan-card'>            
+            <span class='badge-green'>Completo</span>
             <h3>Phoenix Scanner PRO</h3>
             <p>Ações + Opções. A experiência definitiva para profissionais.</p>
             <div class='price'>R$ 247/mês</div>
