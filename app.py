@@ -927,6 +927,115 @@ with step3:
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
 
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+st.markdown("""
+<h2 style='color:#00ff9a; text-align:center; margin-bottom:0.3rem;'>Entendendo o ROI da Phoenix Strategy</h2>
+<p style='text-align:center; color:#d7d7d7; font-size:1.05rem;'>
+A Phoenix Strategy opera em ciclos curtos, com média de <strong>15 dias entre entrada e saída</strong>, permitindo que o cliente 
+opere duas vezes o próprio capital por mês.  
+Os resultados abaixo são <strong>simulações educacionais</strong> baseadas em premissas conservadoras e na filosofia da estratégia.
+</p>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style='text-align:center; margin-top:1rem; margin-bottom:1rem;'>
+    <span style='color:#ff7a1a; font-weight:700; font-size:1.1rem;'>
+        Dois Cenários. Total Transparência. Total Segurança.
+    </span>
+    <p style='color:#d7d7d7; font-size:0.95rem; margin-top:0.4rem;'>
+        • <strong>Cenário Conservador:</strong> Premissas reduzidas de 4% (Ações) e 12% (Opções).<br>
+        • <strong>Premissas da Estratégia:</strong> Faixas históricas da metodologia (5%–8% Ações | 25% Opções).<br>
+        Estes valores NÃO representam promessa de rentabilidade futura.
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
+perfis = [
+    {"nome": "Investidor Iniciante", "capital": 5000},
+    {"nome": "Investidor Intermediário", "capital": 30000},
+    {"nome": "Investidor Avançado", "capital": 100000},
+]
+
+import math
+
+cols = st.columns(3)
+
+for idx, p in enumerate(perfis):
+    with cols[idx]:
+        capital = p["capital"]
+
+        # CENÁRIO CONSERVADOR
+        conservador_acoes = capital * 0.04
+        conservador_opcoes = capital * 0.12
+
+        # CENÁRIO ESTRATÉGICO (PREMISSAS)
+        estrategico_acoes = capital * 0.06  # média entre 5-8%
+        estrategico_opcoes = capital * 0.25
+        
+        st.markdown(f"""
+        <div class="plan-card" style="
+            border: 1px solid rgba(0,255,154,0.3);
+            padding: 1.3rem;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,255,154,0.25);
+            margin-bottom: 1.2rem;
+            background: rgba(255,255,255,0.02);
+        ">
+            <h3 style='color:#00ff9a; text-align:center;'>{p["nome"]}</h3>
+            <p style='text-align:center; color:#d7d7d7;'>Capital: <strong>R$ {capital:,.0f}</strong></p>
+
+            <hr style='border: 1px solid rgba(255,255,255,0.1); margin: 0.8rem 0;'>
+
+            <h4 style='color:#ff7a1a; text-align:center;'>Cenário Conservador</h4>
+            <p style='font-size:0.9rem; color:#d7d7d7;'>
+                Ações (4%): <strong>R$ {conservador_acoes:,.0f}</strong><br>
+                Opções (12%): <strong>R$ {conservador_opcoes:,.0f}</strong>
+            </p>
+
+            <h4 style='color:#00ff9a; text-align:center; margin-top:1rem;'>Premissas da Estratégia</h4>
+            <p style='font-size:0.9rem; color:#d7d7d7;'>
+                Ações (≈6%): <strong>R$ {estrategico_acoes:,.0f}</strong><br>
+                Opções (25%): <strong>R$ {estrategico_opcoes:,.0f}</strong>
+            </p>
+
+        </div>
+        """, unsafe_allow_html=True)
+
+
+st.markdown("""
+<p style='color:#888; font-size:0.8rem; text-align:center; margin-top:1rem;'>
+As simulações acima são meramente educacionais. Não constituem garantia, promessa ou sugestão 
+de rentabilidade futura. Rentabilidade passada — quando existente — não garante resultados futuros.  
+A Phoenix Strategy é uma ferramenta de apoio à decisão, e o investidor permanece responsável pelas próprias operações.
+</p>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style='text-align:center; margin-top:1.5rem;'>
+    <a href="https://wa.me/351915323219" target="_blank"
+       style="
+           display:inline-block;
+           background:linear-gradient(90deg, #00ff9a, #ff7a1a);
+           padding:1rem 2.5rem;
+           border-radius:50px;
+           color:#050608 !important;
+           font-weight:700;
+           font-size:1.15rem;
+           text-decoration:none;
+           box-shadow:0 0 15px rgba(0,255,154,0.45);
+       ">
+       🔥 Quero entender meu ROI com o Phoenix Strategy
+    </a>
+</div>
+""", unsafe_allow_html=True)
+
+
+
+
+
+
+
+
 
 
 
