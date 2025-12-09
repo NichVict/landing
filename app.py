@@ -977,6 +977,59 @@ st.markdown("""
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
 
+# ============================================================
+# SEÇÃO — FAQ PHOENIX STRATEGY
+# ============================================================
+st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+st.markdown(
+    "<h3 style='color:#00ff9a; font-weight:700; text-align:center;'>Perguntas Frequentes</h3>",
+    unsafe_allow_html=True
+)
+
+faq_expander_1 = st.expander("Preciso saber análise técnica para usar a Phoenix Strategy?")
+with faq_expander_1:
+    st.markdown("""
+Não.  
+Se você optar pelas **carteiras**, você recebe sinais prontos de entrada e saída, com explicação simples do racional.
+
+Se você já é avançado, pode usar os **Scanners** para montar suas próprias estratégias, com total autonomia.
+""")
+
+faq_expander_2 = st.expander("Qual o capital mínimo recomendado para começar?")
+with faq_expander_2:
+    st.markdown("""
+Depende do plano:
+
+- A partir de **R$ 3.000** você já consegue seguir parte das carteiras.  
+- Entre **R$ 10.000 e R$ 40.000** é a faixa ideal para aproveitar bem o Phoenix Equity ou o Phoenix Full.  
+- Acima de **R$ 50.000** os Scanners passam a ter ainda mais impacto.
+""")
+
+faq_expander_3 = st.expander("Posso cancelar quando quiser?")
+with faq_expander_3:
+    st.markdown("""
+Sim.  
+Os planos são recorrentes, mas você pode cancelar a qualquer momento, sem multa de fidelidade.
+""")
+
+faq_expander_4 = st.expander("Qual a diferença entre carteiras e Scanners?")
+with faq_expander_4:
+    st.markdown("""
+- **Carteiras** → você segue sinais prontos de entrada e saída.  
+- **Scanners** → você recebe o motor analítico bruto, com rankings e filtros, para montar suas próprias operações.
+
+Um não substitui o outro — são níveis diferentes de autonomia.
+""")
+
+faq_expander_5 = st.expander("A Phoenix Strategy garante resultado?")
+with faq_expander_5:
+    st.markdown("""
+Nenhuma estratégia séria pode prometer resultados garantidos.  
+O que a Phoenix Strategy entrega é **processo**, **método**, **disciplina** e **inteligência de análise**, 
+aumentando a clareza e a qualidade das suas decisões.
+""")
+
+st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
 
 
