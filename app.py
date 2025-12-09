@@ -1299,7 +1299,7 @@ components.html(calc_html, height=800, scrolling=False)
 
 st.markdown(dedent("""
     <p style='color:#888; font-size:0.8rem; text-align:center; margin-top:1rem;'>
-        As simulações acima são educacionais. Não constituem garantia, promessa ou sugestão 
+        As simulações acima não constituem garantia, promessa ou sugestão 
         de rentabilidade futura. Rentabilidade passada não garante resultados futuros.
     </p>
 """), unsafe_allow_html=True)
@@ -1312,13 +1312,13 @@ st.markdown(dedent("""
                background:linear-gradient(90deg, #00ff9a, #ff7a1a);
                padding:1rem 2.5rem;
                border-radius:50px;
-               color:#050608 !important;
+               color:#ff7a1a !important;
                font-weight:700;
                font-size:1.15rem;
                text-decoration:none;
                box-shadow:0 0 15px rgba(0,255,154,0.45);
            ">
-           🔥 Quero entender meu ROI com o Phoenix Strategy
+           🔥 Quero meu Phoenix Strategy agora!
         </a>
     </div>
 """), unsafe_allow_html=True)
@@ -1476,7 +1476,7 @@ with s3:
     <div class='plan-card-wrapper'>
         <div class='plan-card'>
             <span class='badge'>Completo</span>
-            <h3>Scanner Phoenix Scanner PRO</h3>
+            <h3>Phoenix Scanner PRO</h3>
             <p>Ações + Opções. A experiência definitiva para profissionais.</p>
             <div class='price'>R$ 247/mês</div>
         </div>
