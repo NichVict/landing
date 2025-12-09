@@ -1287,7 +1287,7 @@ with c1:
             <span class='badge-green'>Essencial</span>
             <h3>Carteira IBOV</h3>
             <p>Ações sólidas do Ibovespa, com sinais automatizados.</p>
-            <div class='price'>R$ 49/mês</div>
+            <div class='price'>R$ 197/mês</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -1300,7 +1300,7 @@ with c2:
             <span class='badge'>Alta Performance</span>
             <h3>Small Caps</h3>
             <p>Oportunidades agressivas com forte potencial de valorização.</p>
-            <div class='price'>R$ 69/mês</div>
+            <div class='price'>R$ 219/mês</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -1313,7 +1313,7 @@ with c3:
             <span class='badge-green'>Internacional</span>
             <h3>Carteira BDR</h3>
             <p>Exposição global com simplicidade total.</p>
-            <div class='price'>R$ 49/mês</div>
+            <div class='price'>R$ 219/mês</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -1326,7 +1326,7 @@ with c4:
             <span class='badge'>Agressivo</span>
             <h3>Carteira de Opções</h3>
             <p>Estratégias assimétricas com potencial explosivo.</p>
-            <div class='price'>R$ 97/mês</div>
+            <div class='price'>R$ 297/mês</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -1348,7 +1348,7 @@ with p1:
             <span class='badge'>Mais Vendido</span>
             <h3>Phoenix Equity</h3>
             <p>Inclui IBOV + Small Caps + BDR. O melhor custo-benefício para quem opera ações.</p>
-            <div class='price'>R$ 97/mês</div>
+            <div class='price'>R$ 247/mês</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -1361,7 +1361,7 @@ with p2:
             <span class='badge'>Recomendado</span>
             <h3>Phoenix Full</h3>
             <p>Todas as 4 carteiras: IBOV, Small Caps, BDR e Opções em um único plano.</p>
-            <div class='price'>R$ 147/mês</div>
+            <div class='price'>R$ 397/mês</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -1383,7 +1383,7 @@ with s1:
             <span class='badge'>Profissional</span>    
             <h3>Phoenix Scanner Ações</h3>
             <p>O motor analítico de ações. Autonomia total para traders avançados.</p>
-            <div class='price'>R$ 147/mês</div>
+            <div class='price'>R$ 397/mês</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -1396,7 +1396,7 @@ with s2:
             <span class='badge'>Profissional</span>
             <h3>Phoenix Scanner Opções</h3>
             <p>Leitura avançada de volatilidade, assimetrias e distorções de prêmio.</p>
-            <div class='price'>R$ 197/mês</div>
+            <div class='price'>R$ 397/mês</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -1409,7 +1409,7 @@ with s3:
             <span class='badge-green'>Completo</span>
             <h3>Phoenix Scanner PRO</h3>
             <p>Ações + Opções. A experiência definitiva para profissionais.</p>
-            <div class='price'>R$ 247/mês</div>
+            <div class='price'>R$ 597/mês</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
