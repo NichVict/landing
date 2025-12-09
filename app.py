@@ -924,7 +924,7 @@ with step3:
         unsafe_allow_html=True
     )
 
-st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
 
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
