@@ -1265,8 +1265,7 @@ calc_html = """
   <div class="calc-wrapper">
     <h3 class="calc-title">Simule seu ROI com o Phoenix Strategy</h3>
     <p class="calc-subtitle">
-      Ajuste o valor investido, o plano e o horizonte de tempo para visualizar, de forma educacional, 
-      o retorno potencial da estratégia em diferentes cenários.
+      Veja em quanto tempo sua assinatura se paga (payback) e o retorno estimado do seu capital (ROI) conforme seu perfil e estratégia.      
     </p>
 
     <div class="calc-grid">
