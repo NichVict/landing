@@ -1387,7 +1387,7 @@ with s1:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    st.link_button("Assinar Quant Scanner", "https://wa.me/351915323219")
+    st.link_button("Assinar Scanner Ações", "https://wa.me/351915323219")
 
 with s2:
     st.markdown("""
@@ -1400,7 +1400,7 @@ with s2:
         </div>
     </div>
     """, unsafe_allow_html=True)
-    st.link_button("Assinar Volatility Scanner", "https://wa.me/351915323219")
+    st.link_button("Assinar Scanner Opções", "https://wa.me/351915323219")
 
 with s3:
     st.markdown("""
