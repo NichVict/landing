@@ -914,11 +914,10 @@ with step3:
         <div class="plan-card" style="text-align:center;">
             <h3 style="color:#00ff9a;">3. Execute com clareza</h3>
             <p style="font-size:0.9rem; color:#d7d7d7;">
-                Basta executar a ordem na sua corretora preferida conforme o alerta.  
-                <strong>Sem interpretar gráfico.  
-                Sem ficar na tela.  
-                Sem dúvida.</strong><br>
-                A plataforma acompanha tudo em tempo real.
+                Recebeu o alerta? Execute na sua corretora.  
+                <strong>Sem análise gráfica.  
+                Sem necessidade de monitorar.</strong><br>
+                A plataforma cuida do resto em tempo real.
             </p>
         </div>
         """,
@@ -926,6 +925,7 @@ with step3:
     )
 
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
 
 
 
