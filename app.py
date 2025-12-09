@@ -1385,7 +1385,7 @@ calc_html = """
     const totalCons = lucroMensalCons * meses;
     const totalEst  = lucroMensalEst * meses;
 
-    document.getElementById("valor-conservador").textContent = formatCurrency(totalCons);
+    
     document.getElementById("valor-estrategia").textContent  = formatCurrency(totalEst);
     document.getElementById("valor-plano").textContent = formatCurrency(plano.preco);
     document.getElementById("main-number-value").textContent = formatCurrency(totalEst);
