@@ -1264,7 +1264,7 @@ with s3:
     """, unsafe_allow_html=True)
     st.link_button("Assinar Scanner PRO", "https://wa.me/351915323219")
 
-st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
 
 # ===================================================================
 # 4) SEÇÃO — QUAL PLANO ESCOLHER?
