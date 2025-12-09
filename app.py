@@ -869,9 +869,10 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 # ANIMAÇÕES LOTTIE
 # ANIMAÇÕES LOTTIE (VERSÃO ESTÁVEL)
-lottie_algoritmo = load_lottie("https://assets7.lottiefiles.com/packages/lf20_j1adxtyb.json")
-lottie_alerta = load_lottie("https://assets2.lottiefiles.com/packages/lf20_y8d9n8.json")
-lottie_operacao = load_lottie("https://assets1.lottiefiles.com/packages/lf20_t8ak4wxp.json")
+lottie_algoritmo = load_lottie("https://lottie.host/dcd5a56a-99f9-4c66-9d8c-4fbf77fa1f21/UDNTXSar8Q.json")
+lottie_alerta = load_lottie("https://lottie.host/fe2df46b-dae1-47bd-bf85-efc2c6900b8f/ijjWwKj5jR.json")
+lottie_operacao = load_lottie("https://lottie.host/83b0b64f-1e7f-48f1-a4a9-2ed18f0dc219/OlLXg4SxjT.json")
+
 
 
 # ============================================================
