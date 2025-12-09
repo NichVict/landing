@@ -868,9 +868,11 @@ st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
 
 
 # ANIMAÇÕES LOTTIE
-lottie_algoritmo = load_lottie("https://lottie.host/6e552c02-68e5-4d63-8f56-7ab0e3c4f5f6/9c2t0bKa7b.json")
-lottie_alerta = load_lottie("https://lottie.host/775dbf24-6c7c-4d2d-8e7b-7af4d816e8f4/nG0p9PnXgV.json")
-lottie_operacao = load_lottie("https://lottie.host/b323ad3c-7cfe-44b5-a66a-349f4b9f2bde/zTKjvP9nW5.json")
+# ANIMAÇÕES LOTTIE (VERSÃO ESTÁVEL)
+lottie_algoritmo = load_lottie("https://assets7.lottiefiles.com/packages/lf20_j1adxtyb.json")
+lottie_alerta = load_lottie("https://assets2.lottiefiles.com/packages/lf20_y8d9n8.json")
+lottie_operacao = load_lottie("https://assets1.lottiefiles.com/packages/lf20_t8ak4wxp.json")
+
 
 # ============================================================
 # SEÇÃO — COMO FUNCIONA NA PRÁTICA (3 PASSOS ANIMADOS)
