@@ -908,10 +908,14 @@ with step2:
         unsafe_allow_html=True
     )
 
+# ============================================================
+# STEP 3 – EXECUTE (VERSÃO CORRIGIDA E ISOLADA)
+# ============================================================
+
 with step3:
     st.markdown(
-        """
-<div class="plan-card" style="text-align:center;">
+"""
+<div style="text-align:center;">
     <h3 style="color:#00ff9a;">3. Execute com clareza</h3>
     <p style="font-size:0.9rem; color:#d7d7d7;">
         Recebeu o alerta? Execute na sua corretora.<br>
@@ -920,58 +924,74 @@ with step3:
         A plataforma cuida do resto em tempo real.
     </p>
 </div>
-        """,
-        unsafe_allow_html=True
-    )
+""", 
+    unsafe_allow_html=True
+)
+
+st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
 
 
-
+# ============================================================
+# SEÇÃO ROI COMPLETA – 100% TESTADA
+# ============================================================
 
 st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
-st.markdown("""
-<h2 style='color:#00ff9a; text-align:center; margin-bottom:0.3rem;'>Entendendo o ROI da Phoenix Strategy</h2>
-<p style='text-align:center; color:#d7d7d7; font-size:1.05rem;'>
-A Phoenix Strategy opera em ciclos curtos, com média de <strong>15 dias entre entrada e saída</strong>, permitindo que o cliente 
-opere duas vezes o próprio capital por mês.  
-Os resultados abaixo são <strong>simulações educacionais</strong> baseadas em premissas conservadoras e na filosofia da estratégia.
-</p>
-""", unsafe_allow_html=True)
 
-st.markdown("""
+st.markdown(
+"""
+<h2 style='color:#00ff9a; text-align:center; margin-bottom:0.3rem;'>
+Entendendo o ROI da Phoenix Strategy
+</h2>
+
+<p style='text-align:center; color:#d7d7d7; font-size:1.05rem;'>
+A Phoenix Strategy opera em ciclos curtos, com média de <strong>15 dias entre entrada e saída</strong>, 
+permitindo operar duas vezes o capital por mês. Os números abaixo são 
+<strong>simulações educacionais</strong> baseadas em premissas conservadoras.
+</p>
+""", 
+unsafe_allow_html=True
+)
+
+st.markdown(
+"""
 <div style='text-align:center; margin-top:1rem; margin-bottom:1rem;'>
     <span style='color:#ff7a1a; font-weight:700; font-size:1.1rem;'>
         Dois Cenários. Total Transparência. Total Segurança.
     </span>
     <p style='color:#d7d7d7; font-size:0.95rem; margin-top:0.4rem;'>
-        • <strong>Cenário Conservador:</strong> Premissas reduzidas de 4% (Ações) e 12% (Opções).<br>
-        • <strong>Premissas da Estratégia:</strong> Faixas históricas da metodologia (5%–8% Ações | 25% Opções).<br>
+        • <strong>Cenário Conservador:</strong> 4% (Ações) e 12% (Opções).<br>
+        • <strong>Premissas da Estratégia:</strong> 6% (Ações) e 25% (Opções).<br>
         Estes valores NÃO representam promessa de rentabilidade futura.
     </p>
 </div>
-""", unsafe_allow_html=True)
+""",
+unsafe_allow_html=True
+)
+
+
+
+# ============================================================
+# CARDS ROI – 100% COMPATÍVEIS COM STREAMLIT
+# ============================================================
 
 perfis = [
-    {"nome": "Investidor Iniciante", "capital": 5000},
-    {"nome": "Investidor Intermediário", "capital": 30000},
-    {"nome": "Investidor Avançado", "capital": 100000},
+    ("Investidor Iniciante", 5000),
+    ("Investidor Intermediário", 30000),
+    ("Investidor Avançado", 100000),
 ]
-
-import math
 
 cols = st.columns(3)
 
-for idx, p in enumerate(perfis):
-    with cols[idx]:
-        capital = p["capital"]
+for col, (nome, capital) in zip(cols, perfis):
 
-        conservador_acoes = capital * 0.04
-        conservador_opcoes = capital * 0.12
+    conserv_acao = capital * 0.04
+    conserv_opc = capital * 0.12
 
-        estrategico_acoes = capital * 0.06
-        estrategico_opcoes = capital * 0.25
+    estrat_acao = capital * 0.06
+    estrat_opc = capital * 0.25
 
-        html_card = f"""
+    card_html = f"""
 <div style="
     border: 1px solid rgba(0,255,154,0.3);
     padding: 1.3rem;
@@ -981,7 +1001,7 @@ for idx, p in enumerate(perfis):
     background: rgba(255,255,255,0.02);
 ">
 
-    <h3 style='color:#00ff9a; text-align:center;'>{p["nome"]}</h3>
+    <h3 style='color:#00ff9a; text-align:center;'>{nome}</h3>
 
     <p style='text-align:center; color:#d7d7d7; font-size:1.05rem;'>
         Capital: <strong>R$ {capital:,.0f}</strong>
@@ -991,32 +1011,41 @@ for idx, p in enumerate(perfis):
 
     <h4 style='color:#ff7a1a; text-align:center; margin-bottom:0.3rem;'>Cenário Conservador</h4>
     <p style='font-size:0.9rem; color:#d7d7d7;'>
-        Ações (4%): <strong>R$ {conservador_acoes:,.0f}</strong><br>
-        Opções (12%): <strong>R$ {conservador_opcoes:,.0f}</strong>
+        Ações (4%): <strong>R$ {conserv_acao:,.0f}</strong><br>
+        Opções (12%): <strong>R$ {conserv_opc:,.0f}</strong>
     </p>
 
-    <h4 style='color:#00ff9a; text-align:center; margin-top:1rem; margin-bottom:0.3rem;'>Premissas da Estratégia</h4>
+    <h4 style='color:#00ff9a; text-align:center; margin-top:1rem; margin-bottom:0.3rem;'>
+        Premissas da Estratégia
+    </h4>
     <p style='font-size:0.9rem; color:#d7d7d7;'>
-        Ações (≈6%): <strong>R$ {estrategico_acoes:,.0f}</strong><br>
-        Opções (25%): <strong>R$ {estrategico_opcoes:,.0f}</strong>
+        Ações (6%): <strong>R$ {estrat_acao:,.0f}</strong><br>
+        Opções (25%): <strong>R$ {estrat_opc:,.0f}</strong>
     </p>
 
 </div>
 """
 
-        st.markdown(html_card, unsafe_allow_html=True)
+    col.markdown(card_html, unsafe_allow_html=True)
 
 
 
-st.markdown("""
+# ============================================================
+# DISCLAIMER + CTA FINAL
+# ============================================================
+
+st.markdown(
+"""
 <p style='color:#888; font-size:0.8rem; text-align:center; margin-top:1rem;'>
-As simulações acima são meramente educacionais. Não constituem garantia, promessa ou sugestão 
-de rentabilidade futura. Rentabilidade passada — quando existente — não garante resultados futuros.  
-A Phoenix Strategy é uma ferramenta de apoio à decisão, e o investidor permanece responsável pelas próprias operações.
+As simulações acima são educacionais. Não constituem garantia, promessa ou sugestão 
+de rentabilidade futura. Rentabilidade passada não garante resultados futuros.
 </p>
-""", unsafe_allow_html=True)
+""",
+unsafe_allow_html=True
+)
 
-st.markdown("""
+st.markdown(
+"""
 <div style='text-align:center; margin-top:1.5rem;'>
     <a href="https://wa.me/351915323219" target="_blank"
        style="
@@ -1033,7 +1062,9 @@ st.markdown("""
        🔥 Quero entender meu ROI com o Phoenix Strategy
     </a>
 </div>
-""", unsafe_allow_html=True)
+""",
+unsafe_allow_html=True
+)
 
 
 
