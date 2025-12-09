@@ -1116,14 +1116,13 @@ calc_html = """
   }
 
   .calc-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
+    display: block;
   }
 
   .calc-left,
   .calc-right {
-    flex: 1 1 280px;
+    width: 100%;
+    margin-bottom: 20px;
   }
 
   .calc-card {
