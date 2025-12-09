@@ -673,12 +673,12 @@ do mecanismo interno da plataforma.
 
 
 # ============================================================
-# NOVA SEÇÃO — PLANOS PHOENIX STRATEGY (VERSÃO PREMIUM)
+# NOVA SEÇÃO — PLANOS PHOENIX STRATEGY (VERSÃO PREMIUM CORRIGIDA)
 # ============================================================
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
 st.markdown("<h2 class='section-title-center'>Planos Phoenix Strategy</h2>", unsafe_allow_html=True)
-st.markdown("<p class='subtle-center'>Escolha seu nível de autonomia e profundidade.</p>", unsafe_allow_html=True)
+st.markdown("<p class='subtle-center'>Escolha o nível de autonomia e profundidade.</p>", unsafe_allow_html=True)
 
 # ===================================================================
 # 1) CARTEIRAS INDIVIDUAIS
@@ -688,40 +688,56 @@ st.markdown("<h3 style='color:#00ff9a;'>Carteiras Individuais</h3>", unsafe_allo
 c1, c2, c3, c4 = st.columns(4)
 
 with c1:
-    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
-    st.markdown("### Carteira IBOV")
-    st.markdown("<span class='badge-green'>Essencial</span>", unsafe_allow_html=True)
-    st.markdown("<p>Ações sólidas do Ibovespa, com sinais automatizados.</p>", unsafe_allow_html=True)
-    st.markdown("<div class='price'>R$ 49/mês</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='plan-card-wrapper'>
+        <div class='plan-card'>
+            <span class='badge-green'>Essencial</span>
+            <h3>Carteira IBOV</h3>
+            <p>Ações sólidas do Ibovespa, com sinais automatizados.</p>
+            <div class='price'>R$ 49/mês</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.link_button("Assinar", "https://wa.me/351915323219")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 with c2:
-    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
-    st.markdown("### Small Caps")
-    st.markdown("<span class='badge'>Alta Performance</span>", unsafe_allow_html=True)
-    st.markdown("<p>Oportunidades agressivas com forte potencial de valorização.</p>", unsafe_allow_html=True)
-    st.markdown("<div class='price'>R$ 69/mês</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='plan-card-wrapper'>
+        <div class='plan-card'>
+            <span class='badge'>Alta Performance</span>
+            <h3>Small Caps</h3>
+            <p>Oportunidades agressivas com forte potencial de valorização.</p>
+            <div class='price'>R$ 69/mês</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.link_button("Assinar", "https://wa.me/351915323219")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 with c3:
-    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
-    st.markdown("### Carteira BDR")
-    st.markdown("<span class='badge-green'>Internacional</span>", unsafe_allow_html=True)
-    st.markdown("<p>Exposição global com simplicidade total.</p>", unsafe_allow_html=True)
-    st.markdown("<div class='price'>R$ 49/mês</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='plan-card-wrapper'>
+        <div class='plan-card'>
+            <span class='badge-green'>Internacional</span>
+            <h3>Carteira BDR</h3>
+            <p>Exposição global com simplicidade total.</p>
+            <div class='price'>R$ 49/mês</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.link_button("Assinar", "https://wa.me/351915323219")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 with c4:
-    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
-    st.markdown("### Carteira de Opções")
-    st.markdown("<span class='badge'>Agressivo</span>", unsafe_allow_html=True)
-    st.markdown("<p>Estratégias assimétricas com potencial explosivo.</p>", unsafe_allow_html=True)
-    st.markdown("<div class='price'>R$ 97/mês</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='plan-card-wrapper'>
+        <div class='plan-card'>
+            <span class='badge'>Agressivo</span>
+            <h3>Carteira de Opções</h3>
+            <p>Estratégias assimétricas com potencial explosivo.</p>
+            <div class='price'>R$ 97/mês</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.link_button("Assinar", "https://wa.me/351915323219")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
@@ -733,22 +749,30 @@ st.markdown("<h3 style='color:#00ff9a;'>Planos Premium</h3>", unsafe_allow_html=
 p1, p2 = st.columns(2)
 
 with p1:
-    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
-    st.markdown("<span class='badge'>Mais Vendido</span>", unsafe_allow_html=True)
-    st.markdown("## Phoenix Equity")
-    st.markdown("<p>Inclui IBOV + Small Caps + BDR. O melhor custo-benefício para quem opera ações.</p>", unsafe_allow_html=True)
-    st.markdown("<div class='price'>R$ 97/mês</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='plan-card-wrapper'>
+        <div class='plan-card'>
+            <span class='badge'>Mais Vendido</span>
+            <h3>Phoenix Equity</h3>
+            <p>Inclui IBOV + Small Caps + BDR. O melhor custo-benefício para quem opera ações.</p>
+            <div class='price'>R$ 97/mês</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.link_button("Assinar Phoenix Equity", "https://wa.me/351915323219")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 with p2:
-    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
-    st.markdown("<span class='badge'>Recomendado</span>", unsafe_allow_html=True)
-    st.markdown("## Phoenix Options")
-    st.markdown("<p>Operações assimétricas e estratégias de derivativos.</p>", unsafe_allow_html=True)
-    st.markdown("<div class='price'>R$ 147/mês</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='plan-card-wrapper'>
+        <div class='plan-card'>
+            <span class='badge'>Recomendado</span>
+            <h3>Phoenix Options</h3>
+            <p>Operações assimétricas e estratégias de derivativos.</p>
+            <div class='price'>R$ 147/mês</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.link_button("Assinar Phoenix Options", "https://wa.me/351915323219")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
@@ -760,35 +784,47 @@ st.markdown("<h3 style='color:#00ff9a;'>Linha PRO — Scanners Profissionais</h3
 s1, s2, s3 = st.columns(3)
 
 with s1:
-    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
-    st.markdown("## Phoenix Quant Scanner")
-    st.markdown("<p>O motor analítico de ações. Autonomia total para traders avançados.</p>", unsafe_allow_html=True)
-    st.markdown("<div class='price'>R$ 147/mês</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='plan-card-wrapper'>
+        <div class='plan-card'>
+            <h3>Phoenix Quant Scanner</h3>
+            <p>O motor analítico de ações. Autonomia total para traders avançados.</p>
+            <div class='price'>R$ 147/mês</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.link_button("Assinar Quant Scanner", "https://wa.me/351915323219")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 with s2:
-    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
-    st.markdown("<span class='badge'>Profissional</span>", unsafe_allow_html=True)
-    st.markdown("## Phoenix Volatility Scanner")
-    st.markdown("<p>Leitura avançada de volatilidade, assimetrias e distorções de prêmio.</p>", unsafe_allow_html=True)
-    st.markdown("<div class='price'>R$ 197/mês</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='plan-card-wrapper'>
+        <div class='plan-card'>
+            <span class='badge'>Profissional</span>
+            <h3>Phoenix Volatility Scanner</h3>
+            <p>Leitura avançada de volatilidade, assimetrias e distorções de prêmio.</p>
+            <div class='price'>R$ 197/mês</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.link_button("Assinar Volatility Scanner", "https://wa.me/351915323219")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 with s3:
-    st.markdown("<div class='plan-card'>", unsafe_allow_html=True)
-    st.markdown("<span class='badge'>Completo</span>", unsafe_allow_html=True)
-    st.markdown("## Phoenix Scanner PRO")
-    st.markdown("<p>Quant + Volatility. A experiência definitiva para profissionais.</p>", unsafe_allow_html=True)
-    st.markdown("<div class='price'>R$ 247/mês</div>", unsafe_allow_html=True)
+    st.markdown("""
+    <div class='plan-card-wrapper'>
+        <div class='plan-card'>
+            <span class='badge'>Completo</span>
+            <h3>Phoenix Scanner PRO</h3>
+            <p>Quant + Volatility. A experiência definitiva para profissionais.</p>
+            <div class='price'>R$ 247/mês</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.link_button("Assinar Scanner PRO", "https://wa.me/351915323219")
-    st.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
 # ===================================================================
-# SEÇÃO: QUAL PLANO ESCOLHER?
+# 4) SEÇÃO — QUAL PLANO ESCOLHER?
 # ===================================================================
 st.markdown("<h3 style='color:#00ff9a; text-align:center;'>Qual plano escolher?</h3>", unsafe_allow_html=True)
 
@@ -803,6 +839,7 @@ st.markdown("""
 """)
 
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
 
 
 
