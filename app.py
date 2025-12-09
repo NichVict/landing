@@ -113,55 +113,68 @@ st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 EXTRA_CSS = """
 <style>
 
+.plan-card-wrapper {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
 .plan-card {
     background: #0b0d10;
     border: 1px solid rgba(0,255,154,0.25);
     border-radius: 16px;
     padding: 1.4rem;
-    margin-bottom: 1.5rem;
+    overflow: hidden;
+    width: 100% !important;
     box-shadow: 0 0 12px rgba(0,255,154,0.18);
-    transition: all .25s ease-in-out;
+    transition: transform .25s ease-in-out, box-shadow .25s ease-in-out;
 }
 
 .plan-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 22px rgba(0,255,154,0.45);
+    box-shadow: 0 0 25px rgba(0,255,154,0.55);
     border-color: #00ff9a;
 }
 
-.badge {
+/* Correção crítica: remove highlight fantasma do container do Streamlit */
+[data-testid="column"] {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+[data-testid="column"] > div {
+    padding: 0 !important;
+}
+
+/* BADGES */
+.badge, .badge-green {
     display: inline-block;
     padding: 4px 10px;
-    background: linear-gradient(90deg, #ff7a1a, #ff5a1a);
     border-radius: 999px;
     font-weight: 700;
     font-size: 0.75rem;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.badge {
+    background: linear-gradient(90deg, #ff7a1a, #ff5a1a);
     color: #050608;
 }
 
 .badge-green {
-    display: inline-block;
-    padding: 4px 10px;
     background: linear-gradient(90deg, #00ff9a, #00d97a);
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 0.75rem;
-    margin-bottom: 10px;
     color: #050608;
 }
 
+/* TEXTO DO PREÇO */
 .price {
     color: #00ff9a;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-top: 0.7rem;
 }
 
-.feature-list li {
-    margin-bottom: 6px;
-}
-
+/* TÍTULOS CENTRAIS */
 .section-title-center {
     text-align: center;
     font-size: 2rem;
@@ -176,6 +189,7 @@ EXTRA_CSS = """
     margin-bottom: 2rem;
 }
 
+/* DIVISOR */
 .divider-neon {
     border-bottom: 1px solid rgba(0,255,154,0.35);
     margin: 2.2rem 0;
