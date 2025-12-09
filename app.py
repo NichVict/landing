@@ -911,18 +911,19 @@ with step2:
 with step3:
     st.markdown(
         """
-        <div class="plan-card" style="text-align:center;">
-            <h3 style="color:#00ff9a;">3. Execute com clareza</h3>
-            <p style="font-size:0.9rem; color:#d7d7d7;">
-                Recebeu o alerta? Execute na sua corretora.  
-                <strong>Sem análise gráfica.  
-                Sem necessidade de monitorar.</strong><br>
-                A plataforma cuida do resto em tempo real.
-            </p>
-        </div>
+<div class="plan-card" style="text-align:center;">
+    <h3 style="color:#00ff9a;">3. Execute com clareza</h3>
+    <p style="font-size:0.9rem; color:#d7d7d7;">
+        Recebeu o alerta? Execute na sua corretora.<br>
+        <strong>Sem análise gráfica.<br>
+        Sem necessidade de monitorar.</strong><br>
+        A plataforma cuida do resto em tempo real.
+    </p>
+</div>
         """,
         unsafe_allow_html=True
     )
+
 
 
 
