@@ -1390,24 +1390,27 @@ calc_html = """
     document.getElementById("valor-plano").textContent = formatCurrency(plano.preco);
     document.getElementById("main-number-value").textContent = formatCurrency(totalEst);
 
-    if (lucroMensalCons > 0) {
-      const paybackMeses = plano.preco / lucroMensalCons;
-      const paybackDias  = paybackMeses * 30.0;
+    if (lucroMensalEst > 0) {
+      const paybackMeses = plano.preco / lucroMensalEst;
+      const paybackDias = paybackMeses * 30;
       document.getElementById("valor-payback").textContent = formatDays(paybackDias);
     } else {
       document.getElementById("valor-payback").textContent = "–";
     }
 
+
     // barras – proporção entre conservador e estratégia
-    let ratio = 0.0;
+    let ratio = 0;
     if (totalEst > 0) {
       ratio = Math.min(1.0, totalCons / totalEst);
     }
-    const widthEst = 100;
-    const widthCons = Math.max(8, Math.round(widthEst * ratio));
-
-    document.getElementById("bar-estrategia").style.width  = widthEst + "%";
+    
+    const widthEstrat = 100;
+    const widthCons = Math.max(8, Math.round(widthEstrat * ratio));
+    
+    document.getElementById("bar-estrategia").style.width = widthEstrat + "%";
     document.getElementById("bar-conservador").style.width = widthCons + "%";
+
   }
 
   document.getElementById("capital-input").addEventListener("input", updateCalc);
