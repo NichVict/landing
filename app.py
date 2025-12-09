@@ -920,8 +920,9 @@ with step3:
                 A plataforma cuida do resto em tempo real.
             </p>
         </div>
-    """)
-    st.markdown(html_step3, unsafe_allow_html=True)
+        """,
+        unsafe_allow_html=True
+    )
 
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
