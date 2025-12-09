@@ -968,12 +968,11 @@ calc_html = """
   }
 
   .calc-title {
-      text-align: center;
-      color: #ffb347;                      /* amarelo do payback */
-      font-size: 2rem;                     /* maior e mais imponente */
-      margin-bottom: 0.6rem;
-      font-weight: 800;
-      text-shadow: 0 0 10px rgba(255, 180, 70, 0.55);  /* glow
+    text-align: center;
+    color: var(--neon);
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
   }
 
   .calc-subtitle {
