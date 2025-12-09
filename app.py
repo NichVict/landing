@@ -203,76 +203,7 @@ EXTRA_CSS = """
 st.markdown(EXTRA_CSS, unsafe_allow_html=True)
 
 
-CTA_BANNER_CSS = """
-<style>
-.top-cta-banner {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    width: 100%;
-    background: rgba(5, 6, 8, 0.96);
-    border-bottom: 1px solid rgba(0,255,154,0.35);
-    padding: 0.5rem 1.5rem;
-    backdrop-filter: blur(10px);
-}
 
-.top-cta-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.8rem;
-    font-size: 0.95rem;
-}
-
-.top-cta-text {
-    color: #f2f2f2;
-}
-
-.top-cta-text span {
-    color: #00ff9a;
-    font-weight: 600;
-}
-
-.top-cta-btn {
-    border: 1px solid #00ff9a;
-    border-radius: 999px;
-    padding: 0.3rem 1.1rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: #050608;
-    background: linear-gradient(90deg, #00ff9a, #ff7a1a);
-}
-.top-cta-btn:hover {
-    filter: brightness(1.05);
-}
-@media (max-width: 768px){
-    .top-cta-inner {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-</style>
-"""
-st.markdown(CTA_BANNER_CSS, unsafe_allow_html=True)
-
-st.markdown(
-    """
-    <div class="top-cta-banner">
-        <div class="top-cta-inner">
-            <div class="top-cta-text">
-                Pronto para operar com o <span>Phoenix Strategy</span>?
-            </div>
-            <a class="top-cta-btn" href="https://wa.me/351915323219" target="_blank">
-                Falar com o estrategista no WhatsApp
-            </a>
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
 
 
 # ============================================================
