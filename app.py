@@ -1142,7 +1142,7 @@ calc_html = """
 
 <script>
   const planos = {
-    "acoes":  { preco: 197,  pCons: 0.04, pEst: 0.06 },
+    "acoes":  { preco: 247,  pCons: 0.04, pEst: 0.06 },
     "opcoes": { preco: 297,  pCons: 0.12, pEst: 0.25 },
     "max":    { preco: 397,  pCons: 0.08, pEst: 0.155 },
     "full":   { preco: 597,  pCons: 0.08, pEst: 0.155 }
