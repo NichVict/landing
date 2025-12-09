@@ -1237,7 +1237,10 @@ calc_html = """
     color: var(--neon);
   }
 
-  .result-row.payback span:last-child {
+  .result-row.payback span:last-child {    
+    color: #ffb347 !important;
+    font-size: 1.05rem;
+    font-weight: 700;
     text-shadow: 0 0 6px rgba(255, 180, 70, 0.55);
   }
 
