@@ -1409,7 +1409,7 @@ calc_html = """
 </html>
 """
 
-components.html(calc_html, height=480, scrolling=False)
+components.html(calc_html, height=1200, scrolling=False)
 
 
 # ============================================================
