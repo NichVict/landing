@@ -969,38 +969,39 @@ for idx, p in enumerate(perfis):
 
         estrategico_acoes = capital * 0.06
         estrategico_opcoes = capital * 0.25
-        
+
         html_card = f"""
-        <div style="
-            border: 1px solid rgba(0,255,154,0.3);
-            padding: 1.3rem;
-            border-radius: 12px;
-            box-shadow: 0 0 12px rgba(0,255,154,0.25);
-            margin-bottom: 1.2rem;
-            background: rgba(255,255,255,0.02);
-        ">
+<div style="
+    border: 1px solid rgba(0,255,154,0.3);
+    padding: 1.3rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,255,154,0.25);
+    margin-bottom: 1.2rem;
+    background: rgba(255,255,255,0.02);
+">
 
-            <h3 style='color:#00ff9a; text-align:center;'>{p["nome"]}</h3>
-            <p style='text-align:center; color:#d7d7d7; font-size:1.05rem;'>
-                Capital: <strong>R$ {capital:,.0f}</strong>
-            </p>
+    <h3 style='color:#00ff9a; text-align:center;'>{p["nome"]}</h3>
 
-            <hr style='border: 1px solid rgba(255,255,255,0.1); margin: 1rem 0;'>
+    <p style='text-align:center; color:#d7d7d7; font-size:1.05rem;'>
+        Capital: <strong>R$ {capital:,.0f}</strong>
+    </p>
 
-            <h4 style='color:#ff7a1a; text-align:center; margin-bottom:0.3rem;'>Cenário Conservador</h4>
-            <p style='font-size:0.9rem; color:#d7d7d7;'>
-                Ações (4%): <strong>R$ {conservador_acoes:,.0f}</strong><br>
-                Opções (12%): <strong>R$ {conservador_opcoes:,.0f}</strong>
-            </p>
+    <hr style='border: 1px solid rgba(255,255,255,0.1); margin: 1rem 0;'>
 
-            <h4 style='color:#00ff9a; text-align:center; margin-top:1rem; margin-bottom:0.3rem;'>Premissas da Estratégia</h4>
-            <p style='font-size:0.9rem; color:#d7d7d7;'>
-                Ações (≈6%): <strong>R$ {estrategico_acoes:,.0f}</strong><br>
-                Opções (25%): <strong>R$ {estrategico_opcoes:,.0f}</strong>
-            </p>
+    <h4 style='color:#ff7a1a; text-align:center; margin-bottom:0.3rem;'>Cenário Conservador</h4>
+    <p style='font-size:0.9rem; color:#d7d7d7;'>
+        Ações (4%): <strong>R$ {conservador_acoes:,.0f}</strong><br>
+        Opções (12%): <strong>R$ {conservador_opcoes:,.0f}</strong>
+    </p>
 
-        </div>
-        """
+    <h4 style='color:#00ff9a; text-align:center; margin-top:1rem; margin-bottom:0.3rem;'>Premissas da Estratégia</h4>
+    <p style='font-size:0.9rem; color:#d7d7d7;'>
+        Ações (≈6%): <strong>R$ {estrategico_acoes:,.0f}</strong><br>
+        Opções (25%): <strong>R$ {estrategico_opcoes:,.0f}</strong>
+    </p>
+
+</div>
+"""
 
         st.markdown(html_card, unsafe_allow_html=True)
 
