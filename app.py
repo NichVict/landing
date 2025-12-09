@@ -1281,7 +1281,7 @@ st.markdown("""
 - **Quero o melhor do melhor** → Phoenix Scanner PRO  
 """)
 
-st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
+
 
 
 # ============================================================
