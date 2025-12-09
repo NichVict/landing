@@ -766,13 +766,13 @@ with p2:
     <div class='plan-card-wrapper'>
         <div class='plan-card'>
             <span class='badge'>Recomendado</span>
-            <h3>Phoenix Options</h3>
-            <p>Operações assimétricas e estratégias de derivativos.</p>
+            <h3>Phoenix Full</h3>
+            <p>Todas as 4 carteiras: IBOV, Small Caps, BDR e Opções em um único plano.</p>
             <div class='price'>R$ 147/mês</div>
         </div>
     </div>
     """, unsafe_allow_html=True)
-    st.link_button("Assinar Phoenix Options", "https://wa.me/351915323219")
+    st.link_button("Assinar Phoenix Full", "https://wa.me/351915323219")
 
 st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
 
@@ -833,7 +833,7 @@ st.markdown("""
 - **Quero agressividade, mas sem complexidade** → Small Caps  
 - **Quero assimetria explosiva** → Carteira de Opções  
 - **Quero todas as ações com melhor valor** → Phoenix Equity  
-- **Quero operar derivativos sério** → Phoenix Options  
+- **Quero tudo em um único plano** → Phoenix Full  
 - **Quero autonomia total e operar como profissional** → Scanners  
 - **Quero o melhor do melhor** → Phoenix Scanner PRO  
 """)
