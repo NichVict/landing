@@ -1107,12 +1107,12 @@ calc_html = """
       <div class="calc-right">
         <div class="calc-card">
           <div class="main-number">
-            <div class="main-number-title">ROI estimado (Premissas da Estratégia)</div>
+            <div class="main-number-title">ROI estimado</div>
             <div id="main-number-value" class="main-number-value">R$ 0,00</div>
           </div>
 
           <div class="bar-wrapper">
-            <div class="bar-label">Comparação entre Cenário Conservador e Estratégia</div>
+            <div class="bar-label">Compare abaixo</div>
             <div class="bar-bg">
               <div id="bar-conservador" class="bar-fill-conservador" style="width: 30%;"></div>
               <div id="bar-estrategia" class="bar-fill-estrategia" style="width: 60%;"></div>
@@ -1124,7 +1124,7 @@ calc_html = """
             <span id="valor-plano">R$ 0,00</span>
           </div>
           <div class="result-row estrategia">
-            <span>Total estratégia no período</span>
+            <span>Lucro estimado no período</span>
             <span id="valor-estrategia">R$ 0,00</span>
           </div>
           <div class="result-row payback">
