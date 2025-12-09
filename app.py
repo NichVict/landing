@@ -742,6 +742,70 @@ do mecanismo interno da plataforma.
         """
     )
 
+# ============================================================
+# SEÇÃO — DEPOIMENTOS / CONFIANÇA
+# ============================================================
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+st.markdown(
+    "<h3 style='color:#00ff9a; font-weight:700; text-align:center;'>Por que profissionais confiam na Phoenix Strategy?</h3>",
+    unsafe_allow_html=True
+)
+
+col_t1, col_t2, col_t3 = st.columns(3)
+
+with col_t1:
+    st.markdown(
+        """
+        <div class='plan-card'>
+            <p style='font-size:0.9rem; color:#d7d7d7;'>
+            “A ideia de consolidar leitura de fluxo, tendência e volatilidade em um único motor analítico
+            resolve exatamente os gargalos que vejo no dia a dia.”
+            </p>
+            <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
+            — Estrategista em Renda Variável
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+with col_t2:
+    st.markdown(
+        """
+        <div class='plan-card'>
+            <p style='font-size:0.9rem; color:#d7d7d7;'>
+            “Ter sinais claros, com lógica explicável e relatórios rastreáveis, é o tipo de ferramenta
+            que eu gostaria de ter quando comecei.”
+            </p>
+            <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
+            — Analista técnico e educador
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+with col_t3:
+    st.markdown(
+        """
+        <div class='plan-card'>
+            <p style='font-size:0.9rem; color:#d7d7d7;'>
+            “A separação entre carteiras prontas e scanners profissionais deixa muito claro para quem o
+            produto foi feito em cada nível. Isso é raro no mercado.”
+            </p>
+            <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
+            — Consultor independente
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+st.markdown("<div class='section-divider'></div>", unsafe_allow_html=True)
+
+
+
 
 
 # ============================================================
