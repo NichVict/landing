@@ -1,158 +1,243 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
-st.set_page_config(page_title="Planos Premium – Phoenix Strategy", layout="wide")
+st.set_page_config(
+    page_title="Planos Premium – Phoenix Strategy",
+    layout="wide"
+)
 
 # ================================================================
-# ESTILO PREMIUM NEON
+# CABEÇALHO
 # ================================================================
 st.markdown("""
 <style>
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
 
-    .premium-wrapper {
-        max-width: 1100px;
-        margin: 0 auto;
-        margin-top: 2rem;
-    }
+.titulo {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
 
-    .titulo {
-        color: #00ff9a;
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .subtexto {
-        text-align: center;
-        font-size: 1rem;
-        color: #d7d7d7;
-        margin-bottom: 2.5rem;
-    }
-
-    /* GRID – Premium fica lado a lado, e em 1 coluna no mobile */
-    .grid-premium {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 28px;
-    }
-
-    @media(max-width: 900px) {
-        .grid-premium {
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
-
-    /* CARD PREMIUM */
-    .plan-card-wrapper {
-        background: rgba(255,255,255,0.03);
-        border-radius: 22px;
-        padding: 2rem;
-        border: 1px solid rgba(0,255,154,0.28);
-        box-shadow: 0 0 18px rgba(0,255,154,0.30);
-        transition: 0.25s;
-    }
-
-    .plan-card-wrapper:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 0 30px rgba(0,255,154,0.55);
-    }
-
-    .badge {
-        background: #ff7a1a;
-        padding: 6px 12px;
-        border-radius: 50px;
-        font-size: 0.78rem;
-        font-weight: 700;
-        color: #000;
-    }
-
-    h3 {
-        margin-top: 1rem;
-        margin-bottom: 0.6rem;
-        color: #fff;
-        font-size: 1.55rem;
-    }
-
-    .plan-card {
-        margin-bottom: 1.2rem;
-    }
-
-    .price {
-        margin-top: 1rem;
-        font-size: 1.45rem;
-        font-weight: 700;
-        color: #00ff9a;
-    }
-
-    .assinatura-btn {
-        margin-top: 1.2rem;
-        display: flex;
-        justify-content: center;
-    }
-
-    .assinatura-btn a {
-        background: transparent;
-        border: 2px solid #00ff9a;
-        color: #00ff9a !important;
-        padding: 0.55rem 2.2rem;
-        border-radius: 50px;
-        font-weight: 700;
-        text-decoration: none;
-        transition: 0.25s;
-    }
-
-    .assinatura-btn a:hover {
-        background: #00ff9a;
-        color: #000 !important;
-        box-shadow: 0 0 18px rgba(0,255,154,0.45);
-    }
-
+.subtexto {
+    text-align: center;
+    font-size: 1rem;
+    color: #d7d7d7;
+    margin-bottom: 2.5rem;
+}
 </style>
 """, unsafe_allow_html=True)
 
-# ================================================================
-# CONTEÚDO
-# ================================================================
-st.markdown("<div class='premium-wrapper'>", unsafe_allow_html=True)
-
+st.markdown("<div class='wrapper'>", unsafe_allow_html=True)
 st.markdown("<h2 class='titulo'>Planos Premium</h2>", unsafe_allow_html=True)
-st.markdown("""
-<p class='subtexto'>
-Os melhores planos custo-benefício para quem quer operar ações ou unir todas as carteiras em um único pacote.
-</p>
-""", unsafe_allow_html=True)
+st.markdown(
+    "<p class='subtexto'>Os melhores planos custo-benefício para quem quer operar ações ou unificar todas as carteiras em um único pacote.</p>",
+    unsafe_allow_html=True
+)
 
+# ================================================================
+# HTML DOS PLANOS
+# ================================================================
+html_premium = '''
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
 
-st.markdown("<div class='grid-premium'>", unsafe_allow_html=True)
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
 
-# ---------------------- PHOENIX EQUITY ----------------------
-st.markdown("""
-<div class='plan-card-wrapper'>
-    <div class='plan-card'>
-        <span class='badge'>Mais Vendido</span>
-        <h3>Phoenix Equity</h3>
-        <p>Inclui IBOV + Small Caps + BDR. O melhor custo-benefício para quem opera ações.</p>
-        <div class='price'>R$ 247/mês</div>
+.card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 18px;
+    padding: 2rem;
+    border: 1px solid rgba(0,255,154,0.35);
+    box-shadow: 0 0 25px rgba(0,255,154,0.4);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.badge-orange {
+    background: #ff7a1a;
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #000;
+    display: inline-block;
+}
+
+.badge-green {
+    background: #00ff9a;
+    padding: 5px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #000;
+    display: inline-block;
+}
+
+h3 {
+    margin-top: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.desc {
+    color: #d7d7d7;
+    font-size: 0.95rem;
+}
+
+.price {
+    margin-top: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #00ff9a;
+}
+
+.price-sub {
+    font-size: 0.9rem;
+    color: #bfbfbf;
+    margin-top: 6px;
+    line-height: 1.4;
+}
+
+.highlight {
+    color: #00ff9a;
+}
+
+.btn {
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btn a {
+    border: 2px solid #00ff9a;
+    padding: 0.6rem 2.8rem;
+    border-radius: 50px;
+    color: #00ff9a;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.btn a:hover {
+    background: #00ff9a;
+    color: #000;
+}
+
+.section-title {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.features {
+    color: #d7d7d7;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.features div {
+    margin-bottom: 6px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="grid">
+
+<!-- PHOENIX EQUITY -->
+<div class="card">
+    <span class="badge-orange">Mais vendido</span>
+    <h3>Phoenix Equity</h3>
+
+    <p class="desc">
+        Inclui IBOV + Small Caps + BDR. O melhor custo-benefício para quem opera ações.
+    </p>
+
+    <div class="price">R$ 447/mês no plano anual</div>
+    <div class="price-sub">
+        Economia de <strong>25%</strong>
+        <span class="highlight">(equivalente a 3 meses grátis)</span>
     </div>
-    <div class='assinatura-btn'>
-        <a href='https://wa.me/351915323219' target='_blank'>Assinar Phoenix Equity</a>
+
+    <div class="price-sub" style="margin-top:8px;">
+        <strong>Plano trimestral:</strong> R$ 525/mês<br>
+        Economia de <strong>12%</strong> · pagamento a cada 3 meses
+    </div>
+
+    <div class="price-sub" style="margin-top:6px;">
+        <strong>Plano mensal:</strong> R$ 597/mês
+    </div>
+
+    <div class="btn">
+        <a href="https://wa.me/351915323219" target="_blank">Assinar Phoenix Equity</a>
     </div>
 </div>
-""", unsafe_allow_html=True)
 
-# ---------------------- PHOENIX FULL ----------------------
-st.markdown("""
-<div class='plan-card-wrapper'>
-    <div class='plan-card'>
-        <span class='badge'>Recomendado</span>
-        <h3>Phoenix Full</h3>
-        <p>Todas as 4 carteiras: IBOV, Small Caps, BDR e Opções em um único plano.</p>
-        <div class='price'>R$ 397/mês</div>
+<!-- PHOENIX FULL -->
+<div class="card">
+    <span class="badge-green">Recomendado</span>
+    <h3>Phoenix Full</h3>
+
+    <p class="desc">
+        Todas as carteiras em um único plano: IBOV, Small Caps, BDR e Opções.
+    </p>
+
+    <div class="price">R$ 597/mês no plano anual</div>
+    <div class="price-sub">
+        Economia de <strong>25%</strong>
+        <span class="highlight">(equivalente a 3 meses grátis)</span>
     </div>
-    <div class='assinatura-btn'>
-        <a href='https://wa.me/351915323219' target='_blank'>Assinar Phoenix Full</a>
+
+    <div class="price-sub" style="margin-top:8px;">
+        <strong>Plano trimestral:</strong> R$ 699/mês<br>
+        Economia de <strong>12%</strong> · pagamento a cada 3 meses
+    </div>
+
+    <div class="price-sub" style="margin-top:6px;">
+        <strong>Plano mensal:</strong> R$ 797/mês
+    </div>
+
+    <div class="btn">
+        <a href="https://wa.me/351915323219" target="_blank">Assinar Phoenix Full</a>
     </div>
 </div>
-""", unsafe_allow_html=True)
 
-st.markdown("</div>", unsafe_allow_html=True)  # fecha grid
-st.markdown("</div>", unsafe_allow_html=True)  # fecha wrapper
+</div>
+
+<!-- DESCRIÇÃO ABAIXO -->
+<div class="section-title">O que está incluído em cada plano</div>
+
+<div class="features">
+    <div><strong>IBOV:</strong> ações líderes do Ibovespa com foco em consistência e proteção de capital.</div>
+    <div><strong>Small Caps:</strong> empresas em crescimento acelerado com maior potencial de valorização.</div>
+    <div><strong>BDR:</strong> exposição a empresas globais com diversificação geográfica e cambial.</div>
+    <div><strong>Opções:</strong> estratégias com derivativos focadas em assimetria, volatilidade e proteção.</div>
+    <div>✔️ Alertas automáticos por Telegram e e-mail</div>
+    <div>✔️ Plataforma exclusiva com operações e relatórios em tempo real</div>
+</div>
+
+</body>
+</html>
+'''
+
+components.html(
+    html_premium,
+    height=1200,
+    scrolling=False
+)
+
+st.markdown("</div>", unsafe_allow_html=True)
