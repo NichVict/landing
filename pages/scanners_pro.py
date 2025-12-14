@@ -241,7 +241,7 @@ h3 {
     </div>
 
     <div class="btn">
-        <a href="https://wa.me/351915323219" target="_blank">Assinar Scanner PRO</a>
+        <a href="https://loja.infinitepay.io/aurinvest/mvb9924-scanner-pro---acoes-opcoes" target="_blank">Assinar Scanner PRO</a>
     </div>
 </div>
 
