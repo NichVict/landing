@@ -267,7 +267,7 @@ h3 {
 
 components.html(
     html_scanners,
-    height=1550,
+    height=2550,
     scrolling=False
 )
 
