@@ -137,13 +137,25 @@ st.markdown("""
 <div class='plan-card-wrapper'>
     <span class='badge-green'>Essencial</span>
     <h3>Carteira IBOV</h3>
-    <p>Ações sólidas do Ibovespa com sinais automatizados.</p>
+    <p>
+    • Ações líderes do Ibovespa<br>
+    • Sinais objetivos de entrada e saída<br>
+    • Foco em tendência e proteção de capital<br>
+    • Ideal para quem busca consistência
+    </p>
+
     <div class='price'>R$ 197/mês</div>
+    <p style='font-size:0.85rem; color:#bfbfbf;'>
+        Trimestral: <b>R$ 173/mês</b> · Anual: <b>R$ 148/mês</b><br>
+        <span style='color:#00ff9a;'>3 meses grátis no plano anual</span>
+    </p>
+
     <div class='assinatura-btn'>
-        <a href='https://wa.me/351915323219' target='_blank'>Assinar</a>
+        <a href='https://wa.me/351915323219' target='_blank'>Assinar IBOV</a>
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 # ----------------------------- CARD 2
 st.markdown("""
