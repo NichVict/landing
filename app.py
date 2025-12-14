@@ -697,7 +697,7 @@ with col_t1:
             resolve exatamente os gargalos que vejo no dia a dia.”
             </p>
             <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
-            — — Ricardo M., Estrategista em Renda Variável
+            Ricardo M.- Estrategista em Renda Variável
             </p>
         </div>
         """,
@@ -751,7 +751,7 @@ with col_t4:
             Com os alertas da Phoenix, eu só sigo as entradas e saídas. Simples, direto e seguro.”
             </p>
             <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
-            — Karina R.,Investidora Iniciante (1º mês operando)
+            Karina R. - Investidora Iniciante (1º mês operando)
             </p>
         </div>
         """,
@@ -767,7 +767,7 @@ with col_t5:
             com instrução clara. É só executar. Finalmente consegui consistência sem viver na frente da tela.”
             </p>
             <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
-            — Bruno S.,Trader Intermediário
+            Bruno S.- Trader Intermediário
             </p>
         </div>
         """,
@@ -783,7 +783,7 @@ with col_t6:
             Os alertas são objetivos e o relatório em tempo real mostra exatamente o que o algoritmo está lendo.”
             </p>
             <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
-            — Marcela M., Investidora de Médio Prazo
+            Marcela M. - Investidora de Médio Prazo
             </p>
         </div>
         """,
