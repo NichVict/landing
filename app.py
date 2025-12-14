@@ -697,7 +697,7 @@ with col_t1:
             resolve exatamente os gargalos que vejo no dia a dia.”
             </p>
             <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
-            Ricardo M.- Estrategista em Renda Variável
+            Ricardo M. - Estrategista de Renda Variável
             </p>
         </div>
         """,
