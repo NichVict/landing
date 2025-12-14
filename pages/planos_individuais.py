@@ -2,7 +2,7 @@
 
 
 import streamlit as st
-import textwrap
+
 
 st.set_page_config(page_title="Carteiras Individuais – Phoenix Strategy", layout="wide")
 
@@ -137,32 +137,53 @@ Planos individuais para quem deseja focar apenas em uma estratégia específica 
 st.markdown("<div class='grid'>", unsafe_allow_html=True)
 
 # ----------------------------- CARD 1
-st.markdown(textwrap.dedent("""
-<div class='plan-card-wrapper'>
-    <span class='badge-green'>Essencial</span>
-    <h3>Carteira IBOV</h3>
 
-    <p>Ações líderes do Ibovespa com foco em consistência e proteção de capital.</p>
 
-    <p style='font-size:0.9rem; color:#d7d7d7;'>
+with st.container():
+    st.markdown("<div class='plan-card-wrapper'>", unsafe_allow_html=True)
+
+    st.markdown("<span class='badge-green'>Essencial</span>", unsafe_allow_html=True)
+    st.markdown("### Carteira IBOV")
+
+    st.write(
+        "Ações líderes do Ibovespa com foco em consistência e proteção de capital."
+    )
+
+    st.markdown(
+        """
+        <p style="color:#d7d7d7; font-size:0.9rem;">
         • Sinais claros de entrada e saída<br>
         • Operações baseadas em tendência<br>
         • Ideal para investidores que buscam previsibilidade
-    </p>
+        </p>
+        """,
+        unsafe_allow_html=True
+    )
 
-    <div class='price'>R$ 197/mês</div>
+    st.markdown("<div class='price'>R$ 197/mês</div>", unsafe_allow_html=True)
 
-    <p style='font-size:0.85rem; color:#bfbfbf;'>
+    st.markdown(
+        """
+        <p style="font-size:0.85rem; color:#bfbfbf;">
         Trimestral: <b>R$ 173/mês</b> ·
         Anual: <b>R$ 148/mês</b><br>
-        <span style='color:#00ff9a;'>3 meses grátis no plano anual</span>
-    </p>
+        <span style="color:#00ff9a;">3 meses grátis no plano anual</span>
+        </p>
+        """,
+        unsafe_allow_html=True
+    )
 
-    <div class='assinatura-btn'>
-        <a href='https://wa.me/351915323219' target='_blank'>Assinar IBOV</a>
-    </div>
-</div>
-"""), unsafe_allow_html=True)
+    st.markdown(
+        """
+        <div class='assinatura-btn'>
+            <a href='https://wa.me/351915323219' target='_blank'>Assinar IBOV</a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown("</div>", unsafe_allow_html=True)
+
 
 
 
