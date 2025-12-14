@@ -41,7 +41,7 @@ st.markdown(
 )
 
 # ================================================================
-# HTML DOS PLANOS
+# HTML DOS PLANOS PREMIUM (ISOLADO)
 # ================================================================
 html_premium = '''
 <!DOCTYPE html>
@@ -164,22 +164,22 @@ h3 {
     <h3>Phoenix Equity</h3>
 
     <p class="desc">
-        Inclui IBOV + Small Caps + BDR. O melhor custo-benefício para quem opera ações.
+        Inclui IBOV, Small Caps e BDR. O melhor custo-benefício para quem opera ações.
     </p>
 
-    <div class="price">R$ 447/mês no plano anual</div>
+    <div class="price">R$ 335/mês no plano anual</div>
     <div class="price-sub">
         Economia de <strong>25%</strong>
         <span class="highlight">(equivalente a 3 meses grátis)</span>
     </div>
 
     <div class="price-sub" style="margin-top:8px;">
-        <strong>Plano trimestral:</strong> R$ 525/mês<br>
+        <strong>Plano trimestral:</strong> R$ 393/mês<br>
         Economia de <strong>12%</strong> · pagamento a cada 3 meses
     </div>
 
     <div class="price-sub" style="margin-top:6px;">
-        <strong>Plano mensal:</strong> R$ 597/mês
+        <strong>Plano mensal:</strong> R$ 447/mês
     </div>
 
     <div class="btn">
@@ -196,19 +196,19 @@ h3 {
         Todas as carteiras em um único plano: IBOV, Small Caps, BDR e Opções.
     </p>
 
-    <div class="price">R$ 597/mês no plano anual</div>
+    <div class="price">R$ 448/mês no plano anual</div>
     <div class="price-sub">
         Economia de <strong>25%</strong>
         <span class="highlight">(equivalente a 3 meses grátis)</span>
     </div>
 
     <div class="price-sub" style="margin-top:8px;">
-        <strong>Plano trimestral:</strong> R$ 699/mês<br>
+        <strong>Plano trimestral:</strong> R$ 525/mês<br>
         Economia de <strong>12%</strong> · pagamento a cada 3 meses
     </div>
 
     <div class="price-sub" style="margin-top:6px;">
-        <strong>Plano mensal:</strong> R$ 797/mês
+        <strong>Plano mensal:</strong> R$ 597/mês
     </div>
 
     <div class="btn">
@@ -223,7 +223,7 @@ h3 {
 
 <div class="features">
     <div><strong>IBOV:</strong> ações líderes do Ibovespa com foco em consistência e proteção de capital.</div>
-    <div><strong>Small Caps:</strong> empresas em crescimento acelerado com maior potencial de valorização.</div>
+    <div><strong>Small Caps:</strong> empresas em crescimento acelerado com alto potencial de valorização.</div>
     <div><strong>BDR:</strong> exposição a empresas globais com diversificação geográfica e cambial.</div>
     <div><strong>Opções:</strong> estratégias com derivativos focadas em assimetria, volatilidade e proteção.</div>
     <div>✔️ Alertas automáticos por Telegram e e-mail</div>
@@ -236,7 +236,7 @@ h3 {
 
 components.html(
     html_premium,
-    height=1200,
+    height=1150,
     scrolling=False
 )
 
