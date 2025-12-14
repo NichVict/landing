@@ -271,7 +271,7 @@ h3 {
 
 components.html(
     html_cards,
-    height=1350,
+    height=1550,
     scrolling=False
 )
 
