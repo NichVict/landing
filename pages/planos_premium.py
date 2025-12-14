@@ -183,7 +183,7 @@ h3 {
     </div>
 
     <div class="btn">
-        <a href="https://wa.me/351915323219" target="_blank">Assinar Phoenix Equity</a>
+        <a href="https://loja.infinitepay.io/aurinvest/cjp5787-carteira-phoenix-equity" target="_blank">Assinar Phoenix Equity</a>
     </div>
 </div>
 
@@ -212,7 +212,7 @@ h3 {
     </div>
 
     <div class="btn">
-        <a href="https://wa.me/351915323219" target="_blank">Assinar Phoenix Full</a>
+        <a href="https://loja.infinitepay.io/aurinvest/sau8608-carteira-phoenix-full" target="_blank">Assinar Phoenix Full</a>
     </div>
 </div>
 
