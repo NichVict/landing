@@ -1,4 +1,5 @@
 
+
 import streamlit as st
 
 st.set_page_config(page_title="Carteiras Individuais – Phoenix Strategy", layout="wide")
@@ -138,21 +139,13 @@ st.markdown("""
 <div class='plan-card-wrapper'>
     <span class='badge-green'>Essencial</span>
     <h3>Carteira IBOV</h3>
-
-    <p>Ações líderes do Ibovespa com foco em consistência e proteção de capital.</p>
-
-    <div class='price'>R$ 148/mês</div>
-
-    <p style="font-size:0.8rem; color:#bfbfbf;">
-    Cobrado anualmente · Mensal R$ 197 · Trimestral R$ 173
-    </p>
-
+    <p>Ações sólidas do Ibovespa com sinais automatizados.</p>
+    <div class='price'>R$ 197/mês</div>
     <div class='assinatura-btn'>
         <a href='https://wa.me/351915323219' target='_blank'>Assinar</a>
     </div>
 </div>
 """, unsafe_allow_html=True)
-
 
 # ----------------------------- CARD 2
 st.markdown("""
