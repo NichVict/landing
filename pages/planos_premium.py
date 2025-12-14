@@ -222,12 +222,12 @@ h3 {
 <div class="section-title">O que está incluído em cada plano</div>
 
 <div class="features">
-    <div><strong>IBOV:</strong> ações líderes do Ibovespa com foco em consistência e proteção de capital.</div>
-    <div><strong>Small Caps:</strong> empresas em crescimento acelerado com alto potencial de valorização.</div>
-    <div><strong>BDR:</strong> exposição a empresas globais com diversificação geográfica e cambial.</div>
-    <div><strong>Opções:</strong> estratégias com derivativos focadas em assimetria, volatilidade e proteção.</div>
-    <div>✔️ Alertas automáticos por Telegram e e-mail</div>
+
+    <div>✔️ Alertas automáticos por Telegram e e-mail no momento ideal para entrar e sair de cada operação</div>
     <div>✔️ Plataforma exclusiva com operações e relatórios em tempo real</div>
+    <div>✔️ Monitoramento constante do algoritmo proprietário Phoenix Strategy</div>
+    <div>✔️ Suporte técnico e comercial</div>
+    
 </div>
 
 </body>
