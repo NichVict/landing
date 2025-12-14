@@ -253,9 +253,9 @@ h3 {
 <div class="features">
     <div><strong>Scanner Ações:</strong> leitura técnica automatizada, filtros proprietários e identificação de oportunidades em tempo real.</div>
     <div><strong>Scanner Opções:</strong> análise profunda de volatilidade implícita, skew, assimetrias e distorções de prêmio.</div>
-    <div><strong>Scanner Opções:</strong> Ambos Scanners têm um Score com as Top oportunidades e entregam as estratégias prontas, com gatilhos de entrada, stop loss e gain.</div>
-    <div><strong>Scanner Opções:</strong> Registro técnico e visual de todas as buscas, para consulta e geração de relatórios. </div>    
     <div><strong>Scanner PRO:</strong> combinação completa de ações + opções para leitura total do mercado.</div>
+    <div><strong>Ambos Scanners têm um Score com as Top oportunidades e entregam as estratégias prontas, com gatilhos de entrada, stop loss e gain.</div>
+    <div><strong>Registro técnico e visual de todas as buscas, para consulta e geração de relatórios. </div>    
     <div>✔️ Plataforma profissional em tempo real</div>
     <div>✔️ Ferramenta de apoio à decisão (não são sinais)</div>
     <div>✔️ Autonomia total para traders avançados</div>
