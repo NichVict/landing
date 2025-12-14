@@ -188,7 +188,7 @@ h3 {
         <strong>Plano mensal:</strong> R$ 197/mês
     </div>
 
-    <div class="btn"><a href="https://wa.me/351915323219" target="_blank">Assinar IBOV</a></div>
+    <div class="btn"><a href="https://loja.infinitepay.io/aurinvest/uay5017-carteira-ibov" target="_blank">Assinar IBOV</a></div>
 </div>
 
 <div class="card">
