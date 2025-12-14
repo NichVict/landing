@@ -208,7 +208,7 @@ h3 {
         <strong>Plano mensal:</strong> R$ 219/mês
     </div>
 
-    <div class="btn"><a href="https://wa.me/351915323219" target="_blank">Assinar Small Caps</a></div>
+    <div class="btn"><a href="https://loja.infinitepay.io/aurinvest/dft3856-carteira-small-caps" target="_blank">Assinar Small Caps</a></div>
 </div>
 
 <div class="card">
@@ -228,7 +228,7 @@ h3 {
         <strong>Plano mensal:</strong> R$ 219/mês
     </div>
 
-    <div class="btn"><a href="https://wa.me/351915323219" target="_blank">Assinar BDR</a></div>
+    <div class="btn"><a href="https://loja.infinitepay.io/aurinvest/dme6678-carteira-bdr" target="_blank">Assinar BDR</a></div>
 </div>
 
 <div class="card">
@@ -248,7 +248,7 @@ h3 {
         <strong>Plano mensal:</strong> R$ 297/mês
     </div>
 
-    <div class="btn"><a href="https://wa.me/351915323219" target="_blank">Assinar Opções</a></div>
+    <div class="btn"><a href="https://loja.infinitepay.io/aurinvest/nvw1139-carteira-opcoes---derivativos-ibov" target="_blank">Assinar Opções</a></div>
 </div>
 
 </div>
