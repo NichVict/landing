@@ -137,52 +137,100 @@ st.markdown("""
 <div class='plan-card-wrapper'>
     <span class='badge-green'>Essencial</span>
     <h3>Carteira IBOV</h3>
-    <p>Ações sólidas do Ibovespa com sinais automatizados.</p>
+    <p>
+    • Ações líderes do Ibovespa<br>
+    • Sinais objetivos de entrada e saída<br>
+    • Foco em tendência e proteção de capital<br>
+    • Ideal para quem busca consistência
+    </p>
+
     <div class='price'>R$ 197/mês</div>
+    <p style='font-size:0.85rem; color:#bfbfbf;'>
+        Trimestral: <b>R$ 173/mês</b> · Anual: <b>R$ 148/mês</b><br>
+        <span style='color:#00ff9a;'>3 meses grátis no plano anual</span>
+    </p>
+
     <div class='assinatura-btn'>
-        <a href='https://wa.me/351915323219' target='_blank'>Assinar</a>
+        <a href='https://wa.me/351915323219' target='_blank'>Assinar IBOV</a>
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 # ----------------------------- CARD 2
 st.markdown("""
 <div class='plan-card-wrapper'>
     <span class='badge'>Alta Performance</span>
     <h3>Small Caps</h3>
-    <p>Oportunidades agressivas com forte potencial de valorização.</p>
+    <p>
+    • Empresas em crescimento acelerado<br>
+    • Operações com maior assimetria<br>
+    • Maior volatilidade e potencial de retorno<br>
+    • Para investidores mais ativos
+    </p>
+
     <div class='price'>R$ 219/mês</div>
+    <p style='font-size:0.85rem; color:#bfbfbf;'>
+        Trimestral: <b>R$ 193/mês</b> · Anual: <b>R$ 164/mês</b><br>
+        <span style='color:#00ff9a;'>Economize 3 meses no plano anual</span>
+    </p>
+
     <div class='assinatura-btn'>
-        <a href='https://wa.me/351915323219' target='_blank'>Assinar</a>
+        <a href='https://wa.me/351915323219' target='_blank'>Assinar Small Caps</a>
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 # ----------------------------- CARD 3
 st.markdown("""
 <div class='plan-card-wrapper'>
     <span class='badge-green'>Internacional</span>
     <h3>Carteira BDR</h3>
-    <p>Exposição global com simplicidade total.</p>
+    <p>
+    • Exposição a empresas globais<br>
+    • Operações em ativos internacionais<br>
+    • Diversificação cambial automática<br>
+    • Estratégia simples e eficiente
+    </p>
+
     <div class='price'>R$ 219/mês</div>
+    <p style='font-size:0.85rem; color:#bfbfbf;'>
+        Trimestral: <b>R$ 193/mês</b> · Anual: <b>R$ 164/mês</b><br>
+        <span style='color:#00ff9a;'>Plano anual com 3 meses grátis</span>
+    </p>
+
     <div class='assinatura-btn'>
-        <a href='https://wa.me/351915323219' target='_blank'>Assinar</a>
+        <a href='https://wa.me/351915323219' target='_blank'>Assinar BDR</a>
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 # ----------------------------- CARD 4
 st.markdown("""
 <div class='plan-card-wrapper'>
     <span class='badge'>Agressivo</span>
     <h3>Carteira de Opções</h3>
-    <p>Estratégias assimétricas com potencial explosivo.</p>
+    <p>
+    • Estratégias com opções listadas<br>
+    • Exploração de volatilidade e distorções<br>
+    • Risco controlado e payoff assimétrico<br>
+    • Para investidores experientes
+    </p>
+
     <div class='price'>R$ 297/mês</div>
+    <p style='font-size:0.85rem; color:#bfbfbf;'>
+        Trimestral: <b>R$ 261/mês</b> · Anual: <b>R$ 223/mês</b><br>
+        <span style='color:#00ff9a;'>Quanto mais tempo, maior a assimetria</span>
+    </p>
+
     <div class='assinatura-btn'>
-        <a href='https://wa.me/351915323219' target='_blank'>Assinar</a>
+        <a href='https://wa.me/351915323219' target='_blank'>Assinar Opções</a>
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 st.markdown("</div>", unsafe_allow_html=True)  # fecha grid
 st.markdown("</div>", unsafe_allow_html=True)  # fecha wrapper
