@@ -136,22 +136,28 @@ st.markdown("<div class='grid'>", unsafe_allow_html=True)
 st.markdown("""
 <div class='plan-card-wrapper'>
     <span class='badge-green'>Essencial</span>
+
     <h3>Carteira IBOV</h3>
-    <p>
-    • Ações líderes do Ibovespa<br>
-    • Sinais objetivos de entrada e saída<br>
-    • Foco em tendência e proteção de capital<br>
-    • Ideal para quem busca consistência
-    </p>
+
+    <ul style='color:#d7d7d7; font-size:0.95rem; padding-left:18px;'>
+        <li>Ações líderes do Ibovespa</li>
+        <li>Sinais objetivos de entrada e saída</li>
+        <li>Foco em tendência e proteção de capital</li>
+        <li>Ideal para quem busca consistência</li>
+    </ul>
 
     <div class='price'>R$ 197/mês</div>
-    <p style='font-size:0.85rem; color:#bfbfbf;'>
-        Trimestral: <b>R$ 173/mês</b> · Anual: <b>R$ 148/mês</b><br>
+
+    <p style='font-size:0.85rem; color:#bfbfbf; margin-top:0.5rem;'>
+        Trimestral: <b>R$ 173/mês</b> ·
+        Anual: <b>R$ 148/mês</b><br>
         <span style='color:#00ff9a;'>3 meses grátis no plano anual</span>
     </p>
 
     <div class='assinatura-btn'>
-        <a href='https://wa.me/351915323219' target='_blank'>Assinar IBOV</a>
+        <a href='https://wa.me/351915323219' target='_blank'>
+            Assinar IBOV
+        </a>
     </div>
 </div>
 """, unsafe_allow_html=True)
