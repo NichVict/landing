@@ -1,3 +1,12 @@
+quero atualizar as paginas de preço e planos. e o mais importante, descrever o que cada carteira entrega.
+
+Salve todos esses valores acima Mike, vamos começar pelos planos indidivuais. segue codigo abaixo para alterar:
+1 - Inserir o que a carteira entraga 
+2 - Inserir os valores dos 3 tipos de planos e os badges com as frases que achar melhor. faça seu melhor.
+
+Depois partimos para os outros planos .... 
+
+
 import streamlit as st
 
 st.set_page_config(page_title="Carteiras Individuais – Phoenix Strategy", layout="wide")
@@ -137,25 +146,14 @@ st.markdown("""
 <div class='plan-card-wrapper'>
     <span class='badge-green'>Essencial</span>
     <h3>Carteira IBOV</h3>
-    <p>
-    • Ações líderes do Ibovespa<br>
-    • Sinais objetivos de entrada e saída<br>
-    • Foco em tendência e proteção de capital<br>
-    • Ideal para quem busca consistência
-    </p>
-
-    <div class='price'>R$ 197/mês</div>
-    <p style='font-size:0.85rem; color:#bfbfbf;'>
-        Trimestral: <b>R$ 173/mês</b> · Anual: <b>R$ 148/mês</b><br>
-        <span style='color:#00ff9a;'>3 meses grátis no plano anual</span>
-    </p>
-
+    <p>Ações líderes do Ibovespa com foco em consistência e proteção de capital.</p>
+    <div class='price'>R$ 148/mês</div>
+    <p style="font-size:0.8rem; color:#bfbfbf;">Cobrado anualmente · Mensal R$ 197 · Trimestral R$ 173</p>
     <div class='assinatura-btn'>
-        <a href='https://wa.me/351915323219' target='_blank'>Assinar IBOV</a>
+        <a href='https://wa.me/351915323219' target='_blank'>Assinar</a>
     </div>
 </div>
 """, unsafe_allow_html=True)
-
 
 # ----------------------------- CARD 2
 st.markdown("""
