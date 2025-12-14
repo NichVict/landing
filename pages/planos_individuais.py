@@ -7,49 +7,52 @@ st.set_page_config(
 )
 
 # ================================================================
-# CABEÇALHO DA PÁGINA (STREAMLIT)
+# CABEÇALHO / TEXTO SUPERIOR
 # ================================================================
-st.markdown("""
-<style>
-.planos-wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
-    margin-top: 2rem;
-}
+st.markdown(
+    """
+    <style>
+        .planos-wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
 
-.titulo {
-    color: #00ff9a;
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 0.3rem;
-}
+        .titulo {
+            color: #00ff9a;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 0.3rem;
+        }
 
-.subtexto {
-    text-align: center;
-    font-size: 1rem;
-    color: #d7d7d7;
-    margin-bottom: 2.5rem;
-}
-</style>
-""", unsafe_allow_html=True)
+        .subtexto {
+            text-align: center;
+            font-size: 1rem;
+            color: #d7d7d7;
+            margin-bottom: 2.5rem;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.markdown("<div class='planos-wrapper'>", unsafe_allow_html=True)
 st.markdown("<h2 class='titulo'>Carteiras Individuais</h2>", unsafe_allow_html=True)
-st.markdown("""
-<p class='subtexto'>
-Planos individuais para quem deseja focar apenas em uma estratégia específica de ações ou derivativos.
-</p>
-""", unsafe_allow_html=True)
+st.markdown(
+    "<p class='subtexto'>Planos individuais para quem deseja focar apenas em uma estratégia específica de ações ou derivativos.</p>",
+    unsafe_allow_html=True
+)
 
 # ================================================================
-# HTML DOS CARDS (CAMINHO B – SEM MARKDOWN)
+# HTML DOS CARDS (ISOLADO – SEM MARKDOWN)
 # ================================================================
+html_cards = '''
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-
 <style>
+
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -131,15 +134,16 @@ h3 {
     border: 2px solid #00ff9a;
     padding: 0.6rem 2.4rem;
     border-radius: 50px;
-    color:#00ff9a;
-    text-decoration:none;
-    font-weight:700;
+    color: #00ff9a;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 .btn a:hover {
-    background:#00ff9a;
-    color:#000;
+    background: #00ff9a;
+    color: #000;
 }
+
 </style>
 </head>
 
@@ -147,20 +151,13 @@ h3 {
 
 <div class="grid">
 
-<!-- IBOV -->
 <div class="card">
     <span class="badge-green">Essencial</span>
     <h3>Carteira IBOV</h3>
-
-    <p class="desc">
-    Ações líderes do Ibovespa com foco em consistência, diversificação e proteção de capital.
-    </p>
+    <p class="desc">Ações líderes do Ibovespa com foco em consistência, diversificação e proteção de capital.</p>
 
     <div class="price">R$ 148/mês no plano anual</div>
-    <div class="price-sub">
-        Economia de <strong>25%</strong>
-        <span class="highlight">(equivalente a 3 meses grátis)</span>
-    </div>
+    <div class="price-sub">Economia de <strong>25%</strong> <span class="highlight">(equivalente a 3 meses grátis)</span></div>
 
     <div class="price-sub" style="margin-top:8px;">
         <strong>Plano trimestral:</strong> R$ 173/mês<br>
@@ -171,25 +168,16 @@ h3 {
         <strong>Plano mensal:</strong> R$ 197/mês
     </div>
 
-    <div class="btn">
-        <a href="https://wa.me/351915323219" target="_blank">Assinar IBOV</a>
-    </div>
+    <div class="btn"><a href="https://wa.me/351915323219" target="_blank">Assinar IBOV</a></div>
 </div>
 
-<!-- SMALL CAPS -->
 <div class="card">
     <span class="badge-orange">Alta Performance</span>
     <h3>Small Caps</h3>
-
-    <p class="desc">
-    Empresas em crescimento acelerado com alto potencial de valorização e maior volatilidade.
-    </p>
+    <p class="desc">Empresas em crescimento acelerado com alto potencial de valorização e maior volatilidade.</p>
 
     <div class="price">R$ 164/mês no plano anual</div>
-    <div class="price-sub">
-        Economia de <strong>25%</strong>
-        <span class="highlight">(equivalente a 3 meses grátis)</span>
-    </div>
+    <div class="price-sub">Economia de <strong>25%</strong> <span class="highlight">(equivalente a 3 meses grátis)</span></div>
 
     <div class="price-sub" style="margin-top:8px;">
         <strong>Plano trimestral:</strong> R$ 193/mês<br>
@@ -200,25 +188,16 @@ h3 {
         <strong>Plano mensal:</strong> R$ 219/mês
     </div>
 
-    <div class="btn">
-        <a href="https://wa.me/351915323219" target="_blank">Assinar Small Caps</a>
-    </div>
+    <div class="btn"><a href="https://wa.me/351915323219" target="_blank">Assinar Small Caps</a></div>
 </div>
 
-<!-- BDR -->
 <div class="card">
     <span class="badge-green">Internacional</span>
     <h3>Carteira BDR</h3>
-
-    <p class="desc">
-    Exposição a empresas globais com diversificação geográfica e cambial.
-    </p>
+    <p class="desc">Exposição a empresas globais com diversificação geográfica e cambial.</p>
 
     <div class="price">R$ 164/mês no plano anual</div>
-    <div class="price-sub">
-        Economia de <strong>25%</strong>
-        <span class="highlight">(equivalente a 3 meses grátis)</span>
-    </div>
+    <div class="price-sub">Economia de <strong>25%</strong> <span class="highlight">(equivalente a 3 meses grátis)</span></div>
 
     <div class="price-sub" style="margin-top:8px;">
         <strong>Plano trimestral:</strong> R$ 193/mês<br>
@@ -229,25 +208,16 @@ h3 {
         <strong>Plano mensal:</strong> R$ 219/mês
     </div>
 
-    <div class="btn">
-        <a href="https://wa.me/351915323219" target="_blank">Assinar BDR</a>
-    </div>
+    <div class="btn"><a href="https://wa.me/351915323219" target="_blank">Assinar BDR</a></div>
 </div>
 
-<!-- OPÇÕES -->
 <div class="card">
     <span class="badge-orange">Agressivo</span>
     <h3>Carteira de Opções</h3>
-
-    <p class="desc">
-    Estratégias com opções focadas em assimetria, volatilidade e proteção de carteira.
-    </p>
+    <p class="desc">Estratégias com opções focadas em assimetria, volatilidade e proteção.</p>
 
     <div class="price">R$ 223/mês no plano anual</div>
-    <div class="price-sub">
-        Economia de <strong>25%</strong>
-        <span class="highlight">(equivalente a 3 meses grátis)</span>
-    </div>
+    <div class="price-sub">Economia de <strong>25%</strong> <span class="highlight">(equivalente a 3 meses grátis)</span></div>
 
     <div class="price-sub" style="margin-top:8px;">
         <strong>Plano trimestral:</strong> R$ 261/mês<br>
@@ -258,20 +228,18 @@ h3 {
         <strong>Plano mensal:</strong> R$ 297/mês
     </div>
 
-    <div class="btn">
-        <a href="https://wa.me/351915323219" target="_blank">Assinar Opções</a>
-    </div>
+    <div class="btn"><a href="https://wa.me/351915323219" target="_blank">Assinar Opções</a></div>
 </div>
 
 </div>
 
 </body>
 </html>
-
+'''
 
 components.html(
     html_cards,
-    height=520,
+    height=900,
     scrolling=False
 )
 
