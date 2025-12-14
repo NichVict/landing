@@ -1142,10 +1142,10 @@ calc_html = """
 
 <script>
   const planos = {
-    "acoes":  { preco: 335,  pCons: 0.04, pEst: 0.06 },
-    "opcoes": { preco: 297,  pCons: 0.12, pEst: 0.25 },
-    "max":    { preco: 448,  pCons: 0.08, pEst: 0.155 },
-    "full":   { preco: 448,  pCons: 0.08, pEst: 0.155 }
+    "acoes":  { preco: 335,  pCons: 0.04, pEst: 0.08 },
+    "opcoes": { preco: 223,  pCons: 0.12, pEst: 0.23 },
+    "max":    { preco: 448,  pCons: 0.08, pEst: 0.25 },
+    "full":   { preco: 448,  pCons: 0.08, pEst: 0.27 }
   };
 
   function formatCurrency(v) {
