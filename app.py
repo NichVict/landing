@@ -697,7 +697,7 @@ with col_t1:
             resolve exatamente os gargalos que vejo no dia a dia.”
             </p>
             <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
-            — Estrategista em Renda Variável
+            — — Ricardo M., Estrategista em Renda Variável
             </p>
         </div>
         """,
@@ -713,7 +713,7 @@ with col_t2:
             que eu gostaria de ter quando comecei.”
             </p>
             <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
-            — Analista técnico e educador
+            Felipe A. — Analista Técnico e Educador
             </p>
         </div>
         """,
@@ -729,7 +729,7 @@ with col_t3:
             produto foi feito em cada nível. Isso é raro no mercado.”
             </p>
             <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
-            — Consultor independente
+            André C. — Consultor Independente
             </p>
         </div>
         """,
@@ -751,7 +751,7 @@ with col_t4:
             Com os alertas da Phoenix, eu só sigo as entradas e saídas. Simples, direto e seguro.”
             </p>
             <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
-            — Investidor Iniciante (1º mês operando)
+            — Karina R.,Investidora Iniciante (1º mês operando)
             </p>
         </div>
         """,
@@ -767,7 +767,7 @@ with col_t5:
             com instrução clara. É só executar. Finalmente consegui consistência sem viver na frente da tela.”
             </p>
             <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
-            — Trader Intermediário, sem tempo para acompanhar mercado
+            — Bruno S.,Trader Intermediário
             </p>
         </div>
         """,
@@ -783,7 +783,7 @@ with col_t6:
             Os alertas são objetivos e o relatório em tempo real mostra exatamente o que o algoritmo está lendo.”
             </p>
             <p style='font-size:0.85rem; opacity:0.8; margin-top:0.8rem;'>
-            — Investidor que não gosta de análise técnica
+            — Marcela M., Investidora de Médio Prazo
             </p>
         </div>
         """,
@@ -1265,172 +1265,6 @@ st.markdown(dedent("""
 
 
 
-# ============================================================
-# NOVA SEÇÃO — PLANOS PHOENIX STRATEGY (VERSÃO PREMIUM CORRIGIDA)
-# ============================================================
-st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
-
-st.markdown("<h2 class='section-title-center'>Planos Phoenix Strategy</h2>", unsafe_allow_html=True)
-st.markdown("<p class='subtle-center'>Escolha o nível de autonomia e profundidade.</p>", unsafe_allow_html=True)
-
-# ===================================================================
-# 1) CARTEIRAS INDIVIDUAIS
-# ===================================================================
-st.markdown("<h3 style='color:#00ff9a;'>Carteiras Individuais</h3>", unsafe_allow_html=True)
-
-c1, c2, c3, c4 = st.columns(4)
-
-with c1:
-    st.markdown("""
-    <div class='plan-card-wrapper'>
-        <div class='plan-card'>
-            <span class='badge-green'>Essencial</span>
-            <h3>Carteira IBOV</h3>
-            <p>Ações sólidas do Ibovespa, com sinais automatizados.</p>
-            <div class='price'>R$ 197/mês</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Assinar", "https://wa.me/351915323219")
-
-with c2:
-    st.markdown("""
-    <div class='plan-card-wrapper'>
-        <div class='plan-card'>
-            <span class='badge'>Alta Performance</span>
-            <h3>Small Caps</h3>
-            <p>Oportunidades agressivas com forte potencial de valorização.</p>
-            <div class='price'>R$ 219/mês</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Assinar", "https://wa.me/351915323219")
-
-with c3:
-    st.markdown("""
-    <div class='plan-card-wrapper'>
-        <div class='plan-card'>
-            <span class='badge-green'>Internacional</span>
-            <h3>Carteira BDR</h3>
-            <p>Exposição global com simplicidade total.</p>
-            <div class='price'>R$ 219/mês</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Assinar", "https://wa.me/351915323219")
-
-with c4:
-    st.markdown("""
-    <div class='plan-card-wrapper'>
-        <div class='plan-card'>
-            <span class='badge'>Agressivo</span>
-            <h3>Carteira de Opções</h3>
-            <p>Estratégias assimétricas com potencial explosivo.</p>
-            <div class='price'>R$ 297/mês</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Assinar", "https://wa.me/351915323219")
-
-st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
-
-# ===================================================================
-# 2) PLANOS PREMIUM
-# ===================================================================
-st.markdown("<h3 style='color:#00ff9a;'>Planos Premium</h3>", unsafe_allow_html=True)
-
-p1, p2 = st.columns(2)
-
-with p1:
-    st.markdown("""
-    <div class='plan-card-wrapper'>
-        <div class='plan-card'>
-            <span class='badge'>Mais Vendido</span>
-            <h3>Phoenix Equity</h3>
-            <p>Inclui IBOV + Small Caps + BDR. O melhor custo-benefício para quem opera ações.</p>
-            <div class='price'>R$ 247/mês</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Assinar Phoenix Equity", "https://wa.me/351915323219")
-
-with p2:
-    st.markdown("""
-    <div class='plan-card-wrapper'>
-        <div class='plan-card'>
-            <span class='badge'>Recomendado</span>
-            <h3>Phoenix Full</h3>
-            <p>Todas as 4 carteiras: IBOV, Small Caps, BDR e Opções em um único plano.</p>
-            <div class='price'>R$ 397/mês</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Assinar Phoenix Full", "https://wa.me/351915323219")
-
-st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
-
-# ===================================================================
-# 3) SCANNERS — LINHA PRO
-# ===================================================================
-st.markdown("<h3 style='color:#00ff9a;'>Linha PRO — Scanners Profissionais</h3>", unsafe_allow_html=True)
-
-s1, s2, s3 = st.columns(3)
-
-with s1:
-    st.markdown("""
-    <div class='plan-card-wrapper'>
-        <div class='plan-card'>
-            <span class='badge'>Profissional</span>    
-            <h3>Phoenix Scanner Ações</h3>
-            <p>O motor analítico de ações. Autonomia total para traders avançados.</p>
-            <div class='price'>R$ 397/mês</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Assinar Scanner Ações", "https://wa.me/351915323219")
-
-with s2:
-    st.markdown("""
-    <div class='plan-card-wrapper'>
-        <div class='plan-card'>
-            <span class='badge'>Profissional</span>
-            <h3>Phoenix Scanner Opções</h3>
-            <p>Leitura avançada de volatilidade, assimetrias e distorções de prêmio.</p>
-            <div class='price'>R$ 397/mês</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Assinar Scanner Opções", "https://wa.me/351915323219")
-
-with s3:
-    st.markdown("""
-    <div class='plan-card-wrapper'>
-        <div class='plan-card'>            
-            <span class='badge-green'>Completo</span>
-            <h3>Phoenix Scanner PRO</h3>
-            <p>Ações + Opções. A experiência definitiva para profissionais.</p>
-            <div class='price'>R$ 597/mês</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.link_button("Assinar Scanner PRO", "https://wa.me/351915323219")
-
-
-st.markdown("<div class='divider-neon'></div>", unsafe_allow_html=True)
-# ===================================================================
-# 4) SEÇÃO — QUAL PLANO ESCOLHER?
-# ===================================================================
-st.markdown("<h3 style='color:#00ff9a; text-align:center;'>Qual plano escolher?</h3>", unsafe_allow_html=True)
-
-st.markdown("""
-- **Sou iniciante e quero sinais claros** → Carteira IBOV ou BDR  
-- **Quero agressividade, mas sem complexidade** → Small Caps  
-- **Quero assimetria explosiva** → Carteira de Opções  
-- **Quero todas as ações com melhor valor** → Phoenix Equity  
-- **Quero tudo em um único plano** → Phoenix Full  
-- **Quero autonomia total e operar como profissional** → Scanners  
-- **Quero o melhor do melhor** → Phoenix Scanner PRO  
-""")
 
 
 
