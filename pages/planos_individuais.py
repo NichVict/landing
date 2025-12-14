@@ -161,25 +161,32 @@ st.markdown("""
 st.markdown("""
 <div class='plan-card-wrapper'>
     <span class='badge'>Alta Performance</span>
+
     <h3>Small Caps</h3>
-    <p>
-    • Empresas em crescimento acelerado<br>
-    • Operações com maior assimetria<br>
-    • Maior volatilidade e potencial de retorno<br>
-    • Para investidores mais ativos
-    </p>
+
+    <ul style='color:#d7d7d7; font-size:0.95rem; padding-left:18px;'>
+        <li>Empresas em crescimento acelerado</li>
+        <li>Operações com maior assimetria</li>
+        <li>Maior volatilidade e potencial de retorno</li>
+        <li>Para investidores mais ativos</li>
+    </ul>
 
     <div class='price'>R$ 219/mês</div>
-    <p style='font-size:0.85rem; color:#bfbfbf;'>
-        Trimestral: <b>R$ 193/mês</b> · Anual: <b>R$ 164/mês</b><br>
+
+    <p style='font-size:0.85rem; color:#bfbfbf; margin-top:0.5rem;'>
+        Trimestral: <b>R$ 193/mês</b> ·
+        Anual: <b>R$ 164/mês</b><br>
         <span style='color:#00ff9a;'>Economize 3 meses no plano anual</span>
     </p>
 
     <div class='assinatura-btn'>
-        <a href='https://wa.me/351915323219' target='_blank'>Assinar Small Caps</a>
+        <a href='https://wa.me/351915323219' target='_blank'>
+            Assinar Small Caps
+        </a>
     </div>
 </div>
 """, unsafe_allow_html=True)
+
 
 
 # ----------------------------- CARD 3
