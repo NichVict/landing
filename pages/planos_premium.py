@@ -236,7 +236,7 @@ h3 {
 
 components.html(
     html_premium,
-    height=1150,
+    height=2050,
     scrolling=False
 )
 
