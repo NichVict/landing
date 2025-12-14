@@ -1,10 +1,4 @@
-quero atualizar as paginas de preço e planos. e o mais importante, descrever o que cada carteira entrega.
 
-Salve todos esses valores acima Mike, vamos começar pelos planos indidivuais. segue codigo abaixo para alterar:
-1 - Inserir o que a carteira entraga 
-2 - Inserir os valores dos 3 tipos de planos e os badges com as frases que achar melhor. faça seu melhor.
-
-Depois partimos para os outros planos .... 
 
 
 import streamlit as st
