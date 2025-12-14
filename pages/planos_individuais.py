@@ -144,6 +144,26 @@ h3 {
     color: #000;
 }
 
+
+.section-title {
+    margin-top: 2.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.features {
+    color: #d7d7d7;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.features div {
+    margin-bottom: 8px;
+}
+
+
 </style>
 </head>
 
