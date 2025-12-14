@@ -183,7 +183,7 @@ h3 {
     </div>
 
     <div class="btn">
-        <a href="https://wa.me/351915323219" target="_blank">Assinar Scanner Ações</a>
+        <a href="https://loja.infinitepay.io/aurinvest/yhz4317-scanner-acoes-ibov" target="_blank">Assinar Scanner Ações</a>
     </div>
 </div>
 
@@ -212,7 +212,7 @@ h3 {
     </div>
 
     <div class="btn">
-        <a href="https://wa.me/351915323219" target="_blank">Assinar Scanner Opções</a>
+        <a href="https://loja.infinitepay.io/aurinvest/imf0541-scanner-opcoes-de-acoes-ibov" target="_blank">Assinar Scanner Opções</a>
     </div>
 </div>
 
