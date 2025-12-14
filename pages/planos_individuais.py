@@ -233,6 +233,20 @@ h3 {
 
 </div>
 
+<!-- DESCRIÇÃO ABAIXO -->
+<div class="section-title">O que está incluído em cada plano</div>
+
+<div class="features">
+
+    <div>✔️ Alertas automáticos por Telegram e e-mail no momento ideal para entrar e sair de cada operação</div>
+    <div>✔️ Plataforma exclusiva para consulta de todas as operações em adamento e monitoradas. Tudo em tempo real</div>
+    <div>✔️ Monitoramento constante do algoritmo proprietário Phoenix Strategy</div>
+    <div>✔️ Suporte técnico e comercial</div>
+    
+</div>
+
+
+
 </body>
 </html>
 '''
